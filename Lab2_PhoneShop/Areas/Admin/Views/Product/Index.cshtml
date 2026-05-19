@@ -1,0 +1,36 @@
+﻿@* ép kiểu về object *@
+@model IEnumerable<Lab2_PhoneShop.Models.Product>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h1>Product list</h1>
+    <table>
+        <thead>
+            <tr>@Html.DisplayNameFor(m => m.Id)</tr>
+            <tr>@Html.DisplayNameFor(m => m.Name)</tr>
+            <tr>@Html.DisplayNameFor(m => m.Price)</tr>
+            <tr>@Html.DisplayNameFor(m => m.Category)</tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(m => item.Id)</td>
+                    <td>@Html.DisplayFor(m => item.Name)</td>
+                    <td>@Html.DisplayFor(m => item.Price)</td>
+                    <td>@Html.DisplayFor(m => item.Category)</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>

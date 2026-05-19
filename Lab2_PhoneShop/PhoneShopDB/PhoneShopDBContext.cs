@@ -10,5 +10,17 @@ namespace Lab2_PhoneShop.PhoneShopDB
         public DbSet<Category> Categories { get; set; }
 
         public DbSet<Product> Products { get; set; }
+
+        public DbSet<OrderDetails> orderDetails { get; set; }
+
+        public DbSet<Order> orders { get; set; }
+
+        public DbSet<Promotion> promotions{ get; set; }
+
+        public DbSet<Role> roles { get; set; }
+
+        public DbSet<Status> statuses { get; set; }
+
+        public DbSet<User> users { get; set; }
     }
 }
