@@ -94,7 +94,7 @@ $.extend( RowGroup.prototype, {
 	/**
 	 * Get/set the grouping data source - need to call draw after this is
 	 * executed as a setter
-	 * @returns string~RowGroup
+	 * @returns stringAssetsRowGroup
 	 */
 	dataSrc: function ( val )
 	{

@@ -34,7 +34,7 @@
         monthsRegex = /^(leden|únor|březen|duben|květen|červenec|července|červen|června|srpen|září|říjen|listopad|prosinec|led|úno|bře|dub|kvě|čvn|čvc|srp|zář|říj|lis|pro)/i;
 
     function plural(n) {
-        return n > 1 && n < 5 && ~~(n / 10) !== 1;
+        return n > 1 && n < 5 && AssetsAssets(n / 10) !== 1;
     }
     function translate(number, withoutSuffix, key, isFuture) {
         var result = number + ' ';

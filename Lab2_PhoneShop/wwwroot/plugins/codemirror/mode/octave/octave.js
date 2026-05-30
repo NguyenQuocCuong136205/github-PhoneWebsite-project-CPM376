@@ -16,9 +16,9 @@ CodeMirror.defineMode("octave", function() {
     return new RegExp("^((" + words.join(")|(") + "))\\b");
   }
 
-  var singleOperators = new RegExp("^[\\+\\-\\*/&|\\^~<>!@'\\\\]");
+  var singleOperators = new RegExp("^[\\+\\-\\*/&|\\^Assets<>!@'\\\\]");
   var singleDelimiters = new RegExp('^[\\(\\[\\{\\},:=;\\.]');
-  var doubleOperators = new RegExp("^((==)|(~=)|(<=)|(>=)|(<<)|(>>)|(\\.[\\+\\-\\*/\\^\\\\]))");
+  var doubleOperators = new RegExp("^((==)|(Assets=)|(<=)|(>=)|(<<)|(>>)|(\\.[\\+\\-\\*/\\^\\\\]))");
   var doubleDelimiters = new RegExp("^((!=)|(\\+=)|(\\-=)|(\\*=)|(/=)|(&=)|(\\|=)|(\\^=))");
   var tripleDelimiters = new RegExp("^((>>=)|(<<=))");
   var expressionEnd = new RegExp("^[\\]\\)]");

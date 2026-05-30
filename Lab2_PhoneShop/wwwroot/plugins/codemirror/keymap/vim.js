@@ -163,7 +163,7 @@
     { keys: '=', type: 'operator', operator: 'indentAuto' },
     { keys: '>', type: 'operator', operator: 'indent', operatorArgs: { indentRight: true }},
     { keys: '<', type: 'operator', operator: 'indent', operatorArgs: { indentRight: false }},
-    { keys: 'g~', type: 'operator', operator: 'changeCase' },
+    { keys: 'gAssets', type: 'operator', operator: 'changeCase' },
     { keys: 'gu', type: 'operator', operator: 'changeCase', operatorArgs: {toLower: true}, isEdit: true },
     { keys: 'gU', type: 'operator', operator: 'changeCase', operatorArgs: {toLower: false}, isEdit: true },
     { keys: 'n', type: 'motion', motion: 'findNext', motionArgs: { forward: true, toJumplist: true }},
@@ -179,8 +179,8 @@
     { keys: 'Y', type: 'operator', operator: 'yank', operatorArgs: { linewise: true }, context: 'visual'},
     { keys: 'C', type: 'operatorMotion', operator: 'change', motion: 'moveToEol', motionArgs: { inclusive: true }, context: 'normal'},
     { keys: 'C', type: 'operator', operator: 'change', operatorArgs: { linewise: true }, context: 'visual'},
-    { keys: '~', type: 'operatorMotion', operator: 'changeCase', motion: 'moveByCharacters', motionArgs: { forward: true }, operatorArgs: { shouldMoveCursor: true }, context: 'normal'},
-    { keys: '~', type: 'operator', operator: 'changeCase', context: 'visual'},
+    { keys: 'Assets', type: 'operatorMotion', operator: 'changeCase', motion: 'moveByCharacters', motionArgs: { forward: true }, operatorArgs: { shouldMoveCursor: true }, context: 'normal'},
+    { keys: 'Assets', type: 'operator', operator: 'changeCase', context: 'visual'},
     { keys: '<C-u>', type: 'operatorMotion', operator: 'delete', motion: 'moveToStartOfLine', context: 'insert' },
     { keys: '<C-w>', type: 'operatorMotion', operator: 'delete', motion: 'moveByWords', motionArgs: { forward: false, wordEnd: false }, context: 'insert' },
     //ignore C-w in normal mode
@@ -4664,7 +4664,7 @@
         }
 
         // Parse command name.
-        var commandMatch = inputStream.match(/^(\w+|!!|@@|[!#&*<=>@~])/);
+        var commandMatch = inputStream.match(/^(\w+|!!|@@|[!#&*<=>@Assets])/);
         if (commandMatch) {
           result.commandName = commandMatch[1];
         } else {

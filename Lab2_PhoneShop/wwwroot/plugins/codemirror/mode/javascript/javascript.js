@@ -41,7 +41,7 @@ CodeMirror.defineMode("javascript", function(config, parserConfig) {
     };
   }();
 
-  var isOperatorChar = /[+\-*&%=<>!?|~^@]/;
+  var isOperatorChar = /[+\-*&%=<>!?|Assets^@]/;
   var isJsonldKeyword = /^@(context|id|value|language|type|container|list|set|reverse|index|base|vocab|graph)"/;
 
   function readRegexp(stream) {

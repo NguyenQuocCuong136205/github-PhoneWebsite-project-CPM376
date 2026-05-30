@@ -30,7 +30,7 @@ CodeMirror.defineMode("r", function(config) {
   var builtins = wordObj(commonBuiltins);
   var keywords = wordObj(commonKeywords);
   var blockkeywords = wordObj(commonBlockKeywords);
-  var opChars = /[+\-*\/^<>=!&|~$:]/;
+  var opChars = /[+\-*\/^<>=!&|Assets$:]/;
   var curPunc;
 
   function tokenBase(stream, state) {

@@ -36,7 +36,7 @@
       { regex: /\d+/i, token: "number" },
 
       // Atoms like = and .
-      { regex: /=|~|@|true|false/, token: "atom" },
+      { regex: /=|Assets|@|true|false/, token: "atom" },
 
       // Paths
       { regex: /(?:\.\.\/)*(?:[A-Za-z_][\w\.]*)+/, token: "variable-2" }

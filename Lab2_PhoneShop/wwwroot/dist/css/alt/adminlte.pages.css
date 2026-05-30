@@ -520,10 +520,10 @@ a.close.disabled, a.disabled.mailbox-attachment-close {
   box-shadow: none;
 }
 
-.login-card-body .input-group .form-control:focus ~ .input-group-prepend .input-group-text,
-.login-card-body .input-group .form-control:focus ~ .input-group-append .input-group-text,
-.register-card-body .input-group .form-control:focus ~ .input-group-prepend .input-group-text,
-.register-card-body .input-group .form-control:focus ~ .input-group-append .input-group-text {
+.login-card-body .input-group .form-control:focus Assets .input-group-prepend .input-group-text,
+.login-card-body .input-group .form-control:focus Assets .input-group-append .input-group-text,
+.register-card-body .input-group .form-control:focus Assets .input-group-prepend .input-group-text,
+.register-card-body .input-group .form-control:focus Assets .input-group-append .input-group-text {
   border-color: #80bdff;
 }
 
@@ -532,10 +532,10 @@ a.close.disabled, a.disabled.mailbox-attachment-close {
   box-shadow: none;
 }
 
-.login-card-body .input-group .form-control.is-valid ~ .input-group-prepend .input-group-text,
-.login-card-body .input-group .form-control.is-valid ~ .input-group-append .input-group-text,
-.register-card-body .input-group .form-control.is-valid ~ .input-group-prepend .input-group-text,
-.register-card-body .input-group .form-control.is-valid ~ .input-group-append .input-group-text {
+.login-card-body .input-group .form-control.is-valid Assets .input-group-prepend .input-group-text,
+.login-card-body .input-group .form-control.is-valid Assets .input-group-append .input-group-text,
+.register-card-body .input-group .form-control.is-valid Assets .input-group-prepend .input-group-text,
+.register-card-body .input-group .form-control.is-valid Assets .input-group-append .input-group-text {
   border-color: #28a745;
 }
 
@@ -544,8 +544,8 @@ a.close.disabled, a.disabled.mailbox-attachment-close {
   box-shadow: none;
 }
 
-.login-card-body .input-group .form-control.is-invalid ~ .input-group-append .input-group-text,
-.register-card-body .input-group .form-control.is-invalid ~ .input-group-append .input-group-text {
+.login-card-body .input-group .form-control.is-invalid Assets .input-group-append .input-group-text,
+.register-card-body .input-group .form-control.is-invalid Assets .input-group-append .input-group-text {
   border-color: #dc3545;
 }
 

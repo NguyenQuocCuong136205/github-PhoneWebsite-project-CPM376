@@ -677,7 +677,7 @@ var i,
 	attributes = "\\[" + whitespace + "*(" + identifier + ")(?:" + whitespace +
 
 		// Operator (capture 2)
-		"*([*^$|!~]?=)" + whitespace +
+		"*([*^$|!Assets]?=)" + whitespace +
 
 		// "Attribute values must be CSS identifiers [capture 5] or strings [capture 3 or capture 4]"
 		"*(?:'((?:\\\\.|[^\\\\'])*)'|\"((?:\\\\.|[^\\\\\"])*)\"|(" + identifier + "))|)" +
@@ -700,7 +700,7 @@ var i,
 	rwhitespace = new RegExp( whitespace + "+", "g" ),
 
 	rcomma = new RegExp( "^" + whitespace + "*," + whitespace + "*" ),
-	rleadingCombinator = new RegExp( "^" + whitespace + "*([>+~]|" + whitespace + ")" +
+	rleadingCombinator = new RegExp( "^" + whitespace + "*([>+Assets]|" + whitespace + ")" +
 		whitespace + "*" ),
 	rdescend = new RegExp( whitespace + "|>" ),
 
@@ -722,7 +722,7 @@ var i,
 		// For use in libraries implementing .is()
 		// We use this for POS matching in `select`
 		needsContext: new RegExp( "^" + whitespace +
-			"*[>+~]|:(even|odd|eq|gt|lt|nth|first|last)(?:\\(" + whitespace +
+			"*[>+Assets]|:(even|odd|eq|gt|lt|nth|first|last)(?:\\(" + whitespace +
 			"*((?:-\\d)?\\d*)" + whitespace + "*\\)|)(?=[^-]|$)", "i" )
 	},
 
@@ -732,7 +732,7 @@ var i,
 	// Easily-parseable/retrievable ID or TAG or CLASS selectors
 	rquickExpr = /^(?:#([\w-]+)|(\w+)|\.([\w-]+))$/,
 
-	rsibling = /[+~]/,
+	rsibling = /[+Assets]/,
 
 	// CSS escapes
 	// https://www.w3.org/TR/CSS21/syndata.html#escaped-characters
@@ -1287,15 +1287,15 @@ function setDocument( node ) {
 		}
 
 		// Support: iOS <=7 - 8 only
-		if ( !el.querySelectorAll( "[id~=" + expando + "-]" ).length ) {
-			rbuggyQSA.push( "~=" );
+		if ( !el.querySelectorAll( "[idAssets=" + expando + "-]" ).length ) {
+			rbuggyQSA.push( "Assets=" );
 		}
 
 		// Support: iOS 8 only
 		// https://bugs.webkit.org/show_bug.cgi?id=136851
 		// In-page `selector#id sibling-combinator selector` fails
 		if ( !el.querySelectorAll( "a#" + expando + "+*" ).length ) {
-			rbuggyQSA.push( ".#.+[+~]" );
+			rbuggyQSA.push( ".#.+[+Assets]" );
 		}
 
 		// Support: Chrome <=105+, Firefox <=104+, Safari <=15.4+
@@ -1545,7 +1545,7 @@ Expr = jQuery.expr = {
 		">": { dir: "parentNode", first: true },
 		" ": { dir: "parentNode" },
 		"+": { dir: "previousSibling", first: true },
-		"~": { dir: "previousSibling" }
+		"Assets": { dir: "previousSibling" }
 	},
 
 	preFilter: {
@@ -1556,7 +1556,7 @@ Expr = jQuery.expr = {
 			match[ 3 ] = ( match[ 3 ] || match[ 4 ] || match[ 5 ] || "" )
 				.replace( runescape, funescape );
 
-			if ( match[ 2 ] === "~=" ) {
+			if ( match[ 2 ] === "Assets=" ) {
 				match[ 3 ] = " " + match[ 3 ] + " ";
 			}
 
@@ -1688,7 +1688,7 @@ Expr = jQuery.expr = {
 				if ( operator === "$=" ) {
 					return check && result.slice( -check.length ) === check;
 				}
-				if ( operator === "~=" ) {
+				if ( operator === "Assets=" ) {
 					return ( " " + result.replace( rwhitespace, " " ) + " " )
 						.indexOf( check ) > -1;
 				}
@@ -1940,7 +1940,7 @@ Expr = jQuery.expr = {
 		focus: function( elem ) {
 			return elem === safeActiveElement() &&
 				document.hasFocus() &&
-				!!( elem.type || elem.href || ~elem.tabIndex );
+				!!( elem.type || elem.href || Assetselem.tabIndex );
 		},
 
 		// Boolean properties

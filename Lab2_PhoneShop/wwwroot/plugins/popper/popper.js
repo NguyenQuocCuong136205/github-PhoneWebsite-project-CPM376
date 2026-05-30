@@ -1572,7 +1572,7 @@ function keepTogether(data) {
 /**
  * Converts a string containing value + unit into a px value number
  * @function
- * @memberof {modifiers~offset}
+ * @memberof {modifiersAssetsoffset}
  * @private
  * @argument {String} str - Value + unit string
  * @argument {String} measurement - `height` or `width`
@@ -1625,7 +1625,7 @@ function toValue(str, measurement, popperOffsets, referenceOffsets) {
 /**
  * Parse an `offset` string to extrapolate `x` and `y` numeric offsets.
  * @function
- * @memberof {modifiers~offset}
+ * @memberof {modifiersAssetsoffset}
  * @private
  * @argument {String} offset
  * @argument {Object} popperOffsets

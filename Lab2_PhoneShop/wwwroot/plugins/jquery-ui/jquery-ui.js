@@ -1516,8 +1516,8 @@ function clamp( value, prop, allowEmpty ) {
 		return ( allowEmpty || !prop.def ) ? null : prop.def;
 	}
 
-	// ~~ is an short way of doing floor for positive numbers
-	value = type.floor ? ~~value : parseFloat( value );
+	// AssetsAssets is an short way of doing floor for positive numbers
+	value = type.floor ? AssetsAssetsvalue : parseFloat( value );
 
 	// IE will pass in empty strings as value for alpha,
 	// which will hit this case
@@ -1776,7 +1776,7 @@ color.fn = jQuery.extend( color.prototype, {
 			alpha = rgba.pop();
 
 		if ( includeAlpha ) {
-			rgba.push( ~~( alpha * 255 ) );
+			rgba.push( AssetsAssets( alpha * 255 ) );
 		}
 
 		return "#" + jQuery.map( rgba, function( v ) {
@@ -17929,7 +17929,7 @@ $.widget( "ui.tabs", {
 	},
 
 	_sanitizeSelector: function( hash ) {
-		return hash ? hash.replace( /[!"$%&'()*+,.\/:;<=>?@\[\]\^`{|}~]/g, "\\$&" ) : "";
+		return hash ? hash.replace( /[!"$%&'()*+,.\/:;<=>?@\[\]\^`{|}Assets]/g, "\\$&" ) : "";
 	},
 
 	refresh: function() {

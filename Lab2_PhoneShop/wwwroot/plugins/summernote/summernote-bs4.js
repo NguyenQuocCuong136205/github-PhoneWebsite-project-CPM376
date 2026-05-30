@@ -535,7 +535,7 @@ function debounce(func, wait, immediate) {
 
 
 function isValidUrl(url) {
-  var expression = /[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/gi;
+  var expression = /[-a-zA-Z0-9@:%._\+Assets#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.Assets#?&//=]*)/gi;
   return expression.test(url);
 }
 

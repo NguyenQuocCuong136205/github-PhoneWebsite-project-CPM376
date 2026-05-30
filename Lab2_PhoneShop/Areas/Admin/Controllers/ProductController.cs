@@ -88,5 +88,10 @@ namespace Lab2_PhoneShop.Areas.Admin.Controllers
 
             return RedirectToAction("Index");
         }
+
+        public ActionResult Details()
+        {
+            return View();
+        }
     }
 }

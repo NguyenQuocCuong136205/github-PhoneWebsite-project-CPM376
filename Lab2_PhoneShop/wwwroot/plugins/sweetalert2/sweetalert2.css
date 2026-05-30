@@ -802,11 +802,11 @@
 .swal2-progress-steps .swal2-progress-step.swal2-active-progress-step {
   background: #2778c4;
 }
-.swal2-progress-steps .swal2-progress-step.swal2-active-progress-step ~ .swal2-progress-step {
+.swal2-progress-steps .swal2-progress-step.swal2-active-progress-step Assets .swal2-progress-step {
   background: #add8e6;
   color: #fff;
 }
-.swal2-progress-steps .swal2-progress-step.swal2-active-progress-step ~ .swal2-progress-step-line {
+.swal2-progress-steps .swal2-progress-step.swal2-active-progress-step Assets .swal2-progress-step-line {
   background: #add8e6;
 }
 .swal2-progress-steps .swal2-progress-step-line {

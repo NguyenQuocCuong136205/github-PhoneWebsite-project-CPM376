@@ -30,7 +30,7 @@
   var atoms = wordSet(["true","false","nil","self","super","_"])
   var types = wordSet(["Array","Bool","Character","Dictionary","Double","Float","Int","Int8","Int16","Int32","Int64","Never","Optional","Set","String",
                        "UInt8","UInt16","UInt32","UInt64","Void"])
-  var operators = "+-/*%=|&<>~^?!"
+  var operators = "+-/*%=|&<>Assets^?!"
   var punc = ":;,.(){}[]"
   var binary = /^\-?0b[01][01_]*/
   var octal = /^\-?0o[0-7][0-7_]*/

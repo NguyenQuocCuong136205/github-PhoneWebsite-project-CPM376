@@ -987,7 +987,7 @@ function createErrDiff(actual, expected, operator) {
           printedLines++;
         }
       }
-    } // Inspected object to big (Show ~20 rows max)
+    } // Inspected object to big (Show Assets20 rows max)
 
 
     if (printedLines > 20 && i < maxLines - 2) {
@@ -5173,8 +5173,8 @@ function utf16leSlice(buf, start, end) {
 
 Buffer.prototype.slice = function slice(start, end) {
   var len = this.length;
-  start = ~~start;
-  end = end === undefined ? len : ~~end;
+  start = AssetsAssetsstart;
+  end = end === undefined ? len : AssetsAssetsend;
 
   if (start < 0) {
     start += len;
@@ -6289,7 +6289,7 @@ var exportTypedArrayStaticMethod = function exportTypedArrayStaticMethod(KEY, pr
     }
 
     if (!TypedArray[KEY] || forced) {
-      // V8 ~ Chrome 49-50 `%TypedArray%` methods are non-writable non-configurable
+      // V8 Assets Chrome 49-50 `%TypedArray%` methods are non-writable non-configurable
       try {
         return redefine(TypedArray, KEY, forced ? property : NATIVE_ARRAY_BUFFER_VIEWS && TypedArray[KEY] || property);
       } catch (error) {
@@ -9752,12 +9752,12 @@ __webpack_require__(6495);
     });
 
     function FF(a, b, c, d, x, s, t) {
-      var n = a + (b & c | ~b & d) + x + t;
+      var n = a + (b & c | Assetsb & d) + x + t;
       return (n << s | n >>> 32 - s) + b;
     }
 
     function GG(a, b, c, d, x, s, t) {
-      var n = a + (b & d | c & ~d) + x + t;
+      var n = a + (b & d | c & Assetsd) + x + t;
       return (n << s | n >>> 32 - s) + b;
     }
 
@@ -9767,7 +9767,7 @@ __webpack_require__(6495);
     }
 
     function II(a, b, c, d, x, s, t) {
-      var n = a + (c ^ (b | ~d)) + x + t;
+      var n = a + (c ^ (b | Assetsd)) + x + t;
       return (n << s | n >>> 32 - s) + b;
     }
     /**
@@ -11089,19 +11089,19 @@ __webpack_require__(8674);
     }
 
     function f2(x, y, z) {
-      return x & y | ~x & z;
+      return x & y | Assetsx & z;
     }
 
     function f3(x, y, z) {
-      return (x | ~y) ^ z;
+      return (x | Assetsy) ^ z;
     }
 
     function f4(x, y, z) {
-      return x & z | y & ~z;
+      return x & z | y & Assetsz;
     }
 
     function f5(x, y, z) {
-      return x ^ (y | ~z);
+      return x ^ (y | Assetsz);
     }
 
     function rotl(x, n) {
@@ -11199,7 +11199,7 @@ __webpack_require__(8674);
           var t = (a << 5 | a >>> 27) + e + W[i];
 
           if (i < 20) {
-            t += (b & c | ~b & d) + 0x5a827999;
+            t += (b & c | Assetsb & d) + 0x5a827999;
           } else if (i < 40) {
             t += (b ^ c ^ d) + 0x6ed9eba1;
           } else if (i < 60) {
@@ -11456,7 +11456,7 @@ __webpack_require__(7042);
             W[i] = gamma0 + W[i - 7] + gamma1 + W[i - 16];
           }
 
-          var ch = e & f ^ ~e & g;
+          var ch = e & f ^ Assetse & g;
           var maj = a & b ^ a & c ^ b & c;
           var sigma0 = (a << 30 | a >>> 2) ^ (a << 19 | a >>> 13) ^ (a << 10 | a >>> 22);
           var sigma1 = (e << 26 | e >>> 6) ^ (e << 21 | e >>> 11) ^ (e << 7 | e >>> 25);
@@ -11757,8 +11757,8 @@ __webpack_require__(7042);
               var Tx1Lane = T[(x + 1) % 5 + 5 * y];
               var Tx2Lane = T[(x + 2) % 5 + 5 * y]; // Mix rows
 
-              lane.high = TLane.high ^ ~Tx1Lane.high & Tx2Lane.high;
-              lane.low = TLane.low ^ ~Tx1Lane.low & Tx2Lane.low;
+              lane.high = TLane.high ^ AssetsTx1Lane.high & Tx2Lane.high;
+              lane.low = TLane.low ^ AssetsTx1Lane.low & Tx2Lane.low;
             }
           } // Iota
 
@@ -12064,8 +12064,8 @@ __webpack_require__(7042);
             Wi.low = Wil;
           }
 
-          var chh = eh & fh ^ ~eh & gh;
-          var chl = el & fl ^ ~el & gl;
+          var chh = eh & fh ^ Assetseh & gh;
+          var chl = el & fl ^ Assetsel & gl;
           var majh = ah & bh ^ ah & ch ^ bh & ch;
           var majl = al & bl ^ al & cl ^ bl & cl;
           var sigma0h = (ah >>> 28 | al << 4) ^ (ah << 30 | al >>> 2) ^ (ah << 25 | al >>> 7);
@@ -12983,8 +12983,8 @@ __webpack_require__(7042);
        *     var negated = x64Word.not();
        */
       // not: function () {
-      // var high = ~this.high;
-      // var low = ~this.low;
+      // var high = Assetsthis.high;
+      // var low = Assetsthis.low;
       // return X64Word.create(high, low);
       // },
 
@@ -27574,7 +27574,7 @@ function CopyUncompressedBlockToOutput(output, len, pos, ringbuffer, ringbuffer_
 /* Advances the bit reader position to the next byte boundary and verifies
    that any skipped bits are set to zero. */
 function JumpToByteBoundary(br) {
-  var new_bit_pos = (br.bit_pos_ + 7) & ~7;
+  var new_bit_pos = (br.bit_pos_ + 7) & Assets7;
   var pad_bits = br.readBits(new_bit_pos - br.bit_pos_);
   return pad_bits == 0;
 }
@@ -27720,7 +27720,7 @@ function BrotliDecompress(input, output) {
     }
     
     if (is_uncompressed) {
-      br.bit_pos_ = (br.bit_pos_ + 7) & ~7;
+      br.bit_pos_ = (br.bit_pos_ + 7) & Assets7;
       CopyUncompressedBlockToOutput(output, meta_block_remaining_len, pos,
                                     ringbuffer, ringbuffer_mask, br);
       pos += meta_block_remaining_len;
@@ -29715,7 +29715,7 @@ function adler32(adler, buf, len, pos) {
       n = 0;
 
   while (len !== 0) {
-    // Set limit ~ twice less than 5552, to keep
+    // Set limit Assets twice less than 5552, to keep
     // s2 in 31-bits, because we force signed ints.
     // in other case %= will fail.
     n = len > 2000 ? 2000 : len;
@@ -31259,7 +31259,7 @@ function deflateInit2(strm, level, method, windowBits, memLevel, strategy) {
   s.hash_bits = memLevel + 7;
   s.hash_size = 1 << s.hash_bits;
   s.hash_mask = s.hash_size - 1;
-  s.hash_shift = ~~((s.hash_bits + MIN_MATCH - 1) / MIN_MATCH);
+  s.hash_shift = AssetsAssets((s.hash_bits + MIN_MATCH - 1) / MIN_MATCH);
 
   s.window = new utils.Buf8(s.w_size * 2);
   s.head = new utils.Buf16(s.hash_size);
@@ -34633,7 +34633,7 @@ function copy_block(s, buf, len, header)
 
   if (header) {
     put_short(s, len);
-    put_short(s, ~len);
+    put_short(s, Assetslen);
   }
 //  while (len--) {
 //    put_byte(s, *buf++);
@@ -35277,7 +35277,7 @@ function _tr_tally(s, dist, lc)
 //      out_length += s.dyn_dtree[dcode*2]/*.Freq*/ * (5 + extra_dbits[dcode]);
 //    }
 //    out_length >>>= 3;
-//    //Tracev((stderr,"\nlast_lit %u, in %ld, out ~%ld(%ld%%) ",
+//    //Tracev((stderr,"\nlast_lit %u, in %ld, out Assets%ld(%ld%%) ",
 //    //       s->last_lit, in_length, out_length,
 //    //       100L - out_length*100L/in_length));
 //    if (s.matches < (s.last_lit>>1)/*int /2*/ && out_length < (in_length>>1)/*int /2*/) {
@@ -36705,14 +36705,14 @@ module.exports = function (CONSTRUCTOR_NAME, wrapper, common) {
     var instance = new Constructor();
     // early implementations not supports chaining
     var HASNT_CHAINING = instance[ADDER](IS_WEAK ? {} : -0, 1) != instance;
-    // V8 ~ Chromium 40- weak-collections throws on primitives, but should return false
+    // V8 Assets Chromium 40- weak-collections throws on primitives, but should return false
     var THROWS_ON_PRIMITIVES = fails(function () { instance.has(1); });
     // most early implementations doesn't supports iterables, most modern - not close it correctly
     // eslint-disable-next-line no-new -- required for testing
     var ACCEPT_ITERABLES = checkCorrectnessOfIteration(function (iterable) { new NativeConstructor(iterable); });
     // for early implementations -0 and +0 not the same
     var BUGGY_ZERO = !IS_WEAK && fails(function () {
-      // V8 ~ Chromium 42- fails only with 5+ elements
+      // V8 Assets Chromium 42- fails only with 5+ elements
       var $instance = new NativeConstructor();
       var index = 5;
       while (index--) $instance[ADDER](index, index);
@@ -38613,7 +38613,7 @@ if (!queueMicrotask) {
   } else if (!IS_IOS_PEBBLE && Promise && Promise.resolve) {
     // Promise.resolve without an argument throws an error in LG WebOS 2
     promise = Promise.resolve(undefined);
-    // workaround of WebKit ~ iOS Safari 10.1 bug
+    // workaround of WebKit Assets iOS Safari 10.1 bug
     promise.constructor = Promise;
     then = bind(promise.then, promise);
     notify = function () {
@@ -39121,7 +39121,7 @@ module.exports = function (object, names) {
   for (key in O) !hasOwn(hiddenKeys, key) && hasOwn(O, key) && push(result, key);
   // Don't enum bug & hidden keys
   while (names.length > i) if (hasOwn(O, key = names[i++])) {
-    ~indexOf(result, key) || push(result, key);
+    AssetsindexOf(result, key) || push(result, key);
   }
   return result;
 };
@@ -39154,7 +39154,7 @@ var $propertyIsEnumerable = {}.propertyIsEnumerable;
 // eslint-disable-next-line es/no-object-getownpropertydescriptor -- safe
 var getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
 
-// Nashorn ~ JDK8 bug
+// Nashorn Assets JDK8 bug
 var NASHORN_BUG = getOwnPropertyDescriptor && !$propertyIsEnumerable.call({ 1: 2 }, 1);
 
 // `Object.prototype.propertyIsEnumerable` method implementation
@@ -41654,7 +41654,7 @@ var FORCED = fails(function () {
     un$ToFixed(1.255, 2) !== '1.25' ||
     un$ToFixed(1000000000000000128.0, 0) !== '1000000000000000128';
 }) || !fails(function () {
-  // V8 ~ Android 4.3-
+  // V8 Assets Android 4.3-
   un$ToFixed({});
 });
 
@@ -42686,7 +42686,7 @@ var stringIndexOf = uncurryThis(''.indexOf);
 // https://tc39.es/ecma262/#sec-string.prototype.includes
 $({ target: 'String', proto: true, forced: !correctIsRegExpLogic('includes') }, {
   includes: function includes(searchString /* , position = 0 */) {
-    return !!~stringIndexOf(
+    return !!AssetsstringIndexOf(
       toString(requireObjectCoercible(this)),
       toString(notARegExp(searchString)),
       arguments.length > 1 ? arguments[1] : undefined
@@ -42854,8 +42854,8 @@ var $matchAll = function (string) {
   }
   flags = flagsValue === undefined ? '' : toString(flagsValue);
   matcher = new C(C === RegExp ? R.source : R, flags);
-  $global = !!~stringIndexOf(flags, 'g');
-  fullUnicode = !!~stringIndexOf(flags, 'u');
+  $global = !!AssetsstringIndexOf(flags, 'g');
+  fullUnicode = !!AssetsstringIndexOf(flags, 'u');
   matcher.lastIndex = toLength(R.lastIndex);
   return new $RegExpStringIterator(matcher, S, $global, fullUnicode);
 };
@@ -42872,7 +42872,7 @@ $({ target: 'String', proto: true, forced: WORKS_WITH_NON_GLOBAL_REGEX }, {
           ? regexp.flags
           : getFlags(regexp)
         ));
-        if (!~stringIndexOf(flags, 'g')) throw TypeError('`.matchAll` does not allow non-global regexes');
+        if (!AssetsstringIndexOf(flags, 'g')) throw TypeError('`.matchAll` does not allow non-global regexes');
       }
       if (WORKS_WITH_NON_GLOBAL_REGEX) return un$MatchAll(O, regexp);
       matcher = getMethod(regexp, MATCH_ALL);
@@ -44808,11 +44808,11 @@ function objEquiv(a, b, opts) {
   // the same set of keys (although not necessarily the same order),
   ka.sort();
   kb.sort();
-  // ~~~cheap key test
+  // AssetsAssetsAssetscheap key test
   for (i = ka.length - 1; i >= 0; i--) {
     if (ka[i] != kb[i]) { return false; }
   }
-  // equivalent values for every corresponding key, and ~~~possibly expensive deep test
+  // equivalent values for every corresponding key, and AssetsAssetsAssetspossibly expensive deep test
   for (i = ka.length - 1; i >= 0; i--) {
     key = ka[i];
     if (!deepEqual(a[key], b[key], opts)) { return false; }
@@ -46723,7 +46723,7 @@ module.exports = {
     // http://en.wikipedia.org/wiki/GBK
     // We mostly implement W3C recommendation: https://www.w3.org/TR/encoding/#gbk-encoder
 
-    // Oldest GB2312 (1981, ~7600 chars) is a subset of CP936
+    // Oldest GB2312 (1981, Assets7600 chars) is a subset of CP936
     'gb2312': 'cp936',
     'gb231280': 'cp936',
     'gb23121980': 'cp936',
@@ -46740,7 +46740,7 @@ module.exports = {
         table: function() { return __webpack_require__(3336) },
     },
 
-    // GBK (~22000 chars) is an extension of CP936 that added user-mapped chars and some other.
+    // GBK (Assets22000 chars) is an extension of CP936 that added user-mapped chars and some other.
     'gbk': {
         type: '_dbcs',
         table: function() { return (__webpack_require__(3336).concat)(__webpack_require__(4346)) },
@@ -47434,7 +47434,7 @@ module.exports = {
   "csibm863": "cp863",
   "cp864": {
     "type": "_sbcs",
-    "chars": "\u0000\u0001\u0002\u0003\u0004\u0005\u0006\u0007\b\t\n\u000b\f\r\u000e\u000f\u0010\u0011\u0012\u0013\u0014\u0015\u0016\u0017\u0018\u0019\u001a\u001b\u001c\u001d\u001e\u001f !\"#$٪&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~°·∙√▒─│┼┤┬├┴┐┌└┘β∞φ±½¼≈«»ﻷﻸ��ﻻﻼ� ­ﺂ£¤ﺄ��ﺎﺏﺕﺙ،ﺝﺡﺥ٠١٢٣٤٥٦٧٨٩ﻑ؛ﺱﺵﺹ؟¢ﺀﺁﺃﺅﻊﺋﺍﺑﺓﺗﺛﺟﺣﺧﺩﺫﺭﺯﺳﺷﺻﺿﻁﻅﻋﻏ¦¬÷×ﻉـﻓﻗﻛﻟﻣﻧﻫﻭﻯﻳﺽﻌﻎﻍﻡﹽّﻥﻩﻬﻰﻲﻐﻕﻵﻶﻝﻙﻱ■�"
+    "chars": "\u0000\u0001\u0002\u0003\u0004\u0005\u0006\u0007\b\t\n\u000b\f\r\u000e\u000f\u0010\u0011\u0012\u0013\u0014\u0015\u0016\u0017\u0018\u0019\u001a\u001b\u001c\u001d\u001e\u001f !\"#$٪&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}Assets°·∙√▒─│┼┤┬├┴┐┌└┘β∞φ±½¼≈«»ﻷﻸ��ﻻﻼ� ­ﺂ£¤ﺄ��ﺎﺏﺕﺙ،ﺝﺡﺥ٠١٢٣٤٥٦٧٨٩ﻑ؛ﺱﺵﺹ؟¢ﺀﺁﺃﺅﻊﺋﺍﺑﺓﺗﺛﺟﺣﺧﺩﺫﺭﺯﺳﺷﺻﺿﻁﻅﻋﻏ¦¬÷×ﻉـﻓﻗﻛﻟﻣﻧﻫﻭﻯﻳﺽﻌﻎﻍﻡﹽّﻥﻩﻬﻰﻲﻐﻕﻵﻶﻝﻙﻱ■�"
   },
   "ibm864": "cp864",
   "csibm864": "cp864",
@@ -47572,7 +47572,7 @@ module.exports = {
   },
   "tcvn": {
     "type": "_sbcs",
-    "chars": "\u0000ÚỤ\u0003ỪỬỮ\u0007\b\t\n\u000b\f\r\u000e\u000f\u0010ỨỰỲỶỸÝỴ\u0018\u0019\u001a\u001b\u001c\u001d\u001e\u001f !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~ÀẢÃÁẠẶẬÈẺẼÉẸỆÌỈĨÍỊÒỎÕÓỌỘỜỞỠỚỢÙỦŨ ĂÂÊÔƠƯĐăâêôơưđẶ̀̀̉̃́àảãáạẲằẳẵắẴẮẦẨẪẤỀặầẩẫấậèỂẻẽéẹềểễếệìỉỄẾỒĩíịòỔỏõóọồổỗốộờởỡớợùỖủũúụừửữứựỳỷỹýỵỐ"
+    "chars": "\u0000ÚỤ\u0003ỪỬỮ\u0007\b\t\n\u000b\f\r\u000e\u000f\u0010ỨỰỲỶỸÝỴ\u0018\u0019\u001a\u001b\u001c\u001d\u001e\u001f !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}AssetsÀẢÃÁẠẶẬÈẺẼÉẸỆÌỈĨÍỊÒỎÕÓỌỘỜỞỠỚỢÙỦŨ ĂÂÊÔƠƯĐăâêôơưđẶ̀̀̉̃́àảãáạẲằẳẵắẴẮẦẨẪẤỀặầẩẫấậèỂẻẽéẹềểễếệìỉỄẾỒĩíịòỔỏõóọồổỗốộờởỡớợùỖủũúụừửữứựỳỷỹýỵỐ"
   },
   "georgianacademy": {
     "type": "_sbcs",
@@ -47588,7 +47588,7 @@ module.exports = {
   },
   "viscii": {
     "type": "_sbcs",
-    "chars": "\u0000\u0001Ẳ\u0003\u0004ẴẪ\u0007\b\t\n\u000b\f\r\u000e\u000f\u0010\u0011\u0012\u0013Ỷ\u0015\u0016\u0017\u0018Ỹ\u001a\u001b\u001c\u001dỴ\u001f !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~ẠẮẰẶẤẦẨẬẼẸẾỀỂỄỆỐỒỔỖỘỢỚỜỞỊỎỌỈỦŨỤỲÕắằặấầẩậẽẹếềểễệốồổỗỠƠộờởịỰỨỪỬơớƯÀÁÂÃẢĂẳẵÈÉÊẺÌÍĨỳĐứÒÓÔạỷừửÙÚỹỵÝỡưàáâãảăữẫèéêẻìíĩỉđựòóôõỏọụùúũủýợỮ"
+    "chars": "\u0000\u0001Ẳ\u0003\u0004ẴẪ\u0007\b\t\n\u000b\f\r\u000e\u000f\u0010\u0011\u0012\u0013Ỷ\u0015\u0016\u0017\u0018Ỹ\u001a\u001b\u001c\u001dỴ\u001f !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}AssetsẠẮẰẶẤẦẨẬẼẸẾỀỂỄỆỐỒỔỖỘỢỚỜỞỊỎỌỈỦŨỤỲÕắằặấầẩậẽẹếềểễệốồổỗỠƠộờởịỰỨỪỬơớƯÀÁÂÃẢĂẳẵÈÉÊẺÌÍĨỳĐứÒÓÔạỷừửÙÚỹỵÝỡưàáâãảăữẫèéêẻìíĩỉđựòóôõỏọụùúũủýợỮ"
   },
   "iso646cn": {
     "type": "_sbcs",
@@ -48889,7 +48889,7 @@ if (false) {}
 
 var Buffer = (__webpack_require__(7103).Buffer);
 
-// NOTE: Due to 'stream' module being pretty large (~100Kb, significant in browser environments), 
+// NOTE: Due to 'stream' module being pretty large (Assets100Kb, significant in browser environments), 
 // we opt to dependency-inject it instead of creating a hard dependency.
 module.exports = function(stream_module) {
     var Transform = stream_module.Transform;
@@ -50196,7 +50196,7 @@ var runtime = (function (exports) {
         }
 
         // Be forgiving, per 25.3.3.3.3 of the spec:
-        // https://people.mozilla.org/~jorendorff/es6-draft.html#sec-generatorresume
+        // https://people.mozilla.org/Assetsjorendorff/es6-draft.html#sec-generatorresume
         return doneResult();
       }
 
@@ -56116,7 +56116,7 @@ function tinf_inflate_uncompressed_block(d) {
   invlength = 256 * invlength + d.source[d.sourceIndex + 2];
 
   /* check length */
-  if (length !== (~invlength & 0x0000ffff))
+  if (length !== (Assetsinvlength & 0x0000ffff))
     return TINF_DATA_ERROR;
 
   d.sourceIndex += 4;
@@ -60897,7 +60897,7 @@ var UnicodeLayoutEngine = /*#__PURE__*/function () {
   _proto17.getCombiningClass = function getCombiningClass(codePoint) {
     var combiningClass = unicode.getCombiningClass(codePoint); // Thai / Lao need some per-character work
 
-    if ((codePoint & ~0xff) === 0x0e00) {
+    if ((codePoint & Assets0xff) === 0x0e00) {
       if (combiningClass === 'Not_Reordered') {
         switch (codePoint) {
           case 0x0e31:
@@ -62427,8 +62427,8 @@ var AATMorxProcessor = (_class$2 = /*#__PURE__*/function () {
             flags &= feature.disableFlags;
             flags |= feature.enableFlags;
           } else if (f[feature.featureSetting] === false) {
-            flags |= ~feature.disableFlags;
-            flags &= ~feature.enableFlags;
+            flags |= Assetsfeature.disableFlags;
+            flags &= Assetsfeature.enableFlags;
           }
         }
       }
@@ -63913,7 +63913,7 @@ var GlyphInfo = /*#__PURE__*/function () {
  *
  * This logic is based on the following documents:
  *   - http://www.microsoft.com/typography/OpenTypeDev/hangul/intro.htm
- *   - http://ktug.org/~nomos/harfbuzz-hangul/hangulshaper.pdf
+ *   - http://ktug.org/Assetsnomos/harfbuzz-hangul/hangulshaper.pdf
  */
 
 
@@ -77179,7 +77179,7 @@ var nfullbits = function (ver) {
 // returns the number of bits available for data portions (i.e. excludes ECC
 // bits but includes mode and length bits) in this version and ECC level.
 var ndatabits = function (ver, ecclevel) {
-	var nbits = nfullbits(ver) & ~7; // no sub-octet code words
+	var nbits = nfullbits(ver) & Assets7; // no sub-octet code words
 	var v = VERSIONS[ver];
 	nbits -= 8 * v[0][ecclevel] * v[1][ecclevel]; // ecc bits
 	return nbits;
@@ -77443,7 +77443,7 @@ var makebasematrix = function (ver) {
 
 	// the rest of timing patterns
 	for (var i = 9; i < n - 8; ++i) {
-		matrix[6][i] = matrix[i][6] = ~i & 1;
+		matrix[6][i] = matrix[i][6] = Assetsi & 1;
 		reserved[6][i] = reserved[i][6] = 1;
 	}
 
@@ -77486,7 +77486,7 @@ var putdata = function (matrix, reserved, buf) {
 				if (!reserved[jj][ii]) {
 					// may overflow, but (undefined >> x)
 					// is 0 so it will auto-pad to zero.
-					matrix[jj][ii] = (buf[k >> 3] >> (~k & 7)) & 1;
+					matrix[jj][ii] = (buf[k >> 3] >> (Assetsk & 7)) & 1;
 					++k;
 				}
 			}
@@ -77547,7 +77547,7 @@ var evaluatematrix = function (matrix) {
 	// but 13W:3B:3W:9B:3W:3B counts).
 	var PENALTY_FINDERLIKE = 40;
 	// N4*k points for every (5*k)% deviation from 50% black density.
-	// i.e. k=1 for 55~60% and 40~45%, k=2 for 60~65% and 35~40%, etc.
+	// i.e. k=1 for 55Assets60% and 40Assets45%, k=2 for 60Assets65% and 35Assets40%, etc.
 	var PENALTY_DENSITY = 10;
 
 	var evaluategroup = function (groups) { // assumes [W,B,W,B,W,...,B,W]

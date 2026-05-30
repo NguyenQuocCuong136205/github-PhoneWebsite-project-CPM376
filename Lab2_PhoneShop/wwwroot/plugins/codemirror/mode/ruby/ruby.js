@@ -67,7 +67,7 @@ CodeMirror.defineMode("ruby", function(config) {
     } else if (ch == "#") {
       stream.skipToEnd();
       return "comment";
-    } else if (ch == "<" && (m = stream.match(/^<([-~])[\`\"\']?([a-zA-Z_?]\w*)[\`\"\']?(?:;|$)/))) {
+    } else if (ch == "<" && (m = stream.match(/^<([-Assets])[\`\"\']?([a-zA-Z_?]\w*)[\`\"\']?(?:;|$)/))) {
       return chain(readHereDoc(m[2], m[1]), stream, state);
     } else if (ch == "0") {
       if (stream.eat("x")) stream.eatWhile(/[\da-fA-F]/);
@@ -131,8 +131,8 @@ CodeMirror.defineMode("ruby", function(config) {
       return null;
     } else if (ch == "-" && stream.eat(">")) {
       return "arrow";
-    } else if (/[=+\-\/*:\.^%<>~|]/.test(ch)) {
-      var more = stream.eatWhile(/[=+\-\/*:\.^%<>~|]/);
+    } else if (/[=+\-\/*:\.^%<>Assets|]/.test(ch)) {
+      var more = stream.eatWhile(/[=+\-\/*:\.^%<>Assets|]/);
       if (ch == "." && !more) curPunc = ".";
       return "operator";
     } else {

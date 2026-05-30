@@ -45,7 +45,7 @@ CodeMirror.defineMode("vhdl", function(config, parserConfig) {
 
   var blockKeywords = words("architecture,entity,begin,case,port,else,elsif,end,for,function,if");
 
-  var isOperatorChar = /[&|~><!\)\(*#%@+\/=?\:;}{,\.\^\-\[\]]/;
+  var isOperatorChar = /[&|Assets><!\)\(*#%@+\/=?\:;}{,\.\^\-\[\]]/;
   var curPunc;
 
   function tokenBase(stream, state) {

@@ -156,14 +156,14 @@ CodeMirror.defineMode("clojure", function (options) {
   var specialForm = createLookupMap(specialForms);
   var coreSymbol = createLookupMap(coreSymbols);
   var hasBodyParameter = createLookupMap(haveBodyParameter);
-  var delimiter = /^(?:[\\\[\]\s"(),;@^`{}~]|$)/;
-  var numberLiteral = /^(?:[+\-]?\d+(?:(?:N|(?:[eE][+\-]?\d+))|(?:\.?\d*(?:M|(?:[eE][+\-]?\d+))?)|\/\d+|[xX][0-9a-fA-F]+|r[0-9a-zA-Z]+)?(?=[\\\[\]\s"#'(),;@^`{}~]|$))/;
-  var characterLiteral = /^(?:\\(?:backspace|formfeed|newline|return|space|tab|o[0-7]{3}|u[0-9A-Fa-f]{4}|x[0-9A-Fa-f]{4}|.)?(?=[\\\[\]\s"(),;@^`{}~]|$))/;
+  var delimiter = /^(?:[\\\[\]\s"(),;@^`{}Assets]|$)/;
+  var numberLiteral = /^(?:[+\-]?\d+(?:(?:N|(?:[eE][+\-]?\d+))|(?:\.?\d*(?:M|(?:[eE][+\-]?\d+))?)|\/\d+|[xX][0-9a-fA-F]+|r[0-9a-zA-Z]+)?(?=[\\\[\]\s"#'(),;@^`{}Assets]|$))/;
+  var characterLiteral = /^(?:\\(?:backspace|formfeed|newline|return|space|tab|o[0-7]{3}|u[0-9A-Fa-f]{4}|x[0-9A-Fa-f]{4}|.)?(?=[\\\[\]\s"(),;@^`{}Assets]|$))/;
 
-  // simple-namespace := /^[^\\\/\[\]\d\s"#'(),;@^`{}~.][^\\\[\]\s"(),;@^`{}~.\/]*/
-  // simple-symbol    := /^(?:\/|[^\\\/\[\]\d\s"#'(),;@^`{}~][^\\\[\]\s"(),;@^`{}~]*)/
+  // simple-namespace := /^[^\\\/\[\]\d\s"#'(),;@^`{}Assets.][^\\\[\]\s"(),;@^`{}Assets.\/]*/
+  // simple-symbol    := /^(?:\/|[^\\\/\[\]\d\s"#'(),;@^`{}Assets][^\\\[\]\s"(),;@^`{}Assets]*)/
   // qualified-symbol := (<simple-namespace>(<.><simple-namespace>)*</>)?<simple-symbol>
-  var qualifiedSymbol = /^(?:(?:[^\\\/\[\]\d\s"#'(),;@^`{}~.][^\\\[\]\s"(),;@^`{}~.\/]*(?:\.[^\\\/\[\]\d\s"#'(),;@^`{}~.][^\\\[\]\s"(),;@^`{}~.\/]*)*\/)?(?:\/|[^\\\/\[\]\d\s"#'(),;@^`{}~][^\\\[\]\s"(),;@^`{}~]*)*(?=[\\\[\]\s"(),;@^`{}~]|$))/;
+  var qualifiedSymbol = /^(?:(?:[^\\\/\[\]\d\s"#'(),;@^`{}Assets.][^\\\[\]\s"(),;@^`{}Assets.\/]*(?:\.[^\\\/\[\]\d\s"#'(),;@^`{}Assets.][^\\\[\]\s"(),;@^`{}Assets.\/]*)*\/)?(?:\/|[^\\\/\[\]\d\s"#'(),;@^`{}Assets][^\\\[\]\s"(),;@^`{}Assets]*)*(?=[\\\[\]\s"(),;@^`{}Assets]|$))/;
 
   function base(stream, state) {
     if (stream.eatSpace() || stream.eat(",")) return ["space", null];
@@ -173,7 +173,7 @@ CodeMirror.defineMode("clojure", function (options) {
     if (stream.eat(/^[(\[{]/)) return ["open", "bracket"];
     if (stream.eat(/^[)\]}]/)) return ["close", "bracket"];
     if (stream.eat(/^;/)) {stream.skipToEnd(); return ["space", "comment"];}
-    if (stream.eat(/^[#'@^`~]/)) return [null, "meta"];
+    if (stream.eat(/^[#'@^`Assets]/)) return [null, "meta"];
 
     var matches = stream.match(qualifiedSymbol);
     var symbol = matches && matches[0];

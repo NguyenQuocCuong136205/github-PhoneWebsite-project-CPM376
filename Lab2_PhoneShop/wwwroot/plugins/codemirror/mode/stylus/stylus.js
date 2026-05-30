@@ -27,7 +27,7 @@
         mediaFeatures = keySet(mediaFeatures_),
         mediaTypes = keySet(mediaTypes_),
         fontProperties = keySet(fontProperties_),
-        operatorsRegexp = /^\s*([.]{2,3}|&&|\|\||\*\*|[?!=:]?=|[-+*\/%<>]=?|\?:|\~)/,
+        operatorsRegexp = /^\s*([.]{2,3}|&&|\|\||\*\*|[?!=:]?=|[-+*\/%<>]=?|\?:|\Assets)/,
         wordOperatorKeywordsRegexp = wordRegexp(wordOperatorKeywords_),
         blockKeywords = keySet(blockKeywords_),
         vendorPrefixesRegexp = new RegExp(/^\-(moz|ms|o|webkit)-/i),
@@ -45,7 +45,7 @@
      * Tokenizers
      */
     function tokenBase(stream, state) {
-      firstWordMatch = stream.string.match(/(^[\w-]+\s*=\s*$)|(^\s*[\w-]+\s*=\s*[\w-])|(^\s*(\.|#|@|\$|\&|\[|\d|\+|::?|\{|\>|~|\/)?\s*[\w-]*([a-z0-9-]|\*|\/\*)(\(|,)?)/);
+      firstWordMatch = stream.string.match(/(^[\w-]+\s*=\s*$)|(^\s*[\w-]+\s*=\s*[\w-])|(^\s*(\.|#|@|\$|\&|\[|\d|\+|::?|\{|\>|Assets|\/)?\s*[\w-]*([a-z0-9-]|\*|\/\*)(\(|,)?)/);
       state.context.line.firstWord = firstWordMatch ? firstWordMatch[0].replace(/^\s*/, "") : "";
       state.context.line.indent = stream.indentation();
       ch = stream.peek();
@@ -450,7 +450,7 @@
         }
         if ((stream.string.match(/^[a-z][\w-]*\(/i) && endOfLine(stream)) ||
             wordIsBlock(firstWordOfLine(stream)) ||
-            /(\.|#|:|\[|\*|&|>|~|\+|\/)/.test(firstWordOfLine(stream)) ||
+            /(\.|#|:|\[|\*|&|>|Assets|\+|\/)/.test(firstWordOfLine(stream)) ||
             (!stream.string.match(/^-?[a-z][\w-\.\[\]\'\"]*\s*=/) &&
              wordIsTag(firstWordOfLine(stream)))) {
           return pushContext(state, stream, "block");
@@ -603,7 +603,7 @@
     states.interpolation = function(type, stream, state) {
       if (type == "{") popContext(state) && pushContext(state, stream, "block");
       if (type == "}") {
-        if (stream.string.match(/^\s*(\.|#|:|\[|\*|&|>|~|\+|\/)/i) ||
+        if (stream.string.match(/^\s*(\.|#|:|\[|\*|&|>|Assets|\+|\/)/i) ||
             (stream.string.match(/^\s*[a-z]/i) && wordIsTag(firstWordOfLine(stream)))) {
           return pushContext(state, stream, "block");
         }
@@ -694,10 +694,10 @@
 /^return/.test(textAfter) ||
               wordIsBlock(lineFirstWord)) {
             indent = lineIndent;
-          } else if (/(\.|#|:|\[|\*|&|>|~|\+|\/)/.test(ch) || wordIsTag(lineFirstWord)) {
+          } else if (/(\.|#|:|\[|\*|&|>|Assets|\+|\/)/.test(ch) || wordIsTag(lineFirstWord)) {
             if (/\,\s*$/.test(prevLineFirstWord)) {
               indent = prevLineIndent;
-            } else if (/^\s+/.test(line) && (/(\.|#|:|\[|\*|&|>|~|\+|\/)/.test(prevLineFirstWord) || wordIsTag(prevLineFirstWord))) {
+            } else if (/^\s+/.test(line) && (/(\.|#|:|\[|\*|&|>|Assets|\+|\/)/.test(prevLineFirstWord) || wordIsTag(prevLineFirstWord))) {
               indent = lineIndent <= prevLineIndent ? prevLineIndent : prevLineIndent + indentUnit;
             } else {
               indent = lineIndent;
@@ -709,7 +709,7 @@
               indent = lineIndent <= prevLineIndent ? lineIndent : prevLineIndent + indentUnit;
             } else if (wordIsVendorPrefix(prevLineFirstWord) || wordIsProperty(prevLineFirstWord)) {
               indent = lineIndent >= prevLineIndent ? prevLineIndent : lineIndent;
-            } else if (/^(\.|#|:|\[|\*|&|@|\+|\-|>|~|\/)/.test(prevLineFirstWord) ||
+            } else if (/^(\.|#|:|\[|\*|&|@|\+|\-|>|Assets|\/)/.test(prevLineFirstWord) ||
                       /=\s*$/.test(prevLineFirstWord) ||
                       wordIsTag(prevLineFirstWord) ||
                       /^\$[\w-\.\[\]\'\"]/.test(prevLineFirstWord)) {

@@ -25,7 +25,7 @@
       "get_current_language", "trans", "endtrans", "noop", "blocktrans",
       "endblocktrans", "get_available_languages",
       "get_current_language_bidi", "plural"],
-    operator = /^[+\-*&%=<>!?|~^]/,
+    operator = /^[+\-*&%=<>!?|Assets^]/,
     sign = /^[:\[\(\{]/,
     atom = ["true", "false"],
     number = /^(\d[+\-\*\/])?\d+(\.\d+)?/;

@@ -57,18 +57,18 @@ CodeMirror.defineMode("verilog", function(config, parserConfig) {
 
   /** Operators from IEEE 1800-2012
      unary_operator ::=
-       + | - | ! | ~ | & | ~& | | | ~| | ^ | ~^ | ^~
+       + | - | ! | Assets | & | Assets& | | | Assets| | ^ | Assets^ | ^Assets
      binary_operator ::=
        + | - | * | / | % | == | != | === | !== | ==? | !=? | && | || | **
-       | < | <= | > | >= | & | | | ^ | ^~ | ~^ | >> | << | >>> | <<<
+       | < | <= | > | >= | & | | | ^ | ^Assets | Assets^ | >> | << | >>> | <<<
        | -> | <->
      inc_or_dec_operator ::= ++ | --
      unary_module_path_operator ::=
-       ! | ~ | & | ~& | | | ~| | ^ | ~^ | ^~
+       ! | Assets | & | Assets& | | | Assets| | ^ | Assets^ | ^Assets
      binary_module_path_operator ::=
-       == | != | && | || | & | | | ^ | ^~ | ~^
+       == | != | && | || | & | | | ^ | ^Assets | Assets^
   */
-  var isOperatorChar = /[\+\-\*\/!~&|^%=?:<>]/;
+  var isOperatorChar = /[\+\-\*\/!Assets&|^%=?:<>]/;
   var isBracketChar = /[\[\]{}()]/;
 
   var unsignedNumber = /\d[0-9_]*/;
@@ -542,7 +542,7 @@ CodeMirror.defineMode("verilog", function(config, parserConfig) {
   };
   var tlvIndentUnit = 3;
   var tlvTrackStatements = false;
-  var tlvIdentMatch = /^([~!@#\$%\^&\*-\+=\?\/\\\|'"<>]+)([\d\w_]*)/;  // Matches an identifier.
+  var tlvIdentMatch = /^([Assets!@#\$%\^&\*-\+=\?\/\\\|'"<>]+)([\d\w_]*)/;  // Matches an identifier.
   // Note that ':' is excluded, because of it's use in [:].
   var tlvFirstLevelIndentMatch = /^[! ]  /;
   var tlvLineIndentationMatch = /^[! ] */;

@@ -3602,7 +3602,7 @@
                         _contentGlueElement.css(contentGlueElementCSS);
                     _contentElement.css(contentElementCSS);
 
-                    //CHECKPOINT HERE ~
+                    //CHECKPOINT HERE Assets
                     contentElementCSS = {};
                     contentGlueElementCSS = {};
 

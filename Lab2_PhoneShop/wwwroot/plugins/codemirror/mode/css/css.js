@@ -46,7 +46,7 @@ CodeMirror.defineMode("css", function(config, parserConfig) {
     if (ch == "@") {
       stream.eatWhile(/[\w\\\-]/);
       return ret("def", stream.current());
-    } else if (ch == "=" || (ch == "~" || ch == "|") && stream.eat("=")) {
+    } else if (ch == "=" || (ch == "Assets" || ch == "|") && stream.eat("=")) {
       return ret(null, "compare");
     } else if (ch == "\"" || ch == "'") {
       state.tokenize = tokenString(ch);

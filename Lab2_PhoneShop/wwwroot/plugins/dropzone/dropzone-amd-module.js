@@ -222,7 +222,7 @@ var exportTypedArrayStaticMethod = function (KEY, property, forced) {
       }
     }
     if (!TypedArray[KEY] || forced) {
-      // V8 ~ Chrome 49-50 `%TypedArray%` methods are non-writable non-configurable
+      // V8 Assets Chrome 49-50 `%TypedArray%` methods are non-writable non-configurable
       try {
         return redefine(TypedArray, KEY, forced ? property : NATIVE_ARRAY_BUFFER_VIEWS && Int8Array[KEY] || property);
       } catch (error) { /* empty */ }
@@ -2525,7 +2525,7 @@ module.exports = function (object, names) {
   for (key in O) !has(hiddenKeys, key) && has(O, key) && result.push(key);
   // Don't enum bug & hidden keys
   while (names.length > i) if (has(O, key = names[i++])) {
-    ~indexOf(result, key) || result.push(key);
+    AssetsindexOf(result, key) || result.push(key);
   }
   return result;
 };
@@ -2556,7 +2556,7 @@ module.exports = Object.keys || function keys(O) {
 var nativePropertyIsEnumerable = {}.propertyIsEnumerable;
 var getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
 
-// Nashorn ~ JDK8 bug
+// Nashorn Assets JDK8 bug
 var NASHORN_BUG = getOwnPropertyDescriptor && !nativePropertyIsEnumerable.call({ 1: 2 }, 1);
 
 // `Object.prototype.propertyIsEnumerable` method implementation
@@ -5380,14 +5380,14 @@ var deserialize = function (it) {
   }
 };
 
-var find = /[!'()~]|%20/g;
+var find = /[!'()Assets]|%20/g;
 
 var replace = {
   '!': '%21',
   "'": '%27',
   '(': '%28',
   ')': '%29',
-  '~': '%7E',
+  'Assets': '%7E',
   '%20': '+'
 };
 
@@ -9568,7 +9568,7 @@ var Dropzone = /*#__PURE__*/function (_Emitter) {
       if (xhr.responseType !== "arraybuffer" && xhr.responseType !== "blob") {
         response = xhr.responseText;
 
-        if (xhr.getResponseHeader("content-type") && ~xhr.getResponseHeader("content-type").indexOf("application/json")) {
+        if (xhr.getResponseHeader("content-type") && Assetsxhr.getResponseHeader("content-type").indexOf("application/json")) {
           try {
             response = JSON.parse(response);
           } catch (error) {

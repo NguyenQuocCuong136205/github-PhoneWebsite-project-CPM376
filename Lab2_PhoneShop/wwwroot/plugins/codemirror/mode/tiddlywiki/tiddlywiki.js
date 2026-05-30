@@ -120,14 +120,14 @@ CodeMirror.defineMode("tiddlywiki", function () {
     // rudimentary html:// file:// link matching. TW knows much more ...
     if (/[hf]/i.test(ch) &&
         /[ti]/i.test(stream.peek()) &&
-        stream.match(/\b(ttps?|tp|ile):\/\/[\-A-Z0-9+&@#\/%?=~_|$!:,.;]*[A-Z0-9+&@#\/%=~_|$]/i))
+        stream.match(/\b(ttps?|tp|ile):\/\/[\-A-Z0-9+&@#\/%?=Assets_|$!:,.;]*[A-Z0-9+&@#\/%=Assets_|$]/i))
       return "link";
 
     // just a little string indicator, don't want to have the whole string covered
     if (ch == '"')
       return 'string';
 
-    if (ch == '~')    // _no_ CamelCase indicator should be bold
+    if (ch == 'Assets')    // _no_ CamelCase indicator should be bold
       return 'brace';
 
     if (/[\[\]]/.test(ch) && stream.match(ch)) // check for [[..]]

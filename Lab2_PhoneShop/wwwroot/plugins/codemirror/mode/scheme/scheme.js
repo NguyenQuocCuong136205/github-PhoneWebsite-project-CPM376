@@ -155,7 +155,7 @@ CodeMirror.defineMode("scheme", function () {
                             } // else already in a quoted expression
                             returnType = ATOM;
                         } else {
-                            stream.eatWhile(/[\w_\-!$%&*+\.\/:<=>?@\^~]/);
+                            stream.eatWhile(/[\w_\-!$%&*+\.\/:<=>?@\^Assets]/);
                             returnType = ATOM;
                         }
                     } else if (ch == '|') {
@@ -258,7 +258,7 @@ CodeMirror.defineMode("scheme", function () {
                             }
                         }
                     } else {
-                        stream.eatWhile(/[\w_\-!$%&*+\.\/:<=>?@\^~]/);
+                        stream.eatWhile(/[\w_\-!$%&*+\.\/:<=>?@\^Assets]/);
 
                         if (keywords && keywords.propertyIsEnumerable(stream.current())) {
                             returnType = BUILTIN;

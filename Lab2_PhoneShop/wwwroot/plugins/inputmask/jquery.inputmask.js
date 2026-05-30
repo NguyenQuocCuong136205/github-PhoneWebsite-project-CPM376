@@ -314,7 +314,7 @@
                                 return i;
                             }(0, c, p);
                             var h = function(e, a, r) {
-                                for (var o, s, l, c = e.substr(0, r.begin).split(""), f = e.substr(r.begin).split(""), d = a.substr(0, r.begin).split(""), p = a.substr(r.begin).split(""), h = c.length >= d.length ? c.length : d.length, m = f.length >= p.length ? f.length : p.length, v = "", g = [], k = "~"; c.length < h; ) c.push(k);
+                                for (var o, s, l, c = e.substr(0, r.begin).split(""), f = e.substr(r.begin).split(""), d = a.substr(0, r.begin).split(""), p = a.substr(r.begin).split(""), h = c.length >= d.length ? c.length : d.length, m = f.length >= p.length ? f.length : p.length, v = "", g = [], k = "Assets"; c.length < h; ) c.push(k);
                                 for (;d.length < h; ) d.push(k);
                                 for (;f.length < m; ) f.unshift(k);
                                 for (;p.length < m; ) p.unshift(k);
@@ -989,7 +989,7 @@
                         },
                         definitions: {
                             "*": {
-                                validator: "[0-9\uff11-\uff19A-Za-z\u0410-\u044f\u0401\u0451\xc0-\xff\xb5!#$%&'*+/=?^_`{|}~-]"
+                                validator: "[0-9\uff11-\uff19A-Za-z\u0410-\u044f\u0401\u0451\xc0-\xff\xb5!#$%&'*+/=?^_`{|}Assets-]"
                             },
                             "-": {
                                 validator: "[0-9A-Za-z-]"

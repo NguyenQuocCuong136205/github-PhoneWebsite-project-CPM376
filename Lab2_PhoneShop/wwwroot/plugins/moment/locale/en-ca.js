@@ -57,7 +57,7 @@
         ordinal: function (number) {
             var b = number % 10,
                 output =
-                    ~~((number % 100) / 10) === 1
+                    AssetsAssets((number % 100) / 10) === 1
                         ? 'th'
                         : b === 1
                         ? 'st'

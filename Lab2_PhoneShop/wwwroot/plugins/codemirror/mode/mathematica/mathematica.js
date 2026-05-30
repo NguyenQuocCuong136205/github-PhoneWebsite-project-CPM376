@@ -82,7 +82,7 @@ CodeMirror.defineMode('mathematica', function(_config, _parserConfig) {
 
     // this makes a look-ahead match for something like variable:{_Integer}
     // the match is then forwarded to the mma-patterns tokenizer.
-    if (stream.match(/([a-zA-Z\$][a-zA-Z0-9\$]*\s*:)(?:(?:[a-zA-Z\$][a-zA-Z0-9\$]*)|(?:[^:=>~@\^\&\*\)\[\]'\?,\|])).*/, true, false)) {
+    if (stream.match(/([a-zA-Z\$][a-zA-Z0-9\$]*\s*:)(?:(?:[a-zA-Z\$][a-zA-Z0-9\$]*)|(?:[^:=>Assets@\^\&\*\)\[\]'\?,\|])).*/, true, false)) {
       return 'variable-2';
     }
 
@@ -121,7 +121,7 @@ CodeMirror.defineMode('mathematica', function(_config, _parserConfig) {
     }
 
     // operators. Note that operators like @@ or /; are matched separately for each symbol.
-    if (stream.match(/(?:\\|\+|\-|\*|\/|,|;|\.|:|@|~|=|>|<|&|\||_|`|'|\^|\?|!|%)/, true, false)) {
+    if (stream.match(/(?:\\|\+|\-|\*|\/|,|;|\.|:|@|Assets|=|>|<|&|\||_|`|'|\^|\?|!|%)/, true, false)) {
       return 'operator';
     }
 

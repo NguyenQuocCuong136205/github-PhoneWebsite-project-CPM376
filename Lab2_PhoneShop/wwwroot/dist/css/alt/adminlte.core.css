@@ -2205,8 +2205,8 @@ textarea.form-control {
   margin-left: -1.25rem;
 }
 
-.form-check-input[disabled] ~ .form-check-label,
-.form-check-input:disabled ~ .form-check-label {
+.form-check-input[disabled] Assets .form-check-label,
+.form-check-input:disabled Assets .form-check-label {
   color: #6c757d;
 }
 
@@ -2259,10 +2259,10 @@ textarea.form-control {
   left: 5px;
 }
 
-.was-validated :valid ~ .valid-feedback,
-.was-validated :valid ~ .valid-tooltip,
-.is-valid ~ .valid-feedback,
-.is-valid ~ .valid-tooltip {
+.was-validated :valid Assets .valid-feedback,
+.was-validated :valid Assets .valid-tooltip,
+.is-valid Assets .valid-feedback,
+.is-valid Assets .valid-tooltip {
   display: block;
 }
 
@@ -2301,42 +2301,42 @@ textarea.form-control {
   box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.25);
 }
 
-.was-validated .form-check-input:valid ~ .form-check-label, .form-check-input.is-valid ~ .form-check-label {
+.was-validated .form-check-input:valid Assets .form-check-label, .form-check-input.is-valid Assets .form-check-label {
   color: #28a745;
 }
 
-.was-validated .form-check-input:valid ~ .valid-feedback,
-.was-validated .form-check-input:valid ~ .valid-tooltip, .form-check-input.is-valid ~ .valid-feedback,
-.form-check-input.is-valid ~ .valid-tooltip {
+.was-validated .form-check-input:valid Assets .valid-feedback,
+.was-validated .form-check-input:valid Assets .valid-tooltip, .form-check-input.is-valid Assets .valid-feedback,
+.form-check-input.is-valid Assets .valid-tooltip {
   display: block;
 }
 
-.was-validated .custom-control-input:valid ~ .custom-control-label, .custom-control-input.is-valid ~ .custom-control-label {
+.was-validated .custom-control-input:valid Assets .custom-control-label, .custom-control-input.is-valid Assets .custom-control-label {
   color: #28a745;
 }
 
-.was-validated .custom-control-input:valid ~ .custom-control-label::before, .custom-control-input.is-valid ~ .custom-control-label::before {
+.was-validated .custom-control-input:valid Assets .custom-control-label::before, .custom-control-input.is-valid Assets .custom-control-label::before {
   border-color: #28a745;
 }
 
-.was-validated .custom-control-input:valid:checked ~ .custom-control-label::before, .custom-control-input.is-valid:checked ~ .custom-control-label::before {
+.was-validated .custom-control-input:valid:checked Assets .custom-control-label::before, .custom-control-input.is-valid:checked Assets .custom-control-label::before {
   border-color: #34ce57;
   background-color: #34ce57;
 }
 
-.was-validated .custom-control-input:valid:focus ~ .custom-control-label::before, .custom-control-input.is-valid:focus ~ .custom-control-label::before {
+.was-validated .custom-control-input:valid:focus Assets .custom-control-label::before, .custom-control-input.is-valid:focus Assets .custom-control-label::before {
   box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.25);
 }
 
-.was-validated .custom-control-input:valid:focus:not(:checked) ~ .custom-control-label::before, .custom-control-input.is-valid:focus:not(:checked) ~ .custom-control-label::before {
+.was-validated .custom-control-input:valid:focus:not(:checked) Assets .custom-control-label::before, .custom-control-input.is-valid:focus:not(:checked) Assets .custom-control-label::before {
   border-color: #28a745;
 }
 
-.was-validated .custom-file-input:valid ~ .custom-file-label, .custom-file-input.is-valid ~ .custom-file-label {
+.was-validated .custom-file-input:valid Assets .custom-file-label, .custom-file-input.is-valid Assets .custom-file-label {
   border-color: #28a745;
 }
 
-.was-validated .custom-file-input:valid:focus ~ .custom-file-label, .custom-file-input.is-valid:focus ~ .custom-file-label {
+.was-validated .custom-file-input:valid:focus Assets .custom-file-label, .custom-file-input.is-valid:focus Assets .custom-file-label {
   border-color: #28a745;
   box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.25);
 }
@@ -2370,10 +2370,10 @@ textarea.form-control {
   left: 5px;
 }
 
-.was-validated :invalid ~ .invalid-feedback,
-.was-validated :invalid ~ .invalid-tooltip,
-.is-invalid ~ .invalid-feedback,
-.is-invalid ~ .invalid-tooltip {
+.was-validated :invalid Assets .invalid-feedback,
+.was-validated :invalid Assets .invalid-tooltip,
+.is-invalid Assets .invalid-feedback,
+.is-invalid Assets .invalid-tooltip {
   display: block;
 }
 
@@ -2412,42 +2412,42 @@ textarea.form-control {
   box-shadow: 0 0 0 0 rgba(220, 53, 69, 0.25);
 }
 
-.was-validated .form-check-input:invalid ~ .form-check-label, .form-check-input.is-invalid ~ .form-check-label {
+.was-validated .form-check-input:invalid Assets .form-check-label, .form-check-input.is-invalid Assets .form-check-label {
   color: #dc3545;
 }
 
-.was-validated .form-check-input:invalid ~ .invalid-feedback,
-.was-validated .form-check-input:invalid ~ .invalid-tooltip, .form-check-input.is-invalid ~ .invalid-feedback,
-.form-check-input.is-invalid ~ .invalid-tooltip {
+.was-validated .form-check-input:invalid Assets .invalid-feedback,
+.was-validated .form-check-input:invalid Assets .invalid-tooltip, .form-check-input.is-invalid Assets .invalid-feedback,
+.form-check-input.is-invalid Assets .invalid-tooltip {
   display: block;
 }
 
-.was-validated .custom-control-input:invalid ~ .custom-control-label, .custom-control-input.is-invalid ~ .custom-control-label {
+.was-validated .custom-control-input:invalid Assets .custom-control-label, .custom-control-input.is-invalid Assets .custom-control-label {
   color: #dc3545;
 }
 
-.was-validated .custom-control-input:invalid ~ .custom-control-label::before, .custom-control-input.is-invalid ~ .custom-control-label::before {
+.was-validated .custom-control-input:invalid Assets .custom-control-label::before, .custom-control-input.is-invalid Assets .custom-control-label::before {
   border-color: #dc3545;
 }
 
-.was-validated .custom-control-input:invalid:checked ~ .custom-control-label::before, .custom-control-input.is-invalid:checked ~ .custom-control-label::before {
+.was-validated .custom-control-input:invalid:checked Assets .custom-control-label::before, .custom-control-input.is-invalid:checked Assets .custom-control-label::before {
   border-color: #e4606d;
   background-color: #e4606d;
 }
 
-.was-validated .custom-control-input:invalid:focus ~ .custom-control-label::before, .custom-control-input.is-invalid:focus ~ .custom-control-label::before {
+.was-validated .custom-control-input:invalid:focus Assets .custom-control-label::before, .custom-control-input.is-invalid:focus Assets .custom-control-label::before {
   box-shadow: 0 0 0 0 rgba(220, 53, 69, 0.25);
 }
 
-.was-validated .custom-control-input:invalid:focus:not(:checked) ~ .custom-control-label::before, .custom-control-input.is-invalid:focus:not(:checked) ~ .custom-control-label::before {
+.was-validated .custom-control-input:invalid:focus:not(:checked) Assets .custom-control-label::before, .custom-control-input.is-invalid:focus:not(:checked) Assets .custom-control-label::before {
   border-color: #dc3545;
 }
 
-.was-validated .custom-file-input:invalid ~ .custom-file-label, .custom-file-input.is-invalid ~ .custom-file-label {
+.was-validated .custom-file-input:invalid Assets .custom-file-label, .custom-file-input.is-invalid Assets .custom-file-label {
   border-color: #dc3545;
 }
 
-.was-validated .custom-file-input:invalid:focus ~ .custom-file-label, .custom-file-input.is-invalid:focus ~ .custom-file-label {
+.was-validated .custom-file-input:invalid:focus Assets .custom-file-label, .custom-file-input.is-invalid:focus Assets .custom-file-label {
   border-color: #dc3545;
   box-shadow: 0 0 0 0 rgba(220, 53, 69, 0.25);
 }
@@ -3644,7 +3644,7 @@ input[type="button"].btn-block {
 
 .input-group > .form-control:focus,
 .input-group > .custom-select:focus,
-.input-group > .custom-file .custom-file-input:focus ~ .custom-file-label {
+.input-group > .custom-file .custom-file-input:focus Assets .custom-file-label {
   z-index: 3;
 }
 
@@ -3837,33 +3837,33 @@ input[type="button"].btn-block {
   opacity: 0;
 }
 
-.custom-control-input:checked ~ .custom-control-label::before {
+.custom-control-input:checked Assets .custom-control-label::before {
   color: #fff;
   border-color: #007bff;
   background-color: #007bff;
   box-shadow: none;
 }
 
-.custom-control-input:focus ~ .custom-control-label::before {
+.custom-control-input:focus Assets .custom-control-label::before {
   box-shadow: inset 0 0 0 rgba(0, 0, 0, 0), 0 0 0 1px #fff, 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
-.custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
+.custom-control-input:focus:not(:checked) Assets .custom-control-label::before {
   border-color: #80bdff;
 }
 
-.custom-control-input:not(:disabled):active ~ .custom-control-label::before {
+.custom-control-input:not(:disabled):active Assets .custom-control-label::before {
   color: #fff;
   background-color: #b3d7ff;
   border-color: #b3d7ff;
   box-shadow: none;
 }
 
-.custom-control-input[disabled] ~ .custom-control-label, .custom-control-input:disabled ~ .custom-control-label {
+.custom-control-input[disabled] Assets .custom-control-label, .custom-control-input:disabled Assets .custom-control-label {
   color: #6c757d;
 }
 
-.custom-control-input[disabled] ~ .custom-control-label::before, .custom-control-input:disabled ~ .custom-control-label::before {
+.custom-control-input[disabled] Assets .custom-control-label::before, .custom-control-input:disabled Assets .custom-control-label::before {
   background-color: #e9ecef;
 }
 
@@ -3902,25 +3902,25 @@ input[type="button"].btn-block {
   border-radius: 0.25rem;
 }
 
-.custom-checkbox .custom-control-input:checked ~ .custom-control-label::after {
+.custom-checkbox .custom-control-input:checked Assets .custom-control-label::after {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
 }
 
-.custom-checkbox .custom-control-input:indeterminate ~ .custom-control-label::before {
+.custom-checkbox .custom-control-input:indeterminate Assets .custom-control-label::before {
   border-color: #007bff;
   background-color: #007bff;
   box-shadow: none;
 }
 
-.custom-checkbox .custom-control-input:indeterminate ~ .custom-control-label::after {
+.custom-checkbox .custom-control-input:indeterminate Assets .custom-control-label::after {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 4'%3E%3Cpath stroke='%23fff' d='M0 2h4'/%3E%3C/svg%3E");
 }
 
-.custom-checkbox .custom-control-input:disabled:checked ~ .custom-control-label::before {
+.custom-checkbox .custom-control-input:disabled:checked Assets .custom-control-label::before {
   background-color: rgba(0, 123, 255, 0.5);
 }
 
-.custom-checkbox .custom-control-input:disabled:indeterminate ~ .custom-control-label::before {
+.custom-checkbox .custom-control-input:disabled:indeterminate Assets .custom-control-label::before {
   background-color: rgba(0, 123, 255, 0.5);
 }
 
@@ -3928,11 +3928,11 @@ input[type="button"].btn-block {
   border-radius: 50%;
 }
 
-.custom-radio .custom-control-input:checked ~ .custom-control-label::after {
+.custom-radio .custom-control-input:checked Assets .custom-control-label::after {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='%23fff'/%3E%3C/svg%3E");
 }
 
-.custom-radio .custom-control-input:disabled:checked ~ .custom-control-label::before {
+.custom-radio .custom-control-input:disabled:checked Assets .custom-control-label::before {
   background-color: rgba(0, 123, 255, 0.5);
 }
 
@@ -3965,13 +3965,13 @@ input[type="button"].btn-block {
   }
 }
 
-.custom-switch .custom-control-input:checked ~ .custom-control-label::after {
+.custom-switch .custom-control-input:checked Assets .custom-control-label::after {
   background-color: #dee2e6;
   -webkit-transform: translateX(0.75rem);
   transform: translateX(0.75rem);
 }
 
-.custom-switch .custom-control-input:disabled:checked ~ .custom-control-label::before {
+.custom-switch .custom-control-input:disabled:checked Assets .custom-control-label::before {
   background-color: rgba(0, 123, 255, 0.5);
 }
 
@@ -4059,21 +4059,21 @@ input[type="button"].btn-block {
   opacity: 0;
 }
 
-.custom-file-input:focus ~ .custom-file-label {
+.custom-file-input:focus Assets .custom-file-label {
   border-color: #80bdff;
   box-shadow: none;
 }
 
-.custom-file-input[disabled] ~ .custom-file-label,
-.custom-file-input:disabled ~ .custom-file-label {
+.custom-file-input[disabled] Assets .custom-file-label,
+.custom-file-input:disabled Assets .custom-file-label {
   background-color: #e9ecef;
 }
 
-.custom-file-input:lang(en) ~ .custom-file-label::after {
+.custom-file-input:lang(en) Assets .custom-file-label::after {
   content: "Browse";
 }
 
-.custom-file-input ~ .custom-file-label[data-browse]::after {
+.custom-file-input Assets .custom-file-label[data-browse]::after {
   content: attr(data-browse);
 }
 
@@ -10717,7 +10717,7 @@ body,
   top: calc(3.5rem + 1px);
 }
 
-.layout-navbar-fixed.layout-fixed .wrapper .main-header.text-sm ~ .control-sidebar {
+.layout-navbar-fixed.layout-fixed .wrapper .main-header.text-sm Assets .control-sidebar {
   top: calc(2.93725rem + 1px);
 }
 
@@ -10725,7 +10725,7 @@ body,
   margin-top: calc(3.5rem + 1px);
 }
 
-.layout-navbar-fixed.layout-fixed .wrapper .brand-link.text-sm ~ .sidebar {
+.layout-navbar-fixed.layout-fixed .wrapper .brand-link.text-sm Assets .sidebar {
   margin-top: calc(2.93725rem + 1px);
 }
 
@@ -11004,7 +11004,7 @@ body:not(.layout-fixed).layout-navbar-fixed.text-sm .wrapper .main-sidebar .side
   background-color: #fff;
 }
 
-.layout-navbar-fixed .wrapper .main-header.border-bottom-0 ~ .content-wrapper {
+.layout-navbar-fixed .wrapper .main-header.border-bottom-0 Assets .content-wrapper {
   margin-top: 3.5rem;
 }
 
@@ -11012,7 +11012,7 @@ body:not(.layout-fixed).layout-navbar-fixed.text-sm .wrapper .main-sidebar .side
   margin-top: calc(3.5rem + 1px);
 }
 
-.layout-navbar-fixed .wrapper .main-header.text-sm ~ .content-wrapper {
+.layout-navbar-fixed .wrapper .main-header.text-sm Assets .content-wrapper {
   margin-top: calc(2.93725rem + 1px);
 }
 
@@ -11049,8 +11049,8 @@ body:not(.layout-fixed).layout-navbar-fixed.text-sm .wrapper .main-sidebar .side
   top: calc(3.5rem + 1px);
 }
 
-.text-sm .layout-navbar-fixed.layout-fixed .wrapper .main-header ~ .control-sidebar,
-.layout-navbar-fixed.layout-fixed .wrapper .main-header.text-sm ~ .control-sidebar {
+.text-sm .layout-navbar-fixed.layout-fixed .wrapper .main-header Assets .control-sidebar,
+.layout-navbar-fixed.layout-fixed .wrapper .main-header.text-sm Assets .control-sidebar {
   top: calc(2.93725rem + 1px);
 }
 
@@ -11058,8 +11058,8 @@ body:not(.layout-fixed).layout-navbar-fixed.text-sm .wrapper .main-sidebar .side
   margin-top: calc(3.5rem + 1px);
 }
 
-.text-sm .layout-navbar-fixed.layout-fixed .wrapper .brand-link ~ .sidebar,
-.layout-navbar-fixed.layout-fixed .wrapper .brand-link.text-sm ~ .sidebar {
+.text-sm .layout-navbar-fixed.layout-fixed .wrapper .brand-link Assets .sidebar,
+.layout-navbar-fixed.layout-fixed .wrapper .brand-link.text-sm Assets .sidebar {
   margin-top: calc(2.93725rem + 1px);
 }
 
@@ -11109,8 +11109,8 @@ body:not(.layout-fixed).layout-navbar-fixed.text-sm .wrapper .main-sidebar .side
   margin-top: calc(3.5rem + 1px);
 }
 
-.text-sm .layout-navbar-fixed .wrapper .main-header ~ .content-wrapper,
-.layout-navbar-fixed .wrapper .main-header.text-sm ~ .content-wrapper {
+.text-sm .layout-navbar-fixed .wrapper .main-header Assets .content-wrapper,
+.layout-navbar-fixed .wrapper .main-header.text-sm Assets .content-wrapper {
   margin-top: calc(2.93725rem + 1px);
 }
 
@@ -11155,15 +11155,15 @@ body:not(.layout-fixed).layout-navbar-fixed.text-sm .wrapper .main-sidebar .side
   .layout-sm-navbar-fixed.layout-fixed .wrapper .control-sidebar {
     top: calc(3.5rem + 1px);
   }
-  .text-sm .layout-sm-navbar-fixed.layout-fixed .wrapper .main-header ~ .control-sidebar,
-  .layout-sm-navbar-fixed.layout-fixed .wrapper .main-header.text-sm ~ .control-sidebar {
+  .text-sm .layout-sm-navbar-fixed.layout-fixed .wrapper .main-header Assets .control-sidebar,
+  .layout-sm-navbar-fixed.layout-fixed .wrapper .main-header.text-sm Assets .control-sidebar {
     top: calc(2.93725rem + 1px);
   }
   .layout-sm-navbar-fixed.layout-fixed .wrapper .sidebar {
     margin-top: calc(3.5rem + 1px);
   }
-  .text-sm .layout-sm-navbar-fixed.layout-fixed .wrapper .brand-link ~ .sidebar,
-  .layout-sm-navbar-fixed.layout-fixed .wrapper .brand-link.text-sm ~ .sidebar {
+  .text-sm .layout-sm-navbar-fixed.layout-fixed .wrapper .brand-link Assets .sidebar,
+  .layout-sm-navbar-fixed.layout-fixed .wrapper .brand-link.text-sm Assets .sidebar {
     margin-top: calc(2.93725rem + 1px);
   }
   .layout-sm-navbar-fixed.layout-fixed.text-sm .wrapper .control-sidebar {
@@ -11203,8 +11203,8 @@ body:not(.layout-fixed).layout-navbar-fixed.text-sm .wrapper .main-sidebar .side
   .layout-sm-navbar-fixed .wrapper .content-wrapper {
     margin-top: calc(3.5rem + 1px);
   }
-  .text-sm .layout-sm-navbar-fixed .wrapper .main-header ~ .content-wrapper,
-  .layout-sm-navbar-fixed .wrapper .main-header.text-sm ~ .content-wrapper {
+  .text-sm .layout-sm-navbar-fixed .wrapper .main-header Assets .content-wrapper,
+  .layout-sm-navbar-fixed .wrapper .main-header.text-sm Assets .content-wrapper {
     margin-top: calc(2.93725rem + 1px);
   }
   .layout-sm-navbar-fixed .wrapper .main-header {
@@ -11242,15 +11242,15 @@ body:not(.layout-fixed).layout-navbar-fixed.text-sm .wrapper .main-sidebar .side
   .layout-md-navbar-fixed.layout-fixed .wrapper .control-sidebar {
     top: calc(3.5rem + 1px);
   }
-  .text-sm .layout-md-navbar-fixed.layout-fixed .wrapper .main-header ~ .control-sidebar,
-  .layout-md-navbar-fixed.layout-fixed .wrapper .main-header.text-sm ~ .control-sidebar {
+  .text-sm .layout-md-navbar-fixed.layout-fixed .wrapper .main-header Assets .control-sidebar,
+  .layout-md-navbar-fixed.layout-fixed .wrapper .main-header.text-sm Assets .control-sidebar {
     top: calc(2.93725rem + 1px);
   }
   .layout-md-navbar-fixed.layout-fixed .wrapper .sidebar {
     margin-top: calc(3.5rem + 1px);
   }
-  .text-sm .layout-md-navbar-fixed.layout-fixed .wrapper .brand-link ~ .sidebar,
-  .layout-md-navbar-fixed.layout-fixed .wrapper .brand-link.text-sm ~ .sidebar {
+  .text-sm .layout-md-navbar-fixed.layout-fixed .wrapper .brand-link Assets .sidebar,
+  .layout-md-navbar-fixed.layout-fixed .wrapper .brand-link.text-sm Assets .sidebar {
     margin-top: calc(2.93725rem + 1px);
   }
   .layout-md-navbar-fixed.layout-fixed.text-sm .wrapper .control-sidebar {
@@ -11290,8 +11290,8 @@ body:not(.layout-fixed).layout-navbar-fixed.text-sm .wrapper .main-sidebar .side
   .layout-md-navbar-fixed .wrapper .content-wrapper {
     margin-top: calc(3.5rem + 1px);
   }
-  .text-sm .layout-md-navbar-fixed .wrapper .main-header ~ .content-wrapper,
-  .layout-md-navbar-fixed .wrapper .main-header.text-sm ~ .content-wrapper {
+  .text-sm .layout-md-navbar-fixed .wrapper .main-header Assets .content-wrapper,
+  .layout-md-navbar-fixed .wrapper .main-header.text-sm Assets .content-wrapper {
     margin-top: calc(2.93725rem + 1px);
   }
   .layout-md-navbar-fixed .wrapper .main-header {
@@ -11329,15 +11329,15 @@ body:not(.layout-fixed).layout-navbar-fixed.text-sm .wrapper .main-sidebar .side
   .layout-lg-navbar-fixed.layout-fixed .wrapper .control-sidebar {
     top: calc(3.5rem + 1px);
   }
-  .text-sm .layout-lg-navbar-fixed.layout-fixed .wrapper .main-header ~ .control-sidebar,
-  .layout-lg-navbar-fixed.layout-fixed .wrapper .main-header.text-sm ~ .control-sidebar {
+  .text-sm .layout-lg-navbar-fixed.layout-fixed .wrapper .main-header Assets .control-sidebar,
+  .layout-lg-navbar-fixed.layout-fixed .wrapper .main-header.text-sm Assets .control-sidebar {
     top: calc(2.93725rem + 1px);
   }
   .layout-lg-navbar-fixed.layout-fixed .wrapper .sidebar {
     margin-top: calc(3.5rem + 1px);
   }
-  .text-sm .layout-lg-navbar-fixed.layout-fixed .wrapper .brand-link ~ .sidebar,
-  .layout-lg-navbar-fixed.layout-fixed .wrapper .brand-link.text-sm ~ .sidebar {
+  .text-sm .layout-lg-navbar-fixed.layout-fixed .wrapper .brand-link Assets .sidebar,
+  .layout-lg-navbar-fixed.layout-fixed .wrapper .brand-link.text-sm Assets .sidebar {
     margin-top: calc(2.93725rem + 1px);
   }
   .layout-lg-navbar-fixed.layout-fixed.text-sm .wrapper .control-sidebar {
@@ -11377,8 +11377,8 @@ body:not(.layout-fixed).layout-navbar-fixed.text-sm .wrapper .main-sidebar .side
   .layout-lg-navbar-fixed .wrapper .content-wrapper {
     margin-top: calc(3.5rem + 1px);
   }
-  .text-sm .layout-lg-navbar-fixed .wrapper .main-header ~ .content-wrapper,
-  .layout-lg-navbar-fixed .wrapper .main-header.text-sm ~ .content-wrapper {
+  .text-sm .layout-lg-navbar-fixed .wrapper .main-header Assets .content-wrapper,
+  .layout-lg-navbar-fixed .wrapper .main-header.text-sm Assets .content-wrapper {
     margin-top: calc(2.93725rem + 1px);
   }
   .layout-lg-navbar-fixed .wrapper .main-header {
@@ -11416,15 +11416,15 @@ body:not(.layout-fixed).layout-navbar-fixed.text-sm .wrapper .main-sidebar .side
   .layout-xl-navbar-fixed.layout-fixed .wrapper .control-sidebar {
     top: calc(3.5rem + 1px);
   }
-  .text-sm .layout-xl-navbar-fixed.layout-fixed .wrapper .main-header ~ .control-sidebar,
-  .layout-xl-navbar-fixed.layout-fixed .wrapper .main-header.text-sm ~ .control-sidebar {
+  .text-sm .layout-xl-navbar-fixed.layout-fixed .wrapper .main-header Assets .control-sidebar,
+  .layout-xl-navbar-fixed.layout-fixed .wrapper .main-header.text-sm Assets .control-sidebar {
     top: calc(2.93725rem + 1px);
   }
   .layout-xl-navbar-fixed.layout-fixed .wrapper .sidebar {
     margin-top: calc(3.5rem + 1px);
   }
-  .text-sm .layout-xl-navbar-fixed.layout-fixed .wrapper .brand-link ~ .sidebar,
-  .layout-xl-navbar-fixed.layout-fixed .wrapper .brand-link.text-sm ~ .sidebar {
+  .text-sm .layout-xl-navbar-fixed.layout-fixed .wrapper .brand-link Assets .sidebar,
+  .layout-xl-navbar-fixed.layout-fixed .wrapper .brand-link.text-sm Assets .sidebar {
     margin-top: calc(2.93725rem + 1px);
   }
   .layout-xl-navbar-fixed.layout-fixed.text-sm .wrapper .control-sidebar {
@@ -11464,8 +11464,8 @@ body:not(.layout-fixed).layout-navbar-fixed.text-sm .wrapper .main-sidebar .side
   .layout-xl-navbar-fixed .wrapper .content-wrapper {
     margin-top: calc(3.5rem + 1px);
   }
-  .text-sm .layout-xl-navbar-fixed .wrapper .main-header ~ .content-wrapper,
-  .layout-xl-navbar-fixed .wrapper .main-header.text-sm ~ .content-wrapper {
+  .text-sm .layout-xl-navbar-fixed .wrapper .main-header Assets .content-wrapper,
+  .layout-xl-navbar-fixed .wrapper .main-header.text-sm Assets .content-wrapper {
     margin-top: calc(2.93725rem + 1px);
   }
   .layout-xl-navbar-fixed .wrapper .main-header {
@@ -12602,7 +12602,7 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
   height: .5rem;
 }
 
-.brand-link.border-bottom-0 ~ .sidebar {
+.brand-link.border-bottom-0 Assets .sidebar {
   height: calc(100% - 3.5rem);
 }
 
@@ -13718,7 +13718,7 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
 }
 
 .sidebar-collapse .form-control-sidebar,
-.sidebar-collapse .form-control-sidebar ~ .input-group-append,
+.sidebar-collapse .form-control-sidebar Assets .input-group-append,
 .sidebar-collapse .sidebar-search-results {
   display: none;
 }
@@ -14815,7 +14815,7 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
   display: inline-block;
 }
 
-.sidebar-collapse.sidebar-mini .main-sidebar.sidebar-focused:not(.sidebar-no-expand) .form-control-sidebar ~ .input-group-append, .sidebar-collapse.sidebar-mini .main-sidebar:hover:not(.sidebar-no-expand) .form-control-sidebar ~ .input-group-append, .sidebar-collapse.sidebar-mini-md .main-sidebar.sidebar-focused:not(.sidebar-no-expand) .form-control-sidebar ~ .input-group-append, .sidebar-collapse.sidebar-mini-md .main-sidebar:hover:not(.sidebar-no-expand) .form-control-sidebar ~ .input-group-append, .sidebar-collapse.sidebar-mini-xs .main-sidebar.sidebar-focused:not(.sidebar-no-expand) .form-control-sidebar ~ .input-group-append, .sidebar-collapse.sidebar-mini-xs .main-sidebar:hover:not(.sidebar-no-expand) .form-control-sidebar ~ .input-group-append {
+.sidebar-collapse.sidebar-mini .main-sidebar.sidebar-focused:not(.sidebar-no-expand) .form-control-sidebar Assets .input-group-append, .sidebar-collapse.sidebar-mini .main-sidebar:hover:not(.sidebar-no-expand) .form-control-sidebar Assets .input-group-append, .sidebar-collapse.sidebar-mini-md .main-sidebar.sidebar-focused:not(.sidebar-no-expand) .form-control-sidebar Assets .input-group-append, .sidebar-collapse.sidebar-mini-md .main-sidebar:hover:not(.sidebar-no-expand) .form-control-sidebar Assets .input-group-append, .sidebar-collapse.sidebar-mini-xs .main-sidebar.sidebar-focused:not(.sidebar-no-expand) .form-control-sidebar Assets .input-group-append, .sidebar-collapse.sidebar-mini-xs .main-sidebar:hover:not(.sidebar-no-expand) .form-control-sidebar Assets .input-group-append {
   display: -ms-flexbox;
   display: flex;
 }
@@ -15081,11 +15081,11 @@ body.text-sm .control-sidebar {
   top: calc(2.93725rem + 1px);
 }
 
-.main-header.text-sm ~ .control-sidebar {
+.main-header.text-sm Assets .control-sidebar {
   top: calc(2.93725rem + 1px);
 }
 
-.main-footer.text-sm ~ .control-sidebar {
+.main-footer.text-sm Assets .control-sidebar {
   bottom: calc(2.9365rem + 1px);
 }
 
@@ -24796,19 +24796,19 @@ a.text-muted:hover {
   color: #fff;
 }
 
-.accent-primary .custom-control-input:checked ~ .custom-control-label::before {
+.accent-primary .custom-control-input:checked Assets .custom-control-label::before {
   background-color: #007bff;
   border-color: #004a99;
 }
 
-.accent-primary .custom-control-input:checked ~ .custom-control-label::after {
+.accent-primary .custom-control-input:checked Assets .custom-control-label::after {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
 }
 
 .accent-primary .form-control:focus:not(.is-invalid):not(.is-warning):not(.is-valid),
 .accent-primary .custom-select:focus,
-.accent-primary .custom-control-input:focus:not(:checked) ~ .custom-control-label::before,
-.accent-primary .custom-file-input:focus ~ .custom-file-label {
+.accent-primary .custom-control-input:focus:not(:checked) Assets .custom-control-label::before,
+.accent-primary .custom-file-input:focus Assets .custom-file-label {
   border-color: #80bdff;
 }
 
@@ -24867,19 +24867,19 @@ a.text-muted:hover {
   color: #fff;
 }
 
-.accent-secondary .custom-control-input:checked ~ .custom-control-label::before {
+.accent-secondary .custom-control-input:checked Assets .custom-control-label::before {
   background-color: #6c757d;
   border-color: #3d4246;
 }
 
-.accent-secondary .custom-control-input:checked ~ .custom-control-label::after {
+.accent-secondary .custom-control-input:checked Assets .custom-control-label::after {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
 }
 
 .accent-secondary .form-control:focus:not(.is-invalid):not(.is-warning):not(.is-valid),
 .accent-secondary .custom-select:focus,
-.accent-secondary .custom-control-input:focus:not(:checked) ~ .custom-control-label::before,
-.accent-secondary .custom-file-input:focus ~ .custom-file-label {
+.accent-secondary .custom-control-input:focus:not(:checked) Assets .custom-control-label::before,
+.accent-secondary .custom-file-input:focus Assets .custom-file-label {
   border-color: #afb5ba;
 }
 
@@ -24938,19 +24938,19 @@ a.text-muted:hover {
   color: #fff;
 }
 
-.accent-success .custom-control-input:checked ~ .custom-control-label::before {
+.accent-success .custom-control-input:checked Assets .custom-control-label::before {
   background-color: #28a745;
   border-color: #145523;
 }
 
-.accent-success .custom-control-input:checked ~ .custom-control-label::after {
+.accent-success .custom-control-input:checked Assets .custom-control-label::after {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
 }
 
 .accent-success .form-control:focus:not(.is-invalid):not(.is-warning):not(.is-valid),
 .accent-success .custom-select:focus,
-.accent-success .custom-control-input:focus:not(:checked) ~ .custom-control-label::before,
-.accent-success .custom-file-input:focus ~ .custom-file-label {
+.accent-success .custom-control-input:focus:not(:checked) Assets .custom-control-label::before,
+.accent-success .custom-file-input:focus Assets .custom-file-label {
   border-color: #71dd8a;
 }
 
@@ -25009,19 +25009,19 @@ a.text-muted:hover {
   color: #fff;
 }
 
-.accent-info .custom-control-input:checked ~ .custom-control-label::before {
+.accent-info .custom-control-input:checked Assets .custom-control-label::before {
   background-color: #17a2b8;
   border-color: #0c525d;
 }
 
-.accent-info .custom-control-input:checked ~ .custom-control-label::after {
+.accent-info .custom-control-input:checked Assets .custom-control-label::after {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
 }
 
 .accent-info .form-control:focus:not(.is-invalid):not(.is-warning):not(.is-valid),
 .accent-info .custom-select:focus,
-.accent-info .custom-control-input:focus:not(:checked) ~ .custom-control-label::before,
-.accent-info .custom-file-input:focus ~ .custom-file-label {
+.accent-info .custom-control-input:focus:not(:checked) Assets .custom-control-label::before,
+.accent-info .custom-file-input:focus Assets .custom-file-label {
   border-color: #63d9ec;
 }
 
@@ -25080,19 +25080,19 @@ a.text-muted:hover {
   color: #1f2d3d;
 }
 
-.accent-warning .custom-control-input:checked ~ .custom-control-label::before {
+.accent-warning .custom-control-input:checked Assets .custom-control-label::before {
   background-color: #ffc107;
   border-color: #a07800;
 }
 
-.accent-warning .custom-control-input:checked ~ .custom-control-label::after {
+.accent-warning .custom-control-input:checked Assets .custom-control-label::after {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%231f2d3d' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
 }
 
 .accent-warning .form-control:focus:not(.is-invalid):not(.is-warning):not(.is-valid),
 .accent-warning .custom-select:focus,
-.accent-warning .custom-control-input:focus:not(:checked) ~ .custom-control-label::before,
-.accent-warning .custom-file-input:focus ~ .custom-file-label {
+.accent-warning .custom-control-input:focus:not(:checked) Assets .custom-control-label::before,
+.accent-warning .custom-file-input:focus Assets .custom-file-label {
   border-color: #ffe187;
 }
 
@@ -25151,19 +25151,19 @@ a.text-muted:hover {
   color: #fff;
 }
 
-.accent-danger .custom-control-input:checked ~ .custom-control-label::before {
+.accent-danger .custom-control-input:checked Assets .custom-control-label::before {
   background-color: #dc3545;
   border-color: #921925;
 }
 
-.accent-danger .custom-control-input:checked ~ .custom-control-label::after {
+.accent-danger .custom-control-input:checked Assets .custom-control-label::after {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
 }
 
 .accent-danger .form-control:focus:not(.is-invalid):not(.is-warning):not(.is-valid),
 .accent-danger .custom-select:focus,
-.accent-danger .custom-control-input:focus:not(:checked) ~ .custom-control-label::before,
-.accent-danger .custom-file-input:focus ~ .custom-file-label {
+.accent-danger .custom-control-input:focus:not(:checked) Assets .custom-control-label::before,
+.accent-danger .custom-file-input:focus Assets .custom-file-label {
   border-color: #efa2a9;
 }
 
@@ -25222,19 +25222,19 @@ a.text-muted:hover {
   color: #1f2d3d;
 }
 
-.accent-light .custom-control-input:checked ~ .custom-control-label::before {
+.accent-light .custom-control-input:checked Assets .custom-control-label::before {
   background-color: #f8f9fa;
   border-color: #bdc6d0;
 }
 
-.accent-light .custom-control-input:checked ~ .custom-control-label::after {
+.accent-light .custom-control-input:checked Assets .custom-control-label::after {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%231f2d3d' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
 }
 
 .accent-light .form-control:focus:not(.is-invalid):not(.is-warning):not(.is-valid),
 .accent-light .custom-select:focus,
-.accent-light .custom-control-input:focus:not(:checked) ~ .custom-control-label::before,
-.accent-light .custom-file-input:focus ~ .custom-file-label {
+.accent-light .custom-control-input:focus:not(:checked) Assets .custom-control-label::before,
+.accent-light .custom-file-input:focus Assets .custom-file-label {
   border-color: white;
 }
 
@@ -25293,19 +25293,19 @@ a.text-muted:hover {
   color: #fff;
 }
 
-.accent-dark .custom-control-input:checked ~ .custom-control-label::before {
+.accent-dark .custom-control-input:checked Assets .custom-control-label::before {
   background-color: #343a40;
   border-color: #060708;
 }
 
-.accent-dark .custom-control-input:checked ~ .custom-control-label::after {
+.accent-dark .custom-control-input:checked Assets .custom-control-label::after {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
 }
 
 .accent-dark .form-control:focus:not(.is-invalid):not(.is-warning):not(.is-valid),
 .accent-dark .custom-select:focus,
-.accent-dark .custom-control-input:focus:not(:checked) ~ .custom-control-label::before,
-.accent-dark .custom-file-input:focus ~ .custom-file-label {
+.accent-dark .custom-control-input:focus:not(:checked) Assets .custom-control-label::before,
+.accent-dark .custom-file-input:focus Assets .custom-file-label {
   border-color: #6d7a86;
 }
 
@@ -25364,19 +25364,19 @@ a.text-muted:hover {
   color: #fff;
 }
 
-.accent-lightblue .custom-control-input:checked ~ .custom-control-label::before {
+.accent-lightblue .custom-control-input:checked Assets .custom-control-label::before {
   background-color: #3c8dbc;
   border-color: #23536f;
 }
 
-.accent-lightblue .custom-control-input:checked ~ .custom-control-label::after {
+.accent-lightblue .custom-control-input:checked Assets .custom-control-label::after {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
 }
 
 .accent-lightblue .form-control:focus:not(.is-invalid):not(.is-warning):not(.is-valid),
 .accent-lightblue .custom-select:focus,
-.accent-lightblue .custom-control-input:focus:not(:checked) ~ .custom-control-label::before,
-.accent-lightblue .custom-file-input:focus ~ .custom-file-label {
+.accent-lightblue .custom-control-input:focus:not(:checked) Assets .custom-control-label::before,
+.accent-lightblue .custom-file-input:focus Assets .custom-file-label {
   border-color: #99c5de;
 }
 
@@ -25435,19 +25435,19 @@ a.text-muted:hover {
   color: #fff;
 }
 
-.accent-navy .custom-control-input:checked ~ .custom-control-label::before {
+.accent-navy .custom-control-input:checked Assets .custom-control-label::before {
   background-color: #001f3f;
   border-color: black;
 }
 
-.accent-navy .custom-control-input:checked ~ .custom-control-label::after {
+.accent-navy .custom-control-input:checked Assets .custom-control-label::after {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
 }
 
 .accent-navy .form-control:focus:not(.is-invalid):not(.is-warning):not(.is-valid),
 .accent-navy .custom-select:focus,
-.accent-navy .custom-control-input:focus:not(:checked) ~ .custom-control-label::before,
-.accent-navy .custom-file-input:focus ~ .custom-file-label {
+.accent-navy .custom-control-input:focus:not(:checked) Assets .custom-control-label::before,
+.accent-navy .custom-file-input:focus Assets .custom-file-label {
   border-color: #005ebf;
 }
 
@@ -25506,19 +25506,19 @@ a.text-muted:hover {
   color: #fff;
 }
 
-.accent-olive .custom-control-input:checked ~ .custom-control-label::before {
+.accent-olive .custom-control-input:checked Assets .custom-control-label::before {
   background-color: #3d9970;
   border-color: #20503b;
 }
 
-.accent-olive .custom-control-input:checked ~ .custom-control-label::after {
+.accent-olive .custom-control-input:checked Assets .custom-control-label::after {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
 }
 
 .accent-olive .form-control:focus:not(.is-invalid):not(.is-warning):not(.is-valid),
 .accent-olive .custom-select:focus,
-.accent-olive .custom-control-input:focus:not(:checked) ~ .custom-control-label::before,
-.accent-olive .custom-file-input:focus ~ .custom-file-label {
+.accent-olive .custom-control-input:focus:not(:checked) Assets .custom-control-label::before,
+.accent-olive .custom-file-input:focus Assets .custom-file-label {
   border-color: #87cfaf;
 }
 
@@ -25577,19 +25577,19 @@ a.text-muted:hover {
   color: #1f2d3d;
 }
 
-.accent-lime .custom-control-input:checked ~ .custom-control-label::before {
+.accent-lime .custom-control-input:checked Assets .custom-control-label::before {
   background-color: #01ff70;
   border-color: #009a43;
 }
 
-.accent-lime .custom-control-input:checked ~ .custom-control-label::after {
+.accent-lime .custom-control-input:checked Assets .custom-control-label::after {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%231f2d3d' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
 }
 
 .accent-lime .form-control:focus:not(.is-invalid):not(.is-warning):not(.is-valid),
 .accent-lime .custom-select:focus,
-.accent-lime .custom-control-input:focus:not(:checked) ~ .custom-control-label::before,
-.accent-lime .custom-file-input:focus ~ .custom-file-label {
+.accent-lime .custom-control-input:focus:not(:checked) Assets .custom-control-label::before,
+.accent-lime .custom-file-input:focus Assets .custom-file-label {
   border-color: #81ffb8;
 }
 
@@ -25648,19 +25648,19 @@ a.text-muted:hover {
   color: #fff;
 }
 
-.accent-fuchsia .custom-control-input:checked ~ .custom-control-label::before {
+.accent-fuchsia .custom-control-input:checked Assets .custom-control-label::before {
   background-color: #f012be;
   border-color: #930974;
 }
 
-.accent-fuchsia .custom-control-input:checked ~ .custom-control-label::after {
+.accent-fuchsia .custom-control-input:checked Assets .custom-control-label::after {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
 }
 
 .accent-fuchsia .form-control:focus:not(.is-invalid):not(.is-warning):not(.is-valid),
 .accent-fuchsia .custom-select:focus,
-.accent-fuchsia .custom-control-input:focus:not(:checked) ~ .custom-control-label::before,
-.accent-fuchsia .custom-file-input:focus ~ .custom-file-label {
+.accent-fuchsia .custom-control-input:focus:not(:checked) Assets .custom-control-label::before,
+.accent-fuchsia .custom-file-input:focus Assets .custom-file-label {
   border-color: #f88adf;
 }
 
@@ -25719,19 +25719,19 @@ a.text-muted:hover {
   color: #fff;
 }
 
-.accent-maroon .custom-control-input:checked ~ .custom-control-label::before {
+.accent-maroon .custom-control-input:checked Assets .custom-control-label::before {
   background-color: #d81b60;
   border-color: #7d1038;
 }
 
-.accent-maroon .custom-control-input:checked ~ .custom-control-label::after {
+.accent-maroon .custom-control-input:checked Assets .custom-control-label::after {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
 }
 
 .accent-maroon .form-control:focus:not(.is-invalid):not(.is-warning):not(.is-valid),
 .accent-maroon .custom-select:focus,
-.accent-maroon .custom-control-input:focus:not(:checked) ~ .custom-control-label::before,
-.accent-maroon .custom-file-input:focus ~ .custom-file-label {
+.accent-maroon .custom-control-input:focus:not(:checked) Assets .custom-control-label::before,
+.accent-maroon .custom-file-input:focus Assets .custom-file-label {
   border-color: #f083ab;
 }
 
@@ -25790,19 +25790,19 @@ a.text-muted:hover {
   color: #fff;
 }
 
-.accent-blue .custom-control-input:checked ~ .custom-control-label::before {
+.accent-blue .custom-control-input:checked Assets .custom-control-label::before {
   background-color: #007bff;
   border-color: #004a99;
 }
 
-.accent-blue .custom-control-input:checked ~ .custom-control-label::after {
+.accent-blue .custom-control-input:checked Assets .custom-control-label::after {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
 }
 
 .accent-blue .form-control:focus:not(.is-invalid):not(.is-warning):not(.is-valid),
 .accent-blue .custom-select:focus,
-.accent-blue .custom-control-input:focus:not(:checked) ~ .custom-control-label::before,
-.accent-blue .custom-file-input:focus ~ .custom-file-label {
+.accent-blue .custom-control-input:focus:not(:checked) Assets .custom-control-label::before,
+.accent-blue .custom-file-input:focus Assets .custom-file-label {
   border-color: #80bdff;
 }
 
@@ -25861,19 +25861,19 @@ a.text-muted:hover {
   color: #fff;
 }
 
-.accent-indigo .custom-control-input:checked ~ .custom-control-label::before {
+.accent-indigo .custom-control-input:checked Assets .custom-control-label::before {
   background-color: #6610f2;
   border-color: #3d0894;
 }
 
-.accent-indigo .custom-control-input:checked ~ .custom-control-label::after {
+.accent-indigo .custom-control-input:checked Assets .custom-control-label::after {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
 }
 
 .accent-indigo .form-control:focus:not(.is-invalid):not(.is-warning):not(.is-valid),
 .accent-indigo .custom-select:focus,
-.accent-indigo .custom-control-input:focus:not(:checked) ~ .custom-control-label::before,
-.accent-indigo .custom-file-input:focus ~ .custom-file-label {
+.accent-indigo .custom-control-input:focus:not(:checked) Assets .custom-control-label::before,
+.accent-indigo .custom-file-input:focus Assets .custom-file-label {
   border-color: #b389f9;
 }
 
@@ -25932,19 +25932,19 @@ a.text-muted:hover {
   color: #fff;
 }
 
-.accent-purple .custom-control-input:checked ~ .custom-control-label::before {
+.accent-purple .custom-control-input:checked Assets .custom-control-label::before {
   background-color: #6f42c1;
   border-color: #432776;
 }
 
-.accent-purple .custom-control-input:checked ~ .custom-control-label::after {
+.accent-purple .custom-control-input:checked Assets .custom-control-label::after {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
 }
 
 .accent-purple .form-control:focus:not(.is-invalid):not(.is-warning):not(.is-valid),
 .accent-purple .custom-select:focus,
-.accent-purple .custom-control-input:focus:not(:checked) ~ .custom-control-label::before,
-.accent-purple .custom-file-input:focus ~ .custom-file-label {
+.accent-purple .custom-control-input:focus:not(:checked) Assets .custom-control-label::before,
+.accent-purple .custom-file-input:focus Assets .custom-file-label {
   border-color: #b8a2e0;
 }
 
@@ -26003,19 +26003,19 @@ a.text-muted:hover {
   color: #fff;
 }
 
-.accent-pink .custom-control-input:checked ~ .custom-control-label::before {
+.accent-pink .custom-control-input:checked Assets .custom-control-label::before {
   background-color: #e83e8c;
   border-color: #ac145a;
 }
 
-.accent-pink .custom-control-input:checked ~ .custom-control-label::after {
+.accent-pink .custom-control-input:checked Assets .custom-control-label::after {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
 }
 
 .accent-pink .form-control:focus:not(.is-invalid):not(.is-warning):not(.is-valid),
 .accent-pink .custom-select:focus,
-.accent-pink .custom-control-input:focus:not(:checked) ~ .custom-control-label::before,
-.accent-pink .custom-file-input:focus ~ .custom-file-label {
+.accent-pink .custom-control-input:focus:not(:checked) Assets .custom-control-label::before,
+.accent-pink .custom-file-input:focus Assets .custom-file-label {
   border-color: #f6b0d0;
 }
 
@@ -26074,19 +26074,19 @@ a.text-muted:hover {
   color: #fff;
 }
 
-.accent-red .custom-control-input:checked ~ .custom-control-label::before {
+.accent-red .custom-control-input:checked Assets .custom-control-label::before {
   background-color: #dc3545;
   border-color: #921925;
 }
 
-.accent-red .custom-control-input:checked ~ .custom-control-label::after {
+.accent-red .custom-control-input:checked Assets .custom-control-label::after {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
 }
 
 .accent-red .form-control:focus:not(.is-invalid):not(.is-warning):not(.is-valid),
 .accent-red .custom-select:focus,
-.accent-red .custom-control-input:focus:not(:checked) ~ .custom-control-label::before,
-.accent-red .custom-file-input:focus ~ .custom-file-label {
+.accent-red .custom-control-input:focus:not(:checked) Assets .custom-control-label::before,
+.accent-red .custom-file-input:focus Assets .custom-file-label {
   border-color: #efa2a9;
 }
 
@@ -26145,19 +26145,19 @@ a.text-muted:hover {
   color: #1f2d3d;
 }
 
-.accent-orange .custom-control-input:checked ~ .custom-control-label::before {
+.accent-orange .custom-control-input:checked Assets .custom-control-label::before {
   background-color: #fd7e14;
   border-color: #aa4e01;
 }
 
-.accent-orange .custom-control-input:checked ~ .custom-control-label::after {
+.accent-orange .custom-control-input:checked Assets .custom-control-label::after {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%231f2d3d' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
 }
 
 .accent-orange .form-control:focus:not(.is-invalid):not(.is-warning):not(.is-valid),
 .accent-orange .custom-select:focus,
-.accent-orange .custom-control-input:focus:not(:checked) ~ .custom-control-label::before,
-.accent-orange .custom-file-input:focus ~ .custom-file-label {
+.accent-orange .custom-control-input:focus:not(:checked) Assets .custom-control-label::before,
+.accent-orange .custom-file-input:focus Assets .custom-file-label {
   border-color: #fec392;
 }
 
@@ -26216,19 +26216,19 @@ a.text-muted:hover {
   color: #1f2d3d;
 }
 
-.accent-yellow .custom-control-input:checked ~ .custom-control-label::before {
+.accent-yellow .custom-control-input:checked Assets .custom-control-label::before {
   background-color: #ffc107;
   border-color: #a07800;
 }
 
-.accent-yellow .custom-control-input:checked ~ .custom-control-label::after {
+.accent-yellow .custom-control-input:checked Assets .custom-control-label::after {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%231f2d3d' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
 }
 
 .accent-yellow .form-control:focus:not(.is-invalid):not(.is-warning):not(.is-valid),
 .accent-yellow .custom-select:focus,
-.accent-yellow .custom-control-input:focus:not(:checked) ~ .custom-control-label::before,
-.accent-yellow .custom-file-input:focus ~ .custom-file-label {
+.accent-yellow .custom-control-input:focus:not(:checked) Assets .custom-control-label::before,
+.accent-yellow .custom-file-input:focus Assets .custom-file-label {
   border-color: #ffe187;
 }
 
@@ -26287,19 +26287,19 @@ a.text-muted:hover {
   color: #fff;
 }
 
-.accent-green .custom-control-input:checked ~ .custom-control-label::before {
+.accent-green .custom-control-input:checked Assets .custom-control-label::before {
   background-color: #28a745;
   border-color: #145523;
 }
 
-.accent-green .custom-control-input:checked ~ .custom-control-label::after {
+.accent-green .custom-control-input:checked Assets .custom-control-label::after {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
 }
 
 .accent-green .form-control:focus:not(.is-invalid):not(.is-warning):not(.is-valid),
 .accent-green .custom-select:focus,
-.accent-green .custom-control-input:focus:not(:checked) ~ .custom-control-label::before,
-.accent-green .custom-file-input:focus ~ .custom-file-label {
+.accent-green .custom-control-input:focus:not(:checked) Assets .custom-control-label::before,
+.accent-green .custom-file-input:focus Assets .custom-file-label {
   border-color: #71dd8a;
 }
 
@@ -26358,19 +26358,19 @@ a.text-muted:hover {
   color: #fff;
 }
 
-.accent-teal .custom-control-input:checked ~ .custom-control-label::before {
+.accent-teal .custom-control-input:checked Assets .custom-control-label::before {
   background-color: #20c997;
   border-color: #127155;
 }
 
-.accent-teal .custom-control-input:checked ~ .custom-control-label::after {
+.accent-teal .custom-control-input:checked Assets .custom-control-label::after {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
 }
 
 .accent-teal .form-control:focus:not(.is-invalid):not(.is-warning):not(.is-valid),
 .accent-teal .custom-select:focus,
-.accent-teal .custom-control-input:focus:not(:checked) ~ .custom-control-label::before,
-.accent-teal .custom-file-input:focus ~ .custom-file-label {
+.accent-teal .custom-control-input:focus:not(:checked) Assets .custom-control-label::before,
+.accent-teal .custom-file-input:focus Assets .custom-file-label {
   border-color: #7eeaca;
 }
 
@@ -26429,19 +26429,19 @@ a.text-muted:hover {
   color: #fff;
 }
 
-.accent-cyan .custom-control-input:checked ~ .custom-control-label::before {
+.accent-cyan .custom-control-input:checked Assets .custom-control-label::before {
   background-color: #17a2b8;
   border-color: #0c525d;
 }
 
-.accent-cyan .custom-control-input:checked ~ .custom-control-label::after {
+.accent-cyan .custom-control-input:checked Assets .custom-control-label::after {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
 }
 
 .accent-cyan .form-control:focus:not(.is-invalid):not(.is-warning):not(.is-valid),
 .accent-cyan .custom-select:focus,
-.accent-cyan .custom-control-input:focus:not(:checked) ~ .custom-control-label::before,
-.accent-cyan .custom-file-input:focus ~ .custom-file-label {
+.accent-cyan .custom-control-input:focus:not(:checked) Assets .custom-control-label::before,
+.accent-cyan .custom-file-input:focus Assets .custom-file-label {
   border-color: #63d9ec;
 }
 
@@ -26500,19 +26500,19 @@ a.text-muted:hover {
   color: #1f2d3d;
 }
 
-.accent-white .custom-control-input:checked ~ .custom-control-label::before {
+.accent-white .custom-control-input:checked Assets .custom-control-label::before {
   background-color: #fff;
   border-color: #cccccc;
 }
 
-.accent-white .custom-control-input:checked ~ .custom-control-label::after {
+.accent-white .custom-control-input:checked Assets .custom-control-label::after {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%231f2d3d' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
 }
 
 .accent-white .form-control:focus:not(.is-invalid):not(.is-warning):not(.is-valid),
 .accent-white .custom-select:focus,
-.accent-white .custom-control-input:focus:not(:checked) ~ .custom-control-label::before,
-.accent-white .custom-file-input:focus ~ .custom-file-label {
+.accent-white .custom-control-input:focus:not(:checked) Assets .custom-control-label::before,
+.accent-white .custom-file-input:focus Assets .custom-file-label {
   border-color: white;
 }
 
@@ -26571,19 +26571,19 @@ a.text-muted:hover {
   color: #fff;
 }
 
-.accent-gray .custom-control-input:checked ~ .custom-control-label::before {
+.accent-gray .custom-control-input:checked Assets .custom-control-label::before {
   background-color: #6c757d;
   border-color: #3d4246;
 }
 
-.accent-gray .custom-control-input:checked ~ .custom-control-label::after {
+.accent-gray .custom-control-input:checked Assets .custom-control-label::after {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
 }
 
 .accent-gray .form-control:focus:not(.is-invalid):not(.is-warning):not(.is-valid),
 .accent-gray .custom-select:focus,
-.accent-gray .custom-control-input:focus:not(:checked) ~ .custom-control-label::before,
-.accent-gray .custom-file-input:focus ~ .custom-file-label {
+.accent-gray .custom-control-input:focus:not(:checked) Assets .custom-control-label::before,
+.accent-gray .custom-file-input:focus Assets .custom-file-label {
   border-color: #afb5ba;
 }
 
@@ -26642,19 +26642,19 @@ a.text-muted:hover {
   color: #fff;
 }
 
-.accent-gray-dark .custom-control-input:checked ~ .custom-control-label::before {
+.accent-gray-dark .custom-control-input:checked Assets .custom-control-label::before {
   background-color: #343a40;
   border-color: #060708;
 }
 
-.accent-gray-dark .custom-control-input:checked ~ .custom-control-label::after {
+.accent-gray-dark .custom-control-input:checked Assets .custom-control-label::after {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
 }
 
 .accent-gray-dark .form-control:focus:not(.is-invalid):not(.is-warning):not(.is-valid),
 .accent-gray-dark .custom-select:focus,
-.accent-gray-dark .custom-control-input:focus:not(:checked) ~ .custom-control-label::before,
-.accent-gray-dark .custom-file-input:focus ~ .custom-file-label {
+.accent-gray-dark .custom-control-input:focus:not(:checked) Assets .custom-control-label::before,
+.accent-gray-dark .custom-file-input:focus Assets .custom-file-label {
   border-color: #6d7a86;
 }
 
@@ -28053,19 +28053,19 @@ a.text-muted:hover {
   color: #fff;
 }
 
-.dark-mode .accent-primary .custom-control-input:checked ~ .custom-control-label::before {
+.dark-mode .accent-primary .custom-control-input:checked Assets .custom-control-label::before {
   background-color: #3f6791;
   border-color: #20344a;
 }
 
-.dark-mode .accent-primary .custom-control-input:checked ~ .custom-control-label::after {
+.dark-mode .accent-primary .custom-control-input:checked Assets .custom-control-label::after {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
 }
 
 .dark-mode .accent-primary .form-control:focus:not(.is-invalid):not(.is-warning):not(.is-valid),
 .dark-mode .accent-primary .custom-select:focus,
-.dark-mode .accent-primary .custom-control-input:focus:not(:checked) ~ .custom-control-label::before,
-.dark-mode .accent-primary .custom-file-input:focus ~ .custom-file-label {
+.dark-mode .accent-primary .custom-control-input:focus:not(:checked) Assets .custom-control-label::before,
+.dark-mode .accent-primary .custom-file-input:focus Assets .custom-file-label {
   border-color: #85a7ca;
 }
 
@@ -28124,19 +28124,19 @@ a.text-muted:hover {
   color: #fff;
 }
 
-.dark-mode .accent-secondary .custom-control-input:checked ~ .custom-control-label::before {
+.dark-mode .accent-secondary .custom-control-input:checked Assets .custom-control-label::before {
   background-color: #6c757d;
   border-color: #3d4246;
 }
 
-.dark-mode .accent-secondary .custom-control-input:checked ~ .custom-control-label::after {
+.dark-mode .accent-secondary .custom-control-input:checked Assets .custom-control-label::after {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
 }
 
 .dark-mode .accent-secondary .form-control:focus:not(.is-invalid):not(.is-warning):not(.is-valid),
 .dark-mode .accent-secondary .custom-select:focus,
-.dark-mode .accent-secondary .custom-control-input:focus:not(:checked) ~ .custom-control-label::before,
-.dark-mode .accent-secondary .custom-file-input:focus ~ .custom-file-label {
+.dark-mode .accent-secondary .custom-control-input:focus:not(:checked) Assets .custom-control-label::before,
+.dark-mode .accent-secondary .custom-file-input:focus Assets .custom-file-label {
   border-color: #afb5ba;
 }
 
@@ -28195,19 +28195,19 @@ a.text-muted:hover {
   color: #fff;
 }
 
-.dark-mode .accent-success .custom-control-input:checked ~ .custom-control-label::before {
+.dark-mode .accent-success .custom-control-input:checked Assets .custom-control-label::before {
   background-color: #00bc8c;
   border-color: #005640;
 }
 
-.dark-mode .accent-success .custom-control-input:checked ~ .custom-control-label::after {
+.dark-mode .accent-success .custom-control-input:checked Assets .custom-control-label::after {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
 }
 
 .dark-mode .accent-success .form-control:focus:not(.is-invalid):not(.is-warning):not(.is-valid),
 .dark-mode .accent-success .custom-select:focus,
-.dark-mode .accent-success .custom-control-input:focus:not(:checked) ~ .custom-control-label::before,
-.dark-mode .accent-success .custom-file-input:focus ~ .custom-file-label {
+.dark-mode .accent-success .custom-control-input:focus:not(:checked) Assets .custom-control-label::before,
+.dark-mode .accent-success .custom-file-input:focus Assets .custom-file-label {
   border-color: #3dffcd;
 }
 
@@ -28266,19 +28266,19 @@ a.text-muted:hover {
   color: #fff;
 }
 
-.dark-mode .accent-info .custom-control-input:checked ~ .custom-control-label::before {
+.dark-mode .accent-info .custom-control-input:checked Assets .custom-control-label::before {
   background-color: #3498db;
   border-color: #196090;
 }
 
-.dark-mode .accent-info .custom-control-input:checked ~ .custom-control-label::after {
+.dark-mode .accent-info .custom-control-input:checked Assets .custom-control-label::after {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
 }
 
 .dark-mode .accent-info .form-control:focus:not(.is-invalid):not(.is-warning):not(.is-valid),
 .dark-mode .accent-info .custom-select:focus,
-.dark-mode .accent-info .custom-control-input:focus:not(:checked) ~ .custom-control-label::before,
-.dark-mode .accent-info .custom-file-input:focus ~ .custom-file-label {
+.dark-mode .accent-info .custom-control-input:focus:not(:checked) Assets .custom-control-label::before,
+.dark-mode .accent-info .custom-file-input:focus Assets .custom-file-label {
   border-color: #a0cfee;
 }
 
@@ -28337,19 +28337,19 @@ a.text-muted:hover {
   color: #1f2d3d;
 }
 
-.dark-mode .accent-warning .custom-control-input:checked ~ .custom-control-label::before {
+.dark-mode .accent-warning .custom-control-input:checked Assets .custom-control-label::before {
   background-color: #f39c12;
   border-color: #976008;
 }
 
-.dark-mode .accent-warning .custom-control-input:checked ~ .custom-control-label::after {
+.dark-mode .accent-warning .custom-control-input:checked Assets .custom-control-label::after {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%231f2d3d' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
 }
 
 .dark-mode .accent-warning .form-control:focus:not(.is-invalid):not(.is-warning):not(.is-valid),
 .dark-mode .accent-warning .custom-select:focus,
-.dark-mode .accent-warning .custom-control-input:focus:not(:checked) ~ .custom-control-label::before,
-.dark-mode .accent-warning .custom-file-input:focus ~ .custom-file-label {
+.dark-mode .accent-warning .custom-control-input:focus:not(:checked) Assets .custom-control-label::before,
+.dark-mode .accent-warning .custom-file-input:focus Assets .custom-file-label {
   border-color: #f9cf8b;
 }
 
@@ -28408,19 +28408,19 @@ a.text-muted:hover {
   color: #fff;
 }
 
-.dark-mode .accent-danger .custom-control-input:checked ~ .custom-control-label::before {
+.dark-mode .accent-danger .custom-control-input:checked Assets .custom-control-label::before {
   background-color: #e74c3c;
   border-color: #a82315;
 }
 
-.dark-mode .accent-danger .custom-control-input:checked ~ .custom-control-label::after {
+.dark-mode .accent-danger .custom-control-input:checked Assets .custom-control-label::after {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
 }
 
 .dark-mode .accent-danger .form-control:focus:not(.is-invalid):not(.is-warning):not(.is-valid),
 .dark-mode .accent-danger .custom-select:focus,
-.dark-mode .accent-danger .custom-control-input:focus:not(:checked) ~ .custom-control-label::before,
-.dark-mode .accent-danger .custom-file-input:focus ~ .custom-file-label {
+.dark-mode .accent-danger .custom-control-input:focus:not(:checked) Assets .custom-control-label::before,
+.dark-mode .accent-danger .custom-file-input:focus Assets .custom-file-label {
   border-color: #f5b4ae;
 }
 
@@ -28479,19 +28479,19 @@ a.text-muted:hover {
   color: #1f2d3d;
 }
 
-.dark-mode .accent-light .custom-control-input:checked ~ .custom-control-label::before {
+.dark-mode .accent-light .custom-control-input:checked Assets .custom-control-label::before {
   background-color: #f8f9fa;
   border-color: #bdc6d0;
 }
 
-.dark-mode .accent-light .custom-control-input:checked ~ .custom-control-label::after {
+.dark-mode .accent-light .custom-control-input:checked Assets .custom-control-label::after {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%231f2d3d' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
 }
 
 .dark-mode .accent-light .form-control:focus:not(.is-invalid):not(.is-warning):not(.is-valid),
 .dark-mode .accent-light .custom-select:focus,
-.dark-mode .accent-light .custom-control-input:focus:not(:checked) ~ .custom-control-label::before,
-.dark-mode .accent-light .custom-file-input:focus ~ .custom-file-label {
+.dark-mode .accent-light .custom-control-input:focus:not(:checked) Assets .custom-control-label::before,
+.dark-mode .accent-light .custom-file-input:focus Assets .custom-file-label {
   border-color: white;
 }
 
@@ -28550,19 +28550,19 @@ a.text-muted:hover {
   color: #fff;
 }
 
-.dark-mode .accent-dark .custom-control-input:checked ~ .custom-control-label::before {
+.dark-mode .accent-dark .custom-control-input:checked Assets .custom-control-label::before {
   background-color: #343a40;
   border-color: #060708;
 }
 
-.dark-mode .accent-dark .custom-control-input:checked ~ .custom-control-label::after {
+.dark-mode .accent-dark .custom-control-input:checked Assets .custom-control-label::after {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
 }
 
 .dark-mode .accent-dark .form-control:focus:not(.is-invalid):not(.is-warning):not(.is-valid),
 .dark-mode .accent-dark .custom-select:focus,
-.dark-mode .accent-dark .custom-control-input:focus:not(:checked) ~ .custom-control-label::before,
-.dark-mode .accent-dark .custom-file-input:focus ~ .custom-file-label {
+.dark-mode .accent-dark .custom-control-input:focus:not(:checked) Assets .custom-control-label::before,
+.dark-mode .accent-dark .custom-file-input:focus Assets .custom-file-label {
   border-color: #6d7a86;
 }
 
@@ -28653,19 +28653,19 @@ a.text-muted:hover {
   color: #1f2d3d;
 }
 
-.dark-mode .accent-lightblue .custom-control-input:checked ~ .custom-control-label::before {
+.dark-mode .accent-lightblue .custom-control-input:checked Assets .custom-control-label::before {
   background-color: #86bad8;
   border-color: #3c8dbc;
 }
 
-.dark-mode .accent-lightblue .custom-control-input:checked ~ .custom-control-label::after {
+.dark-mode .accent-lightblue .custom-control-input:checked Assets .custom-control-label::after {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%231f2d3d' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
 }
 
 .dark-mode .accent-lightblue .form-control:focus:not(.is-invalid):not(.is-warning):not(.is-valid),
 .dark-mode .accent-lightblue .custom-select:focus,
-.dark-mode .accent-lightblue .custom-control-input:focus:not(:checked) ~ .custom-control-label::before,
-.dark-mode .accent-lightblue .custom-file-input:focus ~ .custom-file-label {
+.dark-mode .accent-lightblue .custom-control-input:focus:not(:checked) Assets .custom-control-label::before,
+.dark-mode .accent-lightblue .custom-file-input:focus Assets .custom-file-label {
   border-color: #e6f1f7;
 }
 
@@ -28724,19 +28724,19 @@ a.text-muted:hover {
   color: #fff;
 }
 
-.dark-mode .accent-navy .custom-control-input:checked ~ .custom-control-label::before {
+.dark-mode .accent-navy .custom-control-input:checked Assets .custom-control-label::before {
   background-color: #002c59;
   border-color: black;
 }
 
-.dark-mode .accent-navy .custom-control-input:checked ~ .custom-control-label::after {
+.dark-mode .accent-navy .custom-control-input:checked Assets .custom-control-label::after {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
 }
 
 .dark-mode .accent-navy .form-control:focus:not(.is-invalid):not(.is-warning):not(.is-valid),
 .dark-mode .accent-navy .custom-select:focus,
-.dark-mode .accent-navy .custom-control-input:focus:not(:checked) ~ .custom-control-label::before,
-.dark-mode .accent-navy .custom-file-input:focus ~ .custom-file-label {
+.dark-mode .accent-navy .custom-control-input:focus:not(:checked) Assets .custom-control-label::before,
+.dark-mode .accent-navy .custom-file-input:focus Assets .custom-file-label {
   border-color: #006ad8;
 }
 
@@ -28795,19 +28795,19 @@ a.text-muted:hover {
   color: #1f2d3d;
 }
 
-.dark-mode .accent-olive .custom-control-input:checked ~ .custom-control-label::before {
+.dark-mode .accent-olive .custom-control-input:checked Assets .custom-control-label::before {
   background-color: #74c8a3;
   border-color: #3d9970;
 }
 
-.dark-mode .accent-olive .custom-control-input:checked ~ .custom-control-label::after {
+.dark-mode .accent-olive .custom-control-input:checked Assets .custom-control-label::after {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%231f2d3d' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
 }
 
 .dark-mode .accent-olive .form-control:focus:not(.is-invalid):not(.is-warning):not(.is-valid),
 .dark-mode .accent-olive .custom-select:focus,
-.dark-mode .accent-olive .custom-control-input:focus:not(:checked) ~ .custom-control-label::before,
-.dark-mode .accent-olive .custom-file-input:focus ~ .custom-file-label {
+.dark-mode .accent-olive .custom-control-input:focus:not(:checked) Assets .custom-control-label::before,
+.dark-mode .accent-olive .custom-file-input:focus Assets .custom-file-label {
   border-color: #cfecdf;
 }
 
@@ -28866,19 +28866,19 @@ a.text-muted:hover {
   color: #1f2d3d;
 }
 
-.dark-mode .accent-lime .custom-control-input:checked ~ .custom-control-label::before {
+.dark-mode .accent-lime .custom-control-input:checked Assets .custom-control-label::before {
   background-color: #67ffa9;
   border-color: #01ff70;
 }
 
-.dark-mode .accent-lime .custom-control-input:checked ~ .custom-control-label::after {
+.dark-mode .accent-lime .custom-control-input:checked Assets .custom-control-label::after {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%231f2d3d' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
 }
 
 .dark-mode .accent-lime .form-control:focus:not(.is-invalid):not(.is-warning):not(.is-valid),
 .dark-mode .accent-lime .custom-select:focus,
-.dark-mode .accent-lime .custom-control-input:focus:not(:checked) ~ .custom-control-label::before,
-.dark-mode .accent-lime .custom-file-input:focus ~ .custom-file-label {
+.dark-mode .accent-lime .custom-control-input:focus:not(:checked) Assets .custom-control-label::before,
+.dark-mode .accent-lime .custom-file-input:focus Assets .custom-file-label {
   border-color: #e7fff1;
 }
 
@@ -28937,19 +28937,19 @@ a.text-muted:hover {
   color: #1f2d3d;
 }
 
-.dark-mode .accent-fuchsia .custom-control-input:checked ~ .custom-control-label::before {
+.dark-mode .accent-fuchsia .custom-control-input:checked Assets .custom-control-label::before {
   background-color: #f672d8;
   border-color: #f012be;
 }
 
-.dark-mode .accent-fuchsia .custom-control-input:checked ~ .custom-control-label::after {
+.dark-mode .accent-fuchsia .custom-control-input:checked Assets .custom-control-label::after {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%231f2d3d' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
 }
 
 .dark-mode .accent-fuchsia .form-control:focus:not(.is-invalid):not(.is-warning):not(.is-valid),
 .dark-mode .accent-fuchsia .custom-select:focus,
-.dark-mode .accent-fuchsia .custom-control-input:focus:not(:checked) ~ .custom-control-label::before,
-.dark-mode .accent-fuchsia .custom-file-input:focus ~ .custom-file-label {
+.dark-mode .accent-fuchsia .custom-control-input:focus:not(:checked) Assets .custom-control-label::before,
+.dark-mode .accent-fuchsia .custom-file-input:focus Assets .custom-file-label {
   border-color: #feeaf9;
 }
 
@@ -29008,19 +29008,19 @@ a.text-muted:hover {
   color: #1f2d3d;
 }
 
-.dark-mode .accent-maroon .custom-control-input:checked ~ .custom-control-label::before {
+.dark-mode .accent-maroon .custom-control-input:checked Assets .custom-control-label::before {
   background-color: #ed6c9b;
   border-color: #d81b60;
 }
 
-.dark-mode .accent-maroon .custom-control-input:checked ~ .custom-control-label::after {
+.dark-mode .accent-maroon .custom-control-input:checked Assets .custom-control-label::after {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%231f2d3d' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
 }
 
 .dark-mode .accent-maroon .form-control:focus:not(.is-invalid):not(.is-warning):not(.is-valid),
 .dark-mode .accent-maroon .custom-select:focus,
-.dark-mode .accent-maroon .custom-control-input:focus:not(:checked) ~ .custom-control-label::before,
-.dark-mode .accent-maroon .custom-file-input:focus ~ .custom-file-label {
+.dark-mode .accent-maroon .custom-control-input:focus:not(:checked) Assets .custom-control-label::before,
+.dark-mode .accent-maroon .custom-file-input:focus Assets .custom-file-label {
   border-color: #fbdee8;
 }
 
@@ -29079,19 +29079,19 @@ a.text-muted:hover {
   color: #fff;
 }
 
-.dark-mode .accent-blue .custom-control-input:checked ~ .custom-control-label::before {
+.dark-mode .accent-blue .custom-control-input:checked Assets .custom-control-label::before {
   background-color: #3f6791;
   border-color: #20344a;
 }
 
-.dark-mode .accent-blue .custom-control-input:checked ~ .custom-control-label::after {
+.dark-mode .accent-blue .custom-control-input:checked Assets .custom-control-label::after {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
 }
 
 .dark-mode .accent-blue .form-control:focus:not(.is-invalid):not(.is-warning):not(.is-valid),
 .dark-mode .accent-blue .custom-select:focus,
-.dark-mode .accent-blue .custom-control-input:focus:not(:checked) ~ .custom-control-label::before,
-.dark-mode .accent-blue .custom-file-input:focus ~ .custom-file-label {
+.dark-mode .accent-blue .custom-control-input:focus:not(:checked) Assets .custom-control-label::before,
+.dark-mode .accent-blue .custom-file-input:focus Assets .custom-file-label {
   border-color: #85a7ca;
 }
 
@@ -29150,19 +29150,19 @@ a.text-muted:hover {
   color: #fff;
 }
 
-.dark-mode .accent-indigo .custom-control-input:checked ~ .custom-control-label::before {
+.dark-mode .accent-indigo .custom-control-input:checked Assets .custom-control-label::before {
   background-color: #6610f2;
   border-color: #3d0894;
 }
 
-.dark-mode .accent-indigo .custom-control-input:checked ~ .custom-control-label::after {
+.dark-mode .accent-indigo .custom-control-input:checked Assets .custom-control-label::after {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
 }
 
 .dark-mode .accent-indigo .form-control:focus:not(.is-invalid):not(.is-warning):not(.is-valid),
 .dark-mode .accent-indigo .custom-select:focus,
-.dark-mode .accent-indigo .custom-control-input:focus:not(:checked) ~ .custom-control-label::before,
-.dark-mode .accent-indigo .custom-file-input:focus ~ .custom-file-label {
+.dark-mode .accent-indigo .custom-control-input:focus:not(:checked) Assets .custom-control-label::before,
+.dark-mode .accent-indigo .custom-file-input:focus Assets .custom-file-label {
   border-color: #b389f9;
 }
 
@@ -29221,19 +29221,19 @@ a.text-muted:hover {
   color: #fff;
 }
 
-.dark-mode .accent-purple .custom-control-input:checked ~ .custom-control-label::before {
+.dark-mode .accent-purple .custom-control-input:checked Assets .custom-control-label::before {
   background-color: #6f42c1;
   border-color: #432776;
 }
 
-.dark-mode .accent-purple .custom-control-input:checked ~ .custom-control-label::after {
+.dark-mode .accent-purple .custom-control-input:checked Assets .custom-control-label::after {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
 }
 
 .dark-mode .accent-purple .form-control:focus:not(.is-invalid):not(.is-warning):not(.is-valid),
 .dark-mode .accent-purple .custom-select:focus,
-.dark-mode .accent-purple .custom-control-input:focus:not(:checked) ~ .custom-control-label::before,
-.dark-mode .accent-purple .custom-file-input:focus ~ .custom-file-label {
+.dark-mode .accent-purple .custom-control-input:focus:not(:checked) Assets .custom-control-label::before,
+.dark-mode .accent-purple .custom-file-input:focus Assets .custom-file-label {
   border-color: #b8a2e0;
 }
 
@@ -29292,19 +29292,19 @@ a.text-muted:hover {
   color: #fff;
 }
 
-.dark-mode .accent-pink .custom-control-input:checked ~ .custom-control-label::before {
+.dark-mode .accent-pink .custom-control-input:checked Assets .custom-control-label::before {
   background-color: #e83e8c;
   border-color: #ac145a;
 }
 
-.dark-mode .accent-pink .custom-control-input:checked ~ .custom-control-label::after {
+.dark-mode .accent-pink .custom-control-input:checked Assets .custom-control-label::after {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
 }
 
 .dark-mode .accent-pink .form-control:focus:not(.is-invalid):not(.is-warning):not(.is-valid),
 .dark-mode .accent-pink .custom-select:focus,
-.dark-mode .accent-pink .custom-control-input:focus:not(:checked) ~ .custom-control-label::before,
-.dark-mode .accent-pink .custom-file-input:focus ~ .custom-file-label {
+.dark-mode .accent-pink .custom-control-input:focus:not(:checked) Assets .custom-control-label::before,
+.dark-mode .accent-pink .custom-file-input:focus Assets .custom-file-label {
   border-color: #f6b0d0;
 }
 
@@ -29363,19 +29363,19 @@ a.text-muted:hover {
   color: #fff;
 }
 
-.dark-mode .accent-red .custom-control-input:checked ~ .custom-control-label::before {
+.dark-mode .accent-red .custom-control-input:checked Assets .custom-control-label::before {
   background-color: #e74c3c;
   border-color: #a82315;
 }
 
-.dark-mode .accent-red .custom-control-input:checked ~ .custom-control-label::after {
+.dark-mode .accent-red .custom-control-input:checked Assets .custom-control-label::after {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
 }
 
 .dark-mode .accent-red .form-control:focus:not(.is-invalid):not(.is-warning):not(.is-valid),
 .dark-mode .accent-red .custom-select:focus,
-.dark-mode .accent-red .custom-control-input:focus:not(:checked) ~ .custom-control-label::before,
-.dark-mode .accent-red .custom-file-input:focus ~ .custom-file-label {
+.dark-mode .accent-red .custom-control-input:focus:not(:checked) Assets .custom-control-label::before,
+.dark-mode .accent-red .custom-file-input:focus Assets .custom-file-label {
   border-color: #f5b4ae;
 }
 
@@ -29434,19 +29434,19 @@ a.text-muted:hover {
   color: #1f2d3d;
 }
 
-.dark-mode .accent-orange .custom-control-input:checked ~ .custom-control-label::before {
+.dark-mode .accent-orange .custom-control-input:checked Assets .custom-control-label::before {
   background-color: #fd7e14;
   border-color: #aa4e01;
 }
 
-.dark-mode .accent-orange .custom-control-input:checked ~ .custom-control-label::after {
+.dark-mode .accent-orange .custom-control-input:checked Assets .custom-control-label::after {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%231f2d3d' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
 }
 
 .dark-mode .accent-orange .form-control:focus:not(.is-invalid):not(.is-warning):not(.is-valid),
 .dark-mode .accent-orange .custom-select:focus,
-.dark-mode .accent-orange .custom-control-input:focus:not(:checked) ~ .custom-control-label::before,
-.dark-mode .accent-orange .custom-file-input:focus ~ .custom-file-label {
+.dark-mode .accent-orange .custom-control-input:focus:not(:checked) Assets .custom-control-label::before,
+.dark-mode .accent-orange .custom-file-input:focus Assets .custom-file-label {
   border-color: #fec392;
 }
 
@@ -29505,19 +29505,19 @@ a.text-muted:hover {
   color: #1f2d3d;
 }
 
-.dark-mode .accent-yellow .custom-control-input:checked ~ .custom-control-label::before {
+.dark-mode .accent-yellow .custom-control-input:checked Assets .custom-control-label::before {
   background-color: #f39c12;
   border-color: #976008;
 }
 
-.dark-mode .accent-yellow .custom-control-input:checked ~ .custom-control-label::after {
+.dark-mode .accent-yellow .custom-control-input:checked Assets .custom-control-label::after {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%231f2d3d' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
 }
 
 .dark-mode .accent-yellow .form-control:focus:not(.is-invalid):not(.is-warning):not(.is-valid),
 .dark-mode .accent-yellow .custom-select:focus,
-.dark-mode .accent-yellow .custom-control-input:focus:not(:checked) ~ .custom-control-label::before,
-.dark-mode .accent-yellow .custom-file-input:focus ~ .custom-file-label {
+.dark-mode .accent-yellow .custom-control-input:focus:not(:checked) Assets .custom-control-label::before,
+.dark-mode .accent-yellow .custom-file-input:focus Assets .custom-file-label {
   border-color: #f9cf8b;
 }
 
@@ -29576,19 +29576,19 @@ a.text-muted:hover {
   color: #fff;
 }
 
-.dark-mode .accent-green .custom-control-input:checked ~ .custom-control-label::before {
+.dark-mode .accent-green .custom-control-input:checked Assets .custom-control-label::before {
   background-color: #00bc8c;
   border-color: #005640;
 }
 
-.dark-mode .accent-green .custom-control-input:checked ~ .custom-control-label::after {
+.dark-mode .accent-green .custom-control-input:checked Assets .custom-control-label::after {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
 }
 
 .dark-mode .accent-green .form-control:focus:not(.is-invalid):not(.is-warning):not(.is-valid),
 .dark-mode .accent-green .custom-select:focus,
-.dark-mode .accent-green .custom-control-input:focus:not(:checked) ~ .custom-control-label::before,
-.dark-mode .accent-green .custom-file-input:focus ~ .custom-file-label {
+.dark-mode .accent-green .custom-control-input:focus:not(:checked) Assets .custom-control-label::before,
+.dark-mode .accent-green .custom-file-input:focus Assets .custom-file-label {
   border-color: #3dffcd;
 }
 
@@ -29647,19 +29647,19 @@ a.text-muted:hover {
   color: #fff;
 }
 
-.dark-mode .accent-teal .custom-control-input:checked ~ .custom-control-label::before {
+.dark-mode .accent-teal .custom-control-input:checked Assets .custom-control-label::before {
   background-color: #20c997;
   border-color: #127155;
 }
 
-.dark-mode .accent-teal .custom-control-input:checked ~ .custom-control-label::after {
+.dark-mode .accent-teal .custom-control-input:checked Assets .custom-control-label::after {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
 }
 
 .dark-mode .accent-teal .form-control:focus:not(.is-invalid):not(.is-warning):not(.is-valid),
 .dark-mode .accent-teal .custom-select:focus,
-.dark-mode .accent-teal .custom-control-input:focus:not(:checked) ~ .custom-control-label::before,
-.dark-mode .accent-teal .custom-file-input:focus ~ .custom-file-label {
+.dark-mode .accent-teal .custom-control-input:focus:not(:checked) Assets .custom-control-label::before,
+.dark-mode .accent-teal .custom-file-input:focus Assets .custom-file-label {
   border-color: #7eeaca;
 }
 
@@ -29718,19 +29718,19 @@ a.text-muted:hover {
   color: #fff;
 }
 
-.dark-mode .accent-cyan .custom-control-input:checked ~ .custom-control-label::before {
+.dark-mode .accent-cyan .custom-control-input:checked Assets .custom-control-label::before {
   background-color: #3498db;
   border-color: #196090;
 }
 
-.dark-mode .accent-cyan .custom-control-input:checked ~ .custom-control-label::after {
+.dark-mode .accent-cyan .custom-control-input:checked Assets .custom-control-label::after {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
 }
 
 .dark-mode .accent-cyan .form-control:focus:not(.is-invalid):not(.is-warning):not(.is-valid),
 .dark-mode .accent-cyan .custom-select:focus,
-.dark-mode .accent-cyan .custom-control-input:focus:not(:checked) ~ .custom-control-label::before,
-.dark-mode .accent-cyan .custom-file-input:focus ~ .custom-file-label {
+.dark-mode .accent-cyan .custom-control-input:focus:not(:checked) Assets .custom-control-label::before,
+.dark-mode .accent-cyan .custom-file-input:focus Assets .custom-file-label {
   border-color: #a0cfee;
 }
 
@@ -29789,19 +29789,19 @@ a.text-muted:hover {
   color: #1f2d3d;
 }
 
-.dark-mode .accent-white .custom-control-input:checked ~ .custom-control-label::before {
+.dark-mode .accent-white .custom-control-input:checked Assets .custom-control-label::before {
   background-color: #fff;
   border-color: #cccccc;
 }
 
-.dark-mode .accent-white .custom-control-input:checked ~ .custom-control-label::after {
+.dark-mode .accent-white .custom-control-input:checked Assets .custom-control-label::after {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%231f2d3d' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
 }
 
 .dark-mode .accent-white .form-control:focus:not(.is-invalid):not(.is-warning):not(.is-valid),
 .dark-mode .accent-white .custom-select:focus,
-.dark-mode .accent-white .custom-control-input:focus:not(:checked) ~ .custom-control-label::before,
-.dark-mode .accent-white .custom-file-input:focus ~ .custom-file-label {
+.dark-mode .accent-white .custom-control-input:focus:not(:checked) Assets .custom-control-label::before,
+.dark-mode .accent-white .custom-file-input:focus Assets .custom-file-label {
   border-color: white;
 }
 
@@ -29860,19 +29860,19 @@ a.text-muted:hover {
   color: #fff;
 }
 
-.dark-mode .accent-gray .custom-control-input:checked ~ .custom-control-label::before {
+.dark-mode .accent-gray .custom-control-input:checked Assets .custom-control-label::before {
   background-color: #6c757d;
   border-color: #3d4246;
 }
 
-.dark-mode .accent-gray .custom-control-input:checked ~ .custom-control-label::after {
+.dark-mode .accent-gray .custom-control-input:checked Assets .custom-control-label::after {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
 }
 
 .dark-mode .accent-gray .form-control:focus:not(.is-invalid):not(.is-warning):not(.is-valid),
 .dark-mode .accent-gray .custom-select:focus,
-.dark-mode .accent-gray .custom-control-input:focus:not(:checked) ~ .custom-control-label::before,
-.dark-mode .accent-gray .custom-file-input:focus ~ .custom-file-label {
+.dark-mode .accent-gray .custom-control-input:focus:not(:checked) Assets .custom-control-label::before,
+.dark-mode .accent-gray .custom-file-input:focus Assets .custom-file-label {
   border-color: #afb5ba;
 }
 
@@ -29931,19 +29931,19 @@ a.text-muted:hover {
   color: #fff;
 }
 
-.dark-mode .accent-gray-dark .custom-control-input:checked ~ .custom-control-label::before {
+.dark-mode .accent-gray-dark .custom-control-input:checked Assets .custom-control-label::before {
   background-color: #343a40;
   border-color: #060708;
 }
 
-.dark-mode .accent-gray-dark .custom-control-input:checked ~ .custom-control-label::after {
+.dark-mode .accent-gray-dark .custom-control-input:checked Assets .custom-control-label::after {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
 }
 
 .dark-mode .accent-gray-dark .form-control:focus:not(.is-invalid):not(.is-warning):not(.is-valid),
 .dark-mode .accent-gray-dark .custom-select:focus,
-.dark-mode .accent-gray-dark .custom-control-input:focus:not(:checked) ~ .custom-control-label::before,
-.dark-mode .accent-gray-dark .custom-file-input:focus ~ .custom-file-label {
+.dark-mode .accent-gray-dark .custom-control-input:focus:not(:checked) Assets .custom-control-label::before,
+.dark-mode .accent-gray-dark .custom-file-input:focus Assets .custom-file-label {
   border-color: #6d7a86;
 }
 

@@ -196,7 +196,7 @@
         return "tag";
       }
       // non-special characters
-      if (source.match(/^[+\-<>|=,\/@!*:;'"`~#?]/)) {
+      if (source.match(/^[+\-<>|=,\/@!*:;'"`Assets#?]/)) {
         return null;
       }
       if (source.match(/^(\d+\.\d*|\d*\.\d+|\d+)/)) {

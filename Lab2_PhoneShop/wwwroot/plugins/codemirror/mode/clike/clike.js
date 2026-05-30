@@ -372,7 +372,7 @@ CodeMirror.defineMode("clike", function(config, parserConfig) {
   }
 
   function cppLooksLikeConstructor(word) {
-    var lastTwo = /(\w+)::~?(\w+)$/.exec(word);
+    var lastTwo = /(\w+)::Assets?(\w+)$/.exec(word);
     return lastTwo && lastTwo[1] == lastTwo[2];
   }
 
@@ -446,7 +446,7 @@ CodeMirror.defineMode("clike", function(config, parserConfig) {
     typeFirstDefinitions: true,
     atoms: words("true false NULL nullptr"),
     dontIndentStatements: /^template$/,
-    isIdentifierChar: /[\w\$_~\xa1-\uffff]/,
+    isIdentifierChar: /[\w\$_Assets\xa1-\uffff]/,
     isReservedIdentifier: cIsReservedIdentifier,
     hooks: {
       "#": cppHook,
@@ -892,7 +892,7 @@ CodeMirror.defineMode("clike", function(config, parserConfig) {
     builtin: words("abstract actual aliased annotation by default deprecated doc final formal late license" +
                    " native optional sealed see serializable shared suppressWarnings tagged throws variable"),
     isPunctuationChar: /[\[\]{}\(\),;\:\.`]/,
-    isOperatorChar: /[+\-*&%=<>!?|^~:\/]/,
+    isOperatorChar: /[+\-*&%=<>!?|^Assets:\/]/,
     numberStart: /[\d#$]/,
     number: /^(?:#[\da-fA-F_]+|\$[01_]+|[\d_]+[kMGTPmunpf]?|[\d_]+\.[\d_]+(?:[eE][-+]?\d+|[kMGTPmunpf]|)|)/i,
     multiLineStrings: true,

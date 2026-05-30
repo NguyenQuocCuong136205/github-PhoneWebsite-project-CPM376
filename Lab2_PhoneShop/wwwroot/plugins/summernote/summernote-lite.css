@@ -670,7 +670,7 @@ a.note-dropdown-item:hover {
 .note-modal .note-tab-content {
     margin: 15px auto;
 }
-.note-modal .note-tab-content > .note-tab-pane:target ~ .note-tab-pane:last-child,
+.note-modal .note-tab-content > .note-tab-pane:target Assets .note-tab-pane:last-child,
 .note-modal .note-tab-content > .note-tab-pane {
     display: none;
 }

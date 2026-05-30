@@ -22,7 +22,7 @@ CodeMirror.defineMode("coffeescript", function(conf, parserConf) {
     return new RegExp("^((" + words.join(")|(") + "))\\b");
   }
 
-  var operators = /^(?:->|=>|\+[+=]?|-[\-=]?|\*[\*=]?|\/[\/=]?|[=!]=|<[><]?=?|>>?=?|%=?|&=?|\|=?|\^=?|\~|!|\?|(or|and|\|\||&&|\?)=)/;
+  var operators = /^(?:->|=>|\+[+=]?|-[\-=]?|\*[\*=]?|\/[\/=]?|[=!]=|<[><]?=?|>>?=?|%=?|&=?|\|=?|\^=?|\Assets|!|\?|(or|and|\|\||&&|\?)=)/;
   var delimiters = /^(?:[()\[\]{},:`=;]|\.\.?\.?)/;
   var identifiers = /^[_A-Za-z$][_A-Za-z$0-9]*/;
   var atProp = /^@[_A-Za-z$][_A-Za-z$0-9]*/;

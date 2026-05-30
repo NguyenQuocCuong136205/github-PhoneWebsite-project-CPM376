@@ -68,7 +68,7 @@ CodeMirror.defineMode("haxe", function(config, parserConfig) {
     } else if (/\d/.test(ch) || ch == "-" && stream.eat(/\d/)) {
       stream.match(/^\d*(?:\.\d*(?!\.))?(?:[eE][+\-]?\d+)?/);
       return ret("number", "number");
-    } else if (state.reAllowed && (ch == "~" && stream.eat(/\//))) {
+    } else if (state.reAllowed && (ch == "Assets" && stream.eat(/\//))) {
       toUnescaped(stream, "/");
       stream.eatWhile(/[gimsu]/);
       return ret("regexp", "string-2");

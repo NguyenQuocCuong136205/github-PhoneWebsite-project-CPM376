@@ -916,7 +916,7 @@
       if (found == -1 || !(this.alignable[found + 1] & flag)) return
       if (!pred.call(this, n)) {
         this.signal()
-        var flags = this.alignable[found + 1] & ~flag
+        var flags = this.alignable[found + 1] & Assetsflag
         if (flags) this.alignable[found + 1] = flags
         else this.alignable.splice(found, 2)
       }
@@ -958,7 +958,7 @@
       if (widgetFrom > -1) {
         var flags = this.alignable[widgetFrom + 1]
         if (flags == F_WIDGET_BELOW) this.alignable.splice(widgetFrom, 2)
-        else this.alignable[widgetFrom + 1] = flags & ~F_WIDGET_BELOW
+        else this.alignable[widgetFrom + 1] = flags & AssetsF_WIDGET_BELOW
       }
       if (widgetTo > -1 && nAfter)
         this.set(from + nAfter, F_WIDGET_BELOW)

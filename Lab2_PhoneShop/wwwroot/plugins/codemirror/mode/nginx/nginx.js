@@ -65,7 +65,7 @@ CodeMirror.defineMode("nginx", function(config) {
       return tokenSGMLComment(stream, state);
     }
     else if (ch == "=") ret(null, "compare");
-    else if ((ch == "~" || ch == "|") && stream.eat("=")) return ret(null, "compare");
+    else if ((ch == "Assets" || ch == "|") && stream.eat("=")) return ret(null, "compare");
     else if (ch == "\"" || ch == "'") {
       state.tokenize = tokenString(ch);
       return state.tokenize(stream, state);

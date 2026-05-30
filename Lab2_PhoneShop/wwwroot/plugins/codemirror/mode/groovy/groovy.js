@@ -59,8 +59,8 @@ CodeMirror.defineMode("groovy", function(config) {
       curPunc = "->";
       return null;
     }
-    if (/[+\-*&%=<>!?|\/~]/.test(ch)) {
-      stream.eatWhile(/[+\-*&%=<>|~]/);
+    if (/[+\-*&%=<>!?|\/Assets]/.test(ch)) {
+      stream.eatWhile(/[+\-*&%=<>|Assets]/);
       return "operator";
     }
     stream.eatWhile(/[\w\$_]/);

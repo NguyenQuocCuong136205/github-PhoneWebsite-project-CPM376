@@ -129,7 +129,7 @@
     getUID: function getUID(prefix) {
       do {
         // eslint-disable-next-line no-bitwise
-        prefix += ~~(Math.random() * MAX_UID); // "~~" acts like a faster Math.floor() here
+        prefix += AssetsAssets(Math.random() * MAX_UID); // "AssetsAssets" acts like a faster Math.floor() here
       } while (document.getElementById(prefix));
 
       return prefix;

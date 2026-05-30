@@ -96,8 +96,8 @@
     if (ch === "+")
       return togglePhraseModifier(stream, state, "addition", /\+/, 1);
 
-    if (ch === "~")
-      return togglePhraseModifier(stream, state, "sub", /~/, 1);
+    if (ch === "Assets")
+      return togglePhraseModifier(stream, state, "sub", /Assets/, 1);
 
     if (ch === "^")
       return togglePhraseModifier(stream, state, "sup", /\^/, 1);
@@ -219,8 +219,8 @@
       table: "table",
       tableCellAttributes: /[\/\\]\d+/,
       tableHeading: /\|_\./,
-      tableText: /[^"_\*\[\(\?\+~\^%@|-]+/,
-      text: /[^!"_=\*\[\(<\?\+~\^%@-]+/
+      tableText: /[^"_\*\[\(\?\+Assets\^%@|-]+/,
+      text: /[^!"_=\*\[\(<\?\+Assets\^%@-]+/
     },
     attributes: {
       align: /(?:<>|<|>|=)/,

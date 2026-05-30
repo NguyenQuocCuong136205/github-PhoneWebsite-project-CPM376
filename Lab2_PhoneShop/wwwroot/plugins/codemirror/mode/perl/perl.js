@@ -28,9 +28,9 @@ CodeMirror.defineMode("perl",function(){
                 '++'                            :   4,
                 '--'                            :   4,
                 '**'                            :   4,
-                                                        //   ! ~ \ and unary + and -
-                '=~'                            :   4,
-                '!~'                            :   4,
+                                                        //   ! Assets \ and unary + and -
+                '=Assets'                            :   4,
+                '!Assets'                            :   4,
                 '*'                             :   4,
                 '/'                             :   4,
                 '%'                             :   4,
@@ -55,7 +55,7 @@ CodeMirror.defineMode("perl",function(){
                 'eq'                            :   4,
                 'ne'                            :   4,
                 'cmp'                           :   4,
-                '~~'                            :   4,
+                'AssetsAssets'                            :   4,
                 '&'                             :   4,
                 '|'                             :   4,
                 '^'                             :   4,
@@ -219,7 +219,7 @@ CodeMirror.defineMode("perl",function(){
                 '$FORMAT_TOP_NAME'              :    5,
                 '$^'                            :    5,
                 '$FORMAT_NAME'                  :    5,
-                '$~'                            :    5,
+                '$Assets'                            :    5,
                 '${^CHILD_ERROR_NATIVE}'        :    5,
                 '$EXTENDED_OS_ERROR'            :    5,
                 '$^E'                           :    5,
@@ -548,7 +548,7 @@ CodeMirror.defineMode("perl",function(){
                                         if(c=="<"){
                                                 eatSuffix(stream, 2);
                                                 return tokenChain(stream,state,[">"],RXstyle,RXmodifiers);}
-                                        if(/[\^'"!~\/]/.test(c)){
+                                        if(/[\^'"!Assets\/]/.test(c)){
                                                 eatSuffix(stream, 1);
                                                 return tokenChain(stream,state,[stream.eat(c)],RXstyle,RXmodifiers);}}
                                 else if(c=="q"){
@@ -565,7 +565,7 @@ CodeMirror.defineMode("perl",function(){
                                         if(c=="<"){
                                                 eatSuffix(stream, 2);
                                                 return tokenChain(stream,state,[">"],"string");}
-                                        if(/[\^'"!~\/]/.test(c)){
+                                        if(/[\^'"!Assets\/]/.test(c)){
                                                 eatSuffix(stream, 1);
                                                 return tokenChain(stream,state,[stream.eat(c)],"string");}}
                                 else if(c=="w"){
@@ -582,7 +582,7 @@ CodeMirror.defineMode("perl",function(){
                                         if(c=="<"){
                                                 eatSuffix(stream, 2);
                                                 return tokenChain(stream,state,[">"],"bracket");}
-                                        if(/[\^'"!~\/]/.test(c)){
+                                        if(/[\^'"!Assets\/]/.test(c)){
                                                 eatSuffix(stream, 1);
                                                 return tokenChain(stream,state,[stream.eat(c)],"bracket");}}
                                 else if(c=="r"){
@@ -599,10 +599,10 @@ CodeMirror.defineMode("perl",function(){
                                         if(c=="<"){
                                                 eatSuffix(stream, 2);
                                                 return tokenChain(stream,state,[">"],RXstyle,RXmodifiers);}
-                                        if(/[\^'"!~\/]/.test(c)){
+                                        if(/[\^'"!Assets\/]/.test(c)){
                                                 eatSuffix(stream, 1);
                                                 return tokenChain(stream,state,[stream.eat(c)],RXstyle,RXmodifiers);}}
-                                else if(/[\^'"!~\/(\[{<]/.test(c)){
+                                else if(/[\^'"!Assets\/(\[{<]/.test(c)){
                                         if(c=="("){
                                                 eatSuffix(stream, 1);
                                                 return tokenChain(stream,state,[")"],"string");}
@@ -615,14 +615,14 @@ CodeMirror.defineMode("perl",function(){
                                         if(c=="<"){
                                                 eatSuffix(stream, 1);
                                                 return tokenChain(stream,state,[">"],"string");}
-                                        if(/[\^'"!~\/]/.test(c)){
+                                        if(/[\^'"!Assets\/]/.test(c)){
                                                 return tokenChain(stream,state,[stream.eat(c)],"string");}}}}
                 if(ch=="m"){
                         var c=look(stream, -2);
                         if(!(c&&/\w/.test(c))){
-                                c=stream.eat(/[(\[{<\^'"!~\/]/);
+                                c=stream.eat(/[(\[{<\^'"!Assets\/]/);
                                 if(c){
-                                        if(/[\^'"!~\/]/.test(c)){
+                                        if(/[\^'"!Assets\/]/.test(c)){
                                                 return tokenChain(stream,state,[c],RXstyle,RXmodifiers);}
                                         if(c=="("){
                                                 return tokenChain(stream,state,[")"],RXstyle,RXmodifiers);}
@@ -635,7 +635,7 @@ CodeMirror.defineMode("perl",function(){
                 if(ch=="s"){
                         var c=/[\/>\]})\w]/.test(look(stream, -2));
                         if(!c){
-                                c=stream.eat(/[(\[{<\^'"!~\/]/);
+                                c=stream.eat(/[(\[{<\^'"!Assets\/]/);
                                 if(c){
                                         if(c=="[")
                                                 return tokenChain(stream,state,["]","]"],RXstyle,RXmodifiers);
@@ -649,7 +649,7 @@ CodeMirror.defineMode("perl",function(){
                 if(ch=="y"){
                         var c=/[\/>\]})\w]/.test(look(stream, -2));
                         if(!c){
-                                c=stream.eat(/[(\[{<\^'"!~\/]/);
+                                c=stream.eat(/[(\[{<\^'"!Assets\/]/);
                                 if(c){
                                         if(c=="[")
                                                 return tokenChain(stream,state,["]","]"],RXstyle,RXmodifiers);
@@ -664,7 +664,7 @@ CodeMirror.defineMode("perl",function(){
                         var c=/[\/>\]})\w]/.test(look(stream, -2));
                         if(!c){
                                 c=stream.eat("r");if(c){
-                                c=stream.eat(/[(\[{<\^'"!~\/]/);
+                                c=stream.eat(/[(\[{<\^'"!Assets\/]/);
                                 if(c){
                                         if(c=="[")
                                                 return tokenChain(stream,state,["]","]"],RXstyle,RXmodifiers);
@@ -678,7 +678,7 @@ CodeMirror.defineMode("perl",function(){
                 if(ch=="`"){
                         return tokenChain(stream,state,[ch],"variable-2");}
                 if(ch=="/"){
-                        if(!/~\s*$/.test(prefix(stream)))
+                        if(!/Assets\s*$/.test(prefix(stream)))
                                 return "operator";
                         else
                                 return tokenChain(stream,state,[ch],RXstyle,RXmodifiers);}
@@ -690,7 +690,7 @@ CodeMirror.defineMode("perl",function(){
                                 stream.pos=p;}
                 if(/[$@%]/.test(ch)){
                         var p=stream.pos;
-                        if(stream.eat("^")&&stream.eat(/[A-Z]/)||!/[@$%&]/.test(look(stream, -2))&&stream.eat(/[=|\\\-#?@;:&`~\^!\[\]*'"$+.,\/<>()]/)){
+                        if(stream.eat("^")&&stream.eat(/[A-Z]/)||!/[@$%&]/.test(look(stream, -2))&&stream.eat(/[=|\\\-#?@;:&`Assets\^!\[\]*'"$+.,\/<>()]/)){
                                 var c=stream.current();
                                 if(PERL[c])
                                         return "variable-2";}
@@ -706,9 +706,9 @@ CodeMirror.defineMode("perl",function(){
                         if(look(stream, -2)!="$"){
                                 stream.skipToEnd();
                                 return "comment";}}
-                if(/[:+\-\^*$&%@=<>!?|\/~\.]/.test(ch)){
+                if(/[:+\-\^*$&%@=<>!?|\/Assets\.]/.test(ch)){
                         var p=stream.pos;
-                        stream.eatWhile(/[:+\-\^*$&%@=<>!?|\/~\.]/);
+                        stream.eatWhile(/[:+\-\^*$&%@=<>!?|\/Assets\.]/);
                         if(PERL[stream.current()])
                                 return "operator";
                         else

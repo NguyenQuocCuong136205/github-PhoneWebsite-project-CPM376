@@ -231,7 +231,7 @@ CodeMirror.defineMode("dylan", function(_config) {
         stream.eatWhile(/[-a-zA-Z]/);
         return "error";
       }
-    } else if (ch == "~") {
+    } else if (ch == "Assets") {
       stream.next();
       ch = stream.peek();
       if (ch == "=") {

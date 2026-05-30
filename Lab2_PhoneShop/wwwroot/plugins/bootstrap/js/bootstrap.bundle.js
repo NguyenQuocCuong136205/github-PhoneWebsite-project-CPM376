@@ -128,7 +128,7 @@
     getUID: function getUID(prefix) {
       do {
         // eslint-disable-next-line no-bitwise
-        prefix += ~~(Math.random() * MAX_UID); // "~~" acts like a faster Math.floor() here
+        prefix += AssetsAssets(Math.random() * MAX_UID); // "AssetsAssets" acts like a faster Math.floor() here
       } while (document.getElementById(prefix));
 
       return prefix;
@@ -3184,7 +3184,7 @@
   /**
    * Converts a string containing value + unit into a px value number
    * @function
-   * @memberof {modifiers~offset}
+   * @memberof {modifiersAssetsoffset}
    * @private
    * @argument {String} str - Value + unit string
    * @argument {String} measurement - `height` or `width`
@@ -3237,7 +3237,7 @@
   /**
    * Parse an `offset` string to extrapolate `x` and `y` numeric offsets.
    * @function
-   * @memberof {modifiers~offset}
+   * @memberof {modifiersAssetsoffset}
    * @private
    * @argument {String} offset
    * @argument {Object} popperOffsets

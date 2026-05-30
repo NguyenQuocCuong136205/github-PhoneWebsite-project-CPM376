@@ -14,8 +14,8 @@
 CodeMirror.defineMode("solr", function() {
   "use strict";
 
-  var isStringChar = /[^\s\|\!\+\-\*\?\~\^\&\:\(\)\[\]\{\}\"\\]/;
-  var isOperatorChar = /[\|\!\+\-\*\?\~\^\&]/;
+  var isStringChar = /[^\s\|\!\+\-\*\?\Assets\^\&\:\(\)\[\]\{\}\"\\]/;
+  var isOperatorChar = /[\|\!\+\-\*\?\Assets\^\&]/;
   var isOperatorString = /^(OR|AND|NOT|TO)$/i;
 
   function isNumber(word) {

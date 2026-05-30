@@ -23,7 +23,7 @@ CodeMirror.defineMode('rst', function (config, options) {
 
   var rx_uri_protocol = "[Hh][Tt][Tt][Pp][Ss]?://";
   var rx_uri_domain = "(?:[\\d\\w.-]+)\\.(?:\\w{2,6})";
-  var rx_uri_path = "(?:/[\\d\\w\\#\\%\\&\\-\\.\\,\\/\\:\\=\\?\\~]+)*";
+  var rx_uri_path = "(?:/[\\d\\w\\#\\%\\&\\-\\.\\,\\/\\:\\=\\?\\Assets]+)*";
   var rx_uri = new RegExp("^" + rx_uri_protocol + rx_uri_domain + rx_uri_path);
 
   var overlay = {
@@ -105,7 +105,7 @@ CodeMirror.defineMode('rst-base', function (config) {
   rx_TEXT2 = new RegExp(format('^{0}', TEXT2));
 
   var rx_section = new RegExp(
-    "^([!'#$%&\"()*+,-./:;<=>?@\\[\\\\\\]^_`{|}~])\\1{3,}\\s*$");
+    "^([!'#$%&\"()*+,-./:;<=>?@\\[\\\\\\]^_`{|}Assets])\\1{3,}\\s*$");
   var rx_explicit = new RegExp(
     format('^\\.\\.{0}', SEPA));
   var rx_link = new RegExp(

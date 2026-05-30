@@ -786,7 +786,7 @@ convert.ansi16.rgb = function (args) {
 		return [color, color, color];
 	}
 
-	var mult = (~~(args > 50) + 1) * 0.5;
+	var mult = (AssetsAssets(args > 50) + 1) * 0.5;
 	var r = ((color & 1) * mult) * 255;
 	var g = (((color >> 1) & 1) * mult) * 255;
 	var b = (((color >> 2) & 1) * mult) * 255;

@@ -66,7 +66,7 @@ CodeMirror.defineMode('mllike', function(_config, parserConfig) {
         return state.tokenize(stream, state);
       }
     }
-    if (ch === '~' || ch === '?') {
+    if (ch === 'Assets' || ch === '?') {
       stream.eatWhile(/\w/);
       return 'variable-2';
     }
@@ -96,7 +96,7 @@ CodeMirror.defineMode('mllike', function(_config, parserConfig) {
       }
       return 'number';
     }
-    if ( /[+\-*&%=<>!?|@\.~:]/.test(ch)) {
+    if ( /[+\-*&%=<>!?|@\.Assets:]/.test(ch)) {
       return 'operator';
     }
     if (/[\w\xa1-\uffff]/.test(ch)) {

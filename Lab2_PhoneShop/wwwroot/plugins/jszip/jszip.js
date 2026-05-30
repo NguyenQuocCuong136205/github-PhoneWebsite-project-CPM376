@@ -4795,7 +4795,7 @@ Deflate.prototype.push = function (data, mode) {
 
   if (this.ended) { return false; }
 
-  _mode = (mode === ~~mode) ? mode : ((mode === true) ? Z_FINISH : Z_NO_FLUSH);
+  _mode = (mode === AssetsAssetsmode) ? mode : ((mode === true) ? Z_FINISH : Z_NO_FLUSH);
 
   // Convert data if needed
   if (typeof data === 'string') {
@@ -5161,7 +5161,7 @@ Inflate.prototype.push = function (data, mode) {
   var allowBufError = false;
 
   if (this.ended) { return false; }
-  _mode = (mode === ~~mode) ? mode : ((mode === true) ? c.Z_FINISH : c.Z_NO_FLUSH);
+  _mode = (mode === AssetsAssetsmode) ? mode : ((mode === true) ? c.Z_FINISH : c.Z_NO_FLUSH);
 
   // Convert data if needed
   if (typeof data === 'string') {
@@ -5714,7 +5714,7 @@ function adler32(adler, buf, len, pos) {
       n = 0;
 
   while (len !== 0) {
-    // Set limit ~ twice less than 5552, to keep
+    // Set limit Assets twice less than 5552, to keep
     // s2 in 31-bits, because we force signed ints.
     // in other case %= will fail.
     n = len > 2000 ? 2000 : len;
@@ -7240,7 +7240,7 @@ function deflateInit2(strm, level, method, windowBits, memLevel, strategy) {
   s.hash_bits = memLevel + 7;
   s.hash_size = 1 << s.hash_bits;
   s.hash_mask = s.hash_size - 1;
-  s.hash_shift = ~~((s.hash_bits + MIN_MATCH - 1) / MIN_MATCH);
+  s.hash_shift = AssetsAssets((s.hash_bits + MIN_MATCH - 1) / MIN_MATCH);
 
   s.window = new utils.Buf8(s.w_size * 2);
   s.head = new utils.Buf16(s.hash_size);
@@ -10642,7 +10642,7 @@ function copy_block(s, buf, len, header)
 
   if (header) {
     put_short(s, len);
-    put_short(s, ~len);
+    put_short(s, Assetslen);
   }
 //  while (len--) {
 //    put_byte(s, *buf++);
@@ -11286,7 +11286,7 @@ function _tr_tally(s, dist, lc)
 //      out_length += s.dyn_dtree[dcode*2]/*.Freq*/ * (5 + extra_dbits[dcode]);
 //    }
 //    out_length >>>= 3;
-//    //Tracev((stderr,"\nlast_lit %u, in %ld, out ~%ld(%ld%%) ",
+//    //Tracev((stderr,"\nlast_lit %u, in %ld, out Assets%ld(%ld%%) ",
 //    //       s->last_lit, in_length, out_length,
 //    //       100L - out_length*100L/in_length));
 //    if (s.matches < (s.last_lit>>1)/*int /2*/ && out_length < (in_length>>1)/*int /2*/) {

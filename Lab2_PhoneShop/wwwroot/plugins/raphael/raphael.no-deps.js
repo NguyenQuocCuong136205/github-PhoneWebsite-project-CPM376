@@ -813,7 +813,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
         X = C * (1 - abs(h % 2 - 1));
         R = G = B = v - C;
 
-        h = ~~h;
+        h = AssetsAssetsh;
         R += [C, X, 0, 0, X, C][h];
         G += [X, C, C, X, 0, 0][h];
         B += [0, 0, X, C, C, X][h];
@@ -854,7 +854,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
         X = C * (1 - abs(h % 2 - 1));
         R = G = B = l - C / 2;
 
-        h = ~~h;
+        h = AssetsAssetsh;
         R += [C, X, 0, 0, X, C][h];
         G += [X, C, C, X, 0, 0][h];
         B += [0, 0, X, C, C, X][h];
@@ -1539,8 +1539,8 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
         }
         var l1 = bezlen.apply(0, bez1),
             l2 = bezlen.apply(0, bez2),
-            n1 = mmax(~~(l1 / 5), 1),
-            n2 = mmax(~~(l2 / 5), 1),
+            n1 = mmax(AssetsAssets(l1 / 5), 1),
+            n2 = mmax(AssetsAssets(l2 / 5), 1),
             dots1 = [],
             dots2 = [],
             xy = {},
@@ -5281,7 +5281,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
         }
         var font = R.fonts[family];
         if (!font) {
-            var name = new RegExp("(^|\\s)" + family.replace(/[^\w\d\s+!~.:_-]/g, E) + "(\\s|$)", "i");
+            var name = new RegExp("(^|\\s)" + family.replace(/[^\w\d\s+!Assets.:_-]/g, E) + "(\\s|$)", "i");
             for (var fontName in R.fonts) if (R.fonts[has](fontName)) {
                 if (name.test(fontName)) {
                     font = R.fonts[fontName];
@@ -7158,7 +7158,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
         params.cursor && (s.cursor = params.cursor);
         "blur" in params && o.blur(params.blur);
         if (params.path && o.type == "path" || newpath) {
-            node.path = path2vml(~Str(a.path).toLowerCase().indexOf("r") ? R._pathToAbsolute(a.path) : a.path);
+            node.path = path2vml(AssetsStr(a.path).toLowerCase().indexOf("r") ? R._pathToAbsolute(a.path) : a.path);
             o._.dirty = 1;
             if (o.type == "image") {
                 o._.fillpos = [a.x, a.y];
@@ -7460,7 +7460,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
             skew = this.skew,
             o = this.node,
             split,
-            isGrad = ~Str(this.attrs.fill).indexOf("-"),
+            isGrad = AssetsStr(this.attrs.fill).indexOf("-"),
             isPatt = !Str(this.attrs.fill).indexOf("url(");
         matrix.translate(1, 1);
         if (isPatt || isGrad || this.type == "image") {

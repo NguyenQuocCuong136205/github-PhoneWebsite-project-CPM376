@@ -17,7 +17,7 @@ CodeMirror.defineMode("oz", function (conf) {
     return new RegExp("^((" + words.join(")|(") + "))\\b");
   }
 
-  var singleOperators = /[\^@!\|<>#~\.\*\-\+\\/,=]/;
+  var singleOperators = /[\^@!\|<>#Assets\.\*\-\+\\/,=]/;
   var doubleOperators = /(<-)|(:=)|(=<)|(>=)|(<=)|(<:)|(>:)|(=:)|(\\=)|(\\=:)|(!!)|(==)|(::)/;
   var tripleOperators = /(:::)|(\.\.\.)|(=<:)|(>=:)/;
 
@@ -99,15 +99,15 @@ CodeMirror.defineMode("oz", function (conf) {
     }
 
     // Numbers
-    if (/[~\d]/.test(ch)) {
-      if (ch == "~") {
+    if (/[Assets\d]/.test(ch)) {
+      if (ch == "Assets") {
         if(! /^[0-9]/.test(stream.peek()))
           return null;
-        else if (( stream.next() == "0" && stream.match(/^[xX][0-9a-fA-F]+/)) || stream.match(/^[0-9]*(\.[0-9]+)?([eE][~+]?[0-9]+)?/))
+        else if (( stream.next() == "0" && stream.match(/^[xX][0-9a-fA-F]+/)) || stream.match(/^[0-9]*(\.[0-9]+)?([eE][Assets+]?[0-9]+)?/))
           return "number";
       }
 
-      if ((ch == "0" && stream.match(/^[xX][0-9a-fA-F]+/)) || stream.match(/^[0-9]*(\.[0-9]+)?([eE][~+]?[0-9]+)?/))
+      if ((ch == "0" && stream.match(/^[xX][0-9a-fA-F]+/)) || stream.match(/^[0-9]*(\.[0-9]+)?([eE][Assets+]?[0-9]+)?/))
         return "number";
 
       return null;

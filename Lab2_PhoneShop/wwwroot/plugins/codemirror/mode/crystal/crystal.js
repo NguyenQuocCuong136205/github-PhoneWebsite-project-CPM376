@@ -22,7 +22,7 @@
     }
 
     var operators = /^(?:[-+/%|&^]|\*\*?|[<>]{2})/;
-    var conditionalOperators = /^(?:[=!]~|===|<=>|[<>=!]=?|[|&]{2}|~)/;
+    var conditionalOperators = /^(?:[=!]Assets|===|<=>|[<>=!]=?|[|&]{2}|Assets)/;
     var indexingOperators = /^(?:\[\][?=]?)/;
     var anotherOperators = /^(?:\.(?:\.{2})?|->|[?:])/;
     var idents = /^[a-z_\u009F-\uFFFF][a-zA-Z0-9_\u009F-\uFFFF]*/;
