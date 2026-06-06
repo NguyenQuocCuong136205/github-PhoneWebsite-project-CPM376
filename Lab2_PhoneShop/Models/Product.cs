@@ -10,6 +10,8 @@ namespace Lab2_PhoneShop.Models
         public int Id { get; set; }
         [Column(TypeName = "nvarchar(200)")]
         public string? Name { get; set; }
+        [Column(TypeName = "nvarchar(200)")]
+        public string? Slug { get; set; }
         public string? Description { get; set; }
         [Column(TypeName = "decimal(18,2)")]
         public decimal? Price { get; set; }
@@ -18,5 +20,6 @@ namespace Lab2_PhoneShop.Models
         [ForeignKey("Category")]
         public int? CategoryId { get; set; }
         public Category? Category { get; set; }
+        public bool? Featured { get; set; }
     }
 }

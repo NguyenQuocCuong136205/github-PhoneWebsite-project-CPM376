@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+@model Lab2_PhoneShop.Models.Product
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -48,9 +50,11 @@
                 <div class="col-xxl-12">
                     <div class="xc-breadcrumb__content p-relative z-index-1">
                         <div class="xc-breadcrumb__list">
-                            <span><a href="#">Home</a></span>
+                            <span><a asp-controller="Home" asp-action="Index">Home</a></span>
                             <span class="dvdr"><i class="icon-arrow-right"></i></span>
                             <span>Product Details</span>
+                            <span class="dvdr"><i class="icon-arrow-right"></i></span>
+                            <span>@Model.Name</span>
                         </div>
                     </div>
                 </div>
@@ -68,16 +72,16 @@
                             <div class="tab-content" id="nav-tabContent">
                                 <div class="tab-pane fade show active" id="nav-one" role="tabpanel"
                                      aria-labelledby="nav-one-tab">
-                                    <img src="~/img/product-details/product-details-1.png" alt="">
+                                    <img src="~/img/phone/@Model.Photo" alt="">
                                 </div>
                                 <div class="tab-pane fade" id="nav-two" role="tabpanel" aria-labelledby="nav-two-tab">
-                                    <img src="~/img/product-details/product-details-2.png" alt="">
+                                    <img src="~/img/phone/@Model.Photo" alt="">
                                 </div>
                                 <div class="tab-pane fade" id="nav-three" role="tabpanel" aria-labelledby="nav-three-tab">
-                                    <img src="~/img/product-details/product-details-3.png" alt="">
+                                    <img src="~/img/phone/@Model.Photo" alt="">
                                 </div>
                                 <div class="tab-pane fade" id="nav-four" role="tabpanel" aria-labelledby="nav-four-tab">
-                                    <img src="~/img/product-details/product-details-4.png" alt="">
+                                    <img src="~/img/phone/@Model.Photo" alt="">
                                 </div>
                             </div>
                         </div>
@@ -87,21 +91,21 @@
                                     <button class="nav-link active" id="nav-one-tab" data-bs-toggle="tab"
                                             data-bs-target="#nav-one" type="button" role="tab" aria-controls="nav-one"
                                             aria-selected="true">
-                                        <img src="~/img/product-details/product-details-sm-1.png" alt="">
+                                        <img src="~/img/phone/@Model.Photo" alt="">
                                     </button>
                                     <button class="nav-link" id="nav-two-tab" data-bs-toggle="tab" data-bs-target="#nav-two"
                                             type="button" role="tab" aria-controls="nav-two" aria-selected="false">
-                                        <img src="~/img/product-details/product-details-sm-2.png" alt="">
+                                        <img src="~/img/phone/@Model.Photo" alt="">
                                     </button>
                                     <button class="nav-link" id="nav-three-tab" data-bs-toggle="tab"
                                             data-bs-target="#nav-three" type="button" role="tab" aria-controls="nav-three"
                                             aria-selected="false">
-                                        <img src="~/img/product-details/product-details-sm-3.png" alt="">
+                                        <img src="~/img/phone/@Model.Photo" alt="">
                                     </button>
                                     <button class="nav-link" id="nav-four-tab" data-bs-toggle="tab"
                                             data-bs-target="#nav-four" type="button" role="tab" aria-controls="nav-four"
                                             aria-selected="false">
-                                        <img src="~/img/product-details/product-details-sm-4.png" alt="">
+                                        <img src="~/img/phone/@Model.Photo" alt="">
                                     </button>
                                 </div>
                             </nav>
@@ -112,9 +116,9 @@
                     <div class="product__details-wrapper">
 
                         <div class="product__details-stock">
-                            <span>18 In Stock</span>
+                            <span>In Stock</span>
                         </div>
-                        <h3 class="product__details-title">Apple Watch Series 7 </h3>
+                        <h3 class="product__details-title">@Model.Name</h3>
 
                         <div class="product__details-rating d-flex align-items-center">
                             <div class="product__rating product__rating-2 d-flex">
@@ -140,38 +144,45 @@
                         </div>
 
                         <p>
-                            Shop Harry.com for every day low prices. Free shipping on orders $35+ or Pickup In-store and get
+                            @Model.Description
                         </p>
 
                         <div class="product__details-price">
-                            <span class="product__details-ammount old-ammount">$82.00</span>
-                            <span class="product__details-ammount new-ammount">$54.00</span>
-                            <span class="product__details-offer">-12%</span>
+                            <span class="product__details-ammount old-ammount">@Model.Price</span>
+                            @* <span class="product__details-ammount new-ammount">$54.00</span> *@
+                            @* <span class="product__details-offer">-12%</span> *@
                         </div>
 
-                        <div class="product__details-quantity">
-                            <div class="xc-product-quantity mt-10 mb-10">
-                                <span class="xc-cart-minus sub">
-                                    <i class="fas fa-minus"></i>
-                                </span>
-                                <input class="xc-cart-input" type="text" value="1" />
-                                <span class="xc-cart-plus add">
-                                    <i class="fas fa-plus"></i>
-                                </span>
+                        <form asp-action="AddToCart" asp-controller="Product" method="get">
+                            <input type="hidden" name="pid" value="@Model.Id" />
+                            <div class="product__details-quantity">
+                                <div class="xc-product-quantity mt-10 mb-10">
+                                    <span class="xc-cart-minus sub">
+                                        <i class="fas fa-minus"></i>
+                                    </span>
+
+                                    <input class="xc-cart-input" type="text" value="1" name="quantity"/>
+
+                                    <span class="xc-cart-plus add">
+                                        <i class="fas fa-plus"></i>
+                                    </span>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="product__details-action d-flex flex-wrap align-items-center">
-                            <a href="cart.html" class="product-add-cart-btn swiftcart-btn">
-                                Add to Cart
-                            </a>
-                            <button type="button" class="product-action-btn">
-                                <i class="icon-love"></i>
-                            </button>
-                            <button type="button" class="product-action-btn">
-                                <i class="icon-eye"></i>
-                            </button>
-                        </div>
+                            <div class="product__details-action d-flex flex-wrap align-items-center">
+                                <button type="submit" class="product-add-cart-btn swiftcart-btn">
+                                    Add to Cart
+                                </button>
+
+                                <button type="button" class="product-action-btn">
+                                    <i class="icon-love"></i>
+                                </button>
+                                <button type="button" class="product-action-btn">
+                                    <i class="icon-eye"></i>
+                                </button>
+                            </div>
+                        </form>
+
                         <div class="product__details-sku product__details-more">
                             <p>SKU:</p>
                             <span>29045-SB-8</span>
@@ -179,14 +190,14 @@
                         <div class="product__details-categories product__details-more">
                             <p>Categories:</p>
                             <span>
-                                <a href="#">Bag,</a>
+                                <a href="#">@Model.Category.Name</a>
                             </span>
-                            <span>
+                            @* <span>
                                 <a href="#">Ladies Bag,</a>
                             </span>
                             <span>
                                 <a href="#">Handbags</a>
-                            </span>
+                            </span> *@
                         </div>
                         <div class="product__details-tags">
                             <span>Tags:</span>
@@ -246,16 +257,7 @@
                                 <div class="product__details-description product__details-review-inner mt-60">
                                     <div class="product__details-description-content">
                                         <p class="mb-0">
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                                            fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                                            minim veniam,
-                                            Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-                                            dolore eu fugiat nulla pariatur.
+                                            @Model.Description
                                         </p>
                                     </div>
                                 </div>

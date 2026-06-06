@@ -22,5 +22,9 @@ namespace Lab2_PhoneShop.PhoneShopDB
         public DbSet<Status> statuses { get; set; }
 
         public DbSet<User> users { get; set; }
+
+        public DbSet<Cart> carts { get; set; }
+
+        public DbSet<CartItem> cartItems { get; set; }
     }
 }

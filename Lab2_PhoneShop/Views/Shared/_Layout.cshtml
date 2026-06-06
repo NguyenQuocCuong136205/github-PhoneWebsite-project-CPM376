@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -84,8 +84,19 @@
                         <a href="#" class="xc-header-one__btn">
                             <i class="icon-heart"></i>Wishlist
                         </a>
-                        <a href="cart.html" class="xc-header-one__btn">
-                            <i class="icon-grocery-store"></i>My cart
+                        @using Microsoft.AspNetCore.Http
+                        @using Newtonsoft.Json
+                        @{
+                            var jsoncart = Context.Session.GetString("cart");
+                            int cartCount = 0;
+                            if (jsoncart != null)
+                            {
+                                var cart = JsonConvert.DeserializeObject<List<Lab2_PhoneShop.DTOs.CartDTO>>(jsoncart);
+                                cartCount = cart?.Sum(x => x.Quantity) ?? 0;
+                            }
+                        }
+                        <a asp-controller="Cart" asp-action="Index" class="xc-header-one__btn">
+                            <i class="icon-grocery-store"></i>My cart @(cartCount > 0 ? $"({cartCount})" : "")
                         </a>
                         <!-- mobile drawer  -->
                         <div class="xc-header-one__hamburger d-xl-none">

@@ -6,7 +6,6 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-
 // Dependency injection - đăng ký để trương trình cung cấp các context ở bất cứ đâu
 // Lấy chuỗi kết nối từ file appsettings.json
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
@@ -14,6 +13,17 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 // Đăng ký ApplicationDbContext sử dụng SQL Server
 builder.Services.AddDbContext<PhoneShopDBContext>(options =>
     options.UseSqlServer(connectionString));
+
+builder.Services.AddControllersWithViews();
+
+builder.Services.AddDistributedMemoryCache();
+
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30); // Thời gian tồn tại của session
+    options.Cookie.HttpOnly = true; // Chỉ cho phép truy cập cookie qua HTTP
+    options.Cookie.IsEssential = true; // Cookie cần thiết cho ứng dụng
+});
 
 var app = builder.Build();
 
@@ -28,6 +38,8 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
+
+app.UseSession();
 
 app.UseAuthorization();
 

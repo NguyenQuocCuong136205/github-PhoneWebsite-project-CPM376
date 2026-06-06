@@ -1,4 +1,9 @@
-﻿<!DOCTYPE html>
+@model IEnumerable<Lab2_PhoneShop.DTOs.CartDTO>
+@{
+    decimal total = Model?.Sum(item => item.Quantity * (item.Product?.Price ?? 0)) ?? 0;
+}
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -79,7 +84,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
+                                    @* <tr>
                                         <td class="product-thumbnail"><a href="product-details.html"><img src="assets/img/cart/cart-1.png" alt=""></a></td>
                                         <td class="product-name">
                                             <a href="product-details.html">Level Bolt Smart Lock</a>
@@ -98,48 +103,58 @@
                                         </td>
                                         <td class="product-subtotal"><span class="amount">$130.00</span></td>
                                         <td class="product-remove"><button type="submit"><i class="fa fa-times"></i></button></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="product-thumbnail"><a href="product-details.html"><img src="assets/img/cart/cart-2.png" alt=""></a></td>
-                                        <td class="product-name">
-                                            <a href="product-details.html">Level Bolt Smart Lock</a>
-                                        </td>
-                                        <td class="product-price"><span class="amount">$130.00</span></td>
-                                        <td class="product-quantity">
-                                            <div class="xc-product-quantity mt-10 mb-10">
-                                                <span class="xc-cart-minus sub">
-                                                    <i class="fas fa-minus"></i>
-                                                </span>
-                                                <input class="xc-cart-input" type="text" value="1">
-                                                <span class="xc-cart-plus add">
-                                                    <i class="fas fa-plus"></i>
-                                                </span>
-                                            </div>
-                                        </td>
-                                        <td class="product-subtotal"><span class="amount">$130.00</span></td>
-                                        <td class="product-remove"><button type="submit"><i class="fa fa-times"></i></button></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="product-thumbnail"><a href="product-details.html"><img src="assets/img/cart/cart-3.png" alt=""></a></td>
-                                        <td class="product-name">
-                                            <a href="product-details.html">Level Bolt Smart Lock</a>
-                                        </td>
-                                        <td class="product-price"><span class="amount">$130.00</span></td>
-                                        <td class="product-quantity">
-                                            <div class="xc-product-quantity mt-10 mb-10">
-                                                <span class="xc-cart-minus sub">
-                                                    <i class="fas fa-minus"></i>
-                                                </span>
-                                                <input class="xc-cart-input" type="text" value="1">
-                                                <span class="xc-cart-plus add">
-                                                    <i class="fas fa-plus"></i>
-                                                </span>
-                                            </div>
-                                        </td>
-                                        <td class="product-subtotal"><span class="amount">$130.00</span></td>
-                                        <td class="product-remove"><button type="submit"><i class="fa fa-times"></i></button></td>
-                                    </tr>
+                                    </tr> *@
+                                    @if (Model != null && Model.Any())
+                                    {
+                                        @foreach (var item in Model)
+                                        {
+                                            <tr>
+                                                <td class="product-thumbnail">
+                                                    @if (item.Product != null)
+                                                    {
+                                                        <a asp-controller="Product" asp-action="Details" asp-route-slug="@item.Product.Slug">
+                                                            <img src="~/img/phone/@item.Product.Photo" alt="@item.Product.Name" style="width: 80px; height: auto;" />
+                                                        </a>
+                                                    }
+                                                </td>
+                                                <td class="product-name">
+                                                    @if (item.Product != null)
+                                                    {
+                                                        <a asp-controller="Product" asp-action="Details" asp-route-slug="@item.Product.Slug">@item.Product.Name</a>
+                                                    }
+                                                </td>
+                                                <td class="product-price"><span class="amount">@item.Product?.Price?.ToString("N0") VNĐ</span></td>
+                                                <td class="product-quantity">
+                                                    <div class="xc-product-quantity mt-10 mb-10">
+                                                        <a class="xc-cart-minus sub" asp-controller="Cart" asp-action="DecreaseQuantityProduct" asp-route-productId="@item.Product?.Id" style="display: inline-flex; align-items: center; justify-content: center; text-decoration: none;">
+                                                            <i class="fas fa-minus"></i>
+                                                        </a>
 
+                                                        <input class="xc-cart-input" type="text" value="@item.Quantity" readonly>
+
+                                                        <a class="xc-cart-plus add" asp-controller="Cart" asp-action="IncreaseQuantityProduct" asp-route-productId="@item.Product?.Id" style="display: inline-flex; align-items: center; justify-content: center; text-decoration: none;">
+                                                            <i class="fas fa-plus"></i>
+                                                        </a>
+                                                    </div>
+                                                </td>
+                                                <td class="product-subtotal"><span class="amount">@((item.Quantity * (item.Product?.Price ?? 0)).ToString("N0")) VNĐ</span></td>
+                                                <td class="product-remove">
+                                                    @if (item.Product != null)
+                                                    {
+                                                        <a asp-controller="Cart" asp-action="Remove" asp-route-pid="@item.Product.Id" class="text-danger">
+                                                            <i class="fa fa-times"></i>
+                                                        </a>
+                                                    }
+                                                </td>
+                                            </tr>
+                                        }
+                                    }
+                                    else
+                                    {
+                                        <tr>
+                                            <td colspan="6" class="text-center">Giỏ hàng trống.</td>
+                                        </tr>
+                                    }
                                 </tbody>
                             </table>
                         </div>
@@ -159,10 +174,10 @@
                                                 <input type="text" placeholder="Coupon Code">
                                                 <button>Apply</button>
                                             </div>
-                                            <div class="cart-subtitle">
-                                                <h4>Subtotal</h4>
-                                                <h4>$4589</h4>
-                                            </div>
+                                             <div class="cart-subtitle">
+                                                 <h4>Subtotal</h4>
+                                                 <h4>@total.ToString("N0") VNĐ</h4>
+                                             </div>
                                             <div class="cart-checkout">
                                                 <h4>Shipping</h4>
                                                 <div class="shop__widget-list">
@@ -180,10 +195,10 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="cart-totails">
-                                                <h4>Subtotal</h4>
-                                                <h4>$4589</h4>
-                                            </div>
+                                             <div class="cart-totails">
+                                                 <h4>Total</h4>
+                                                 <h4>@total.ToString("N0") VNĐ</h4>
+                                             </div>
                                             <p>Wetters, as opposed to using Content here, content here, making it look like readable English. Many desktop </p>
                                             <a class="cart-checkout-btn" href="checkout.html">Checkout</a>
                                         </div>
