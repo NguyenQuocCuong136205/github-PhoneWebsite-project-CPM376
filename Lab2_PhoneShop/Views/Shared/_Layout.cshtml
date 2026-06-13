@@ -98,6 +98,7 @@
                         <a asp-controller="Cart" asp-action="Index" class="xc-header-one__btn">
                             <i class="icon-grocery-store"></i>My cart @(cartCount > 0 ? $"({cartCount})" : "")
                         </a>
+
                         <!-- mobile drawer  -->
                         <div class="xc-header-one__hamburger d-xl-none">
                             <button type="button" class="xc-offcanvas-btn xc-header-one__btn">
@@ -417,7 +418,8 @@
 <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
 
 <!-- template js -->
-<script src="~/js/swiftcart.js"></script>
+<script src="~/js/swiftcart.js" asp-append-version="true"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
 
 
 </body>

@@ -16,29 +16,130 @@ namespace Lab2_PhoneShop.Controllers
             _ctx = ctx;
         }
 
-        // Lấy cart từ Session (danh sách CartItem)
-        List<Lab2_PhoneShop.DTOs.CartDTO>? GetCartItems()
+        private User GetOrCreateDefaultUser()
         {
-
-            var session = HttpContext.Session;
-            string? jsoncart = session.GetString(CARTKEY);
-            if (jsoncart != null)
+            var user = _ctx.users.FirstOrDefault();
+            if (user == null)
             {
-                return JsonConvert.DeserializeObject<List<Lab2_PhoneShop.DTOs.CartDTO>>(jsoncart);
+                var role = _ctx.roles.FirstOrDefault();
+                if (role == null)
+                {
+                    role = new Role { Name = "Customer", Description = "Customer Role" };
+                    _ctx.roles.Add(role);
+                    _ctx.SaveChanges();
+                }
+                user = new User
+                {
+                    Name = "Default Customer",
+                    Email = "customer@example.com",
+                    Role_Id = role.Id,
+                    Password = "123",
+                    Phone = "0123456789",
+                    Address = "Default Address"
+                };
+                _ctx.users.Add(user);
+                _ctx.SaveChanges();
             }
-            return new List<Lab2_PhoneShop.DTOs.CartDTO>();
+            return user;
         }
 
-        // Xóa cart khỏi session
+        private Cart GetOrCreateCart(int userId)
+        {
+            var cart = _ctx.carts.FirstOrDefault(c => c.UserId == userId);
+            if (cart == null)
+            {
+                cart = new Cart { UserId = userId };
+                _ctx.carts.Add(cart);
+                _ctx.SaveChanges();
+            }
+            return cart;
+        }
+
+        // Lấy cart từ Database & Session (danh sách CartItem)
+        List<Lab2_PhoneShop.DTOs.CartDTO> GetCartItems()
+        {
+            var user = GetOrCreateDefaultUser();
+            var cart = GetOrCreateCart(user.Id);
+            
+            var items = _ctx.cartItems
+                .Where(ci => ci.CartId == cart.Id)
+                .ToList();
+                
+            var result = new List<Lab2_PhoneShop.DTOs.CartDTO>();
+            foreach (var item in items)
+            {
+                var product = _ctx.Products.FirstOrDefault(p => p.Id == item.ProductId);
+                if (product != null)
+                {
+                    result.Add(new Lab2_PhoneShop.DTOs.CartDTO
+                    {
+                        Product = product,
+                        Quantity = item.Quantity
+                    });
+                }
+            }
+
+            // Sync with session count for header display
+            var session = HttpContext.Session;
+            string jsoncart = JsonConvert.SerializeObject(result);
+            session.SetString(CARTKEY, jsoncart);
+
+            return result;
+        }
+
+        // Xóa cart khỏi database & session
         void ClearCart()
         {
+            var user = GetOrCreateDefaultUser();
+            var cart = GetOrCreateCart(user.Id);
+            var dbItems = _ctx.cartItems.Where(ci => ci.CartId == cart.Id).ToList();
+            _ctx.cartItems.RemoveRange(dbItems);
+            _ctx.SaveChanges();
+
             var session = HttpContext.Session;
             session.Remove(CARTKEY);
         }
 
-        // Lưu Cart (Danh sách CartItem) vào session
+        // Lưu Cart (Danh sách CartItem) vào database & session
         void SaveCartSession(List<Lab2_PhoneShop.DTOs.CartDTO> ls)
         {
+            var user = GetOrCreateDefaultUser();
+            var cart = GetOrCreateCart(user.Id);
+
+            var dbItems = _ctx.cartItems.Where(ci => ci.CartId == cart.Id).ToList();
+
+            foreach (var dto in ls)
+            {
+                if (dto.Product == null) continue;
+
+                var dbItem = dbItems.FirstOrDefault(ci => ci.ProductId == dto.Product.Id);
+                if (dbItem != null)
+                {
+                    dbItem.Quantity = dto.Quantity;
+                    _ctx.cartItems.Update(dbItem);
+                }
+                else
+                {
+                    var newItem = new CartItem
+                    {
+                        CartId = cart.Id,
+                        ProductId = dto.Product.Id,
+                        Quantity = dto.Quantity
+                    };
+                    _ctx.cartItems.Add(newItem);
+                }
+            }
+
+            foreach (var dbItem in dbItems)
+            {
+                if (!ls.Any(dto => dto.Product?.Id == dbItem.ProductId))
+                {
+                    _ctx.cartItems.Remove(dbItem);
+                }
+            }
+
+            _ctx.SaveChanges();
+
             var session = HttpContext.Session;
             string jsoncart = JsonConvert.SerializeObject(ls);
             session.SetString(CARTKEY, jsoncart);

@@ -1,5 +1,6 @@
 using Lab2_PhoneShop.PhoneShopDB;
 using Microsoft.EntityFrameworkCore;
+using BookCart.Service;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,7 +15,8 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 builder.Services.AddDbContext<PhoneShopDBContext>(options =>
     options.UseSqlServer(connectionString));
 
-builder.Services.AddControllersWithViews();
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddScoped<IPayPalService, PayPalService>();
 
 builder.Services.AddDistributedMemoryCache();
 

@@ -1,0 +1,267 @@
+@model Lab2_PhoneShop.Areas.Admin.Controllers.DashboardViewModel
+
+@{
+    ViewData["Title"] = "Thống kê Đơn hàng - Admin Dashboard";
+}
+
+<!-- Link FontAwesome & Google Fonts -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+    body {
+        font-family: 'Outfit', sans-serif;
+        background-color: #f4f6fc;
+    }
+    .dashboard-container {
+        padding: 2.5rem 1.5rem;
+    }
+    .stat-card {
+        background: linear-gradient(135deg, #ffffff 0%, #f9fbfd 100%);
+        border: none;
+        border-radius: 16px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
+        overflow: hidden;
+    }
+    .stat-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 30px rgba(59, 130, 246, 0.08);
+    }
+    .stat-icon {
+        width: 60px;
+        height: 60px;
+        border-radius: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        color: #ffffff;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .bg-gradient-blue {
+        background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    }
+    .bg-gradient-green {
+        background: linear-gradient(135deg, #10b981 0%, #047857 100%);
+    }
+    .bg-gradient-purple {
+        background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%);
+    }
+    .bg-gradient-orange {
+        background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    }
+    .dashboard-section {
+        background: #ffffff;
+        border-radius: 16px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+        border: none;
+        margin-bottom: 2rem;
+        padding: 1.5rem;
+    }
+    .table-responsive {
+        border-radius: 12px;
+        overflow: hidden;
+    }
+    .table thead th {
+        background-color: #f8fafc;
+        border-bottom: 2px solid #e2e8f0;
+        font-weight: 600;
+        color: #475569;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        letter-spacing: 0.5px;
+    }
+    .table tbody td {
+        vertical-align: middle;
+        font-size: 0.9rem;
+        border-bottom: 1px solid #f1f5f9;
+        color: #334155;
+    }
+    .status-badge {
+        padding: 6px 12px;
+        border-radius: 30px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        display: inline-block;
+        text-transform: capitalize;
+    }
+    .status-pending {
+        background-color: #fef3c7;
+        color: #d97706;
+    }
+    .status-paid {
+        background-color: #d1fae5;
+        color: #065f46;
+    }
+    .status-cancelled {
+        background-color: #fee2e2;
+        color: #991b1b;
+    }
+    .progress-bar-thin {
+        height: 6px;
+        border-radius: 10px;
+    }
+    .product-img {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        border-radius: 8px;
+        border: 1px solid #e2e8f0;
+    }
+</style>
+
+<div class="dashboard-container">
+        <!-- Recent Orders -->
+        <div class="col-xl-7 mb-4">
+            <div class="dashboard-section h-100">
+                <h5 class="font-weight-bold mb-4" style="color: #1e293b; font-weight: 700;"><i class="fas fa-receipt me-2 text-info"></i> Danh Sách Đơn Hàng Gần Đây</h5>
+                <div class="table-responsive">
+                    <table class="table align-items-center table-flush table-hover">
+                        <thead>
+                            <tr>
+                                <th>Mã đơn</th>
+                                <th>Khách hàng</th>
+                                <th>Ngày tạo</th>
+                                <th>Tổng tiền</th>
+                                <th>Trạng thái</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (Model.RecentOrders != null && Model.RecentOrders.Any())
+                            {
+                                foreach (var order in Model.RecentOrders)
+                                {
+                                    <tr>
+                                        <td>
+                                            <span class="font-weight-bold text-primary">#@order.OrderId</span>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <span class="d-block font-weight-medium">@order.CustomerName</span>
+                                                <small class="text-muted">@order.CustomerPhone</small>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            @order.Date.ToString("dd/MM/yyyy HH:mm")
+                                        </td>
+                                        <td class="font-weight-bold">
+                                            @order.TotalAmount.ToString("N0") đ
+                                        </td>
+                                        <td>
+                                            @if (order.Status?.ToLower() == "paid" || order.Status?.ToLower() == "complete" || order.Status?.ToLower() == "thành công")
+                                            {
+                                                <span class="status-badge status-paid">Đã thanh toán</span>
+                                            }
+                                            else if (order.Status?.ToLower() == "cancelled" || order.Status?.ToLower() == "hủy")
+                                            {
+                                                <span class="status-badge status-cancelled">Đã hủy</span>
+                                            }
+                                            else
+                                            {
+                                                <span class="status-badge status-pending">@order.Status</span>
+                                            }
+                                        </td>
+                                    </tr>
+                                }
+                            }
+                            else
+                            {
+                                <tr>
+                                    <td colspan="5" class="text-center text-muted py-4">Chưa có đơn hàng nào được tạo.</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ChartJS Script CDN -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var ctx = document.getElementById('revenueChart').getContext('2d');
+        
+        // Dynamic labels & data injected from C# list
+        var labels = [@Html.Raw(string.Join(",", Model.DailyRevenues.Select(dr => $"'{dr.DateLabel}'")))];
+        var data = [@string.Join(",", Model.DailyRevenues.Select(dr => dr.Revenue))];
+
+        var gradient = ctx.createLinearGradient(0, 0, 0, 300);
+        gradient.addColorStop(0, 'rgba(59, 130, 246, 0.4)');
+        gradient.addColorStop(1, 'rgba(59, 130, 246, 0.0)');
+
+        var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Doanh thu (VNĐ)',
+                    data: data,
+                    borderColor: '#3b82f6',
+                    borderWidth: 3,
+                    pointBackgroundColor: '#ffffff',
+                    pointBorderColor: '#3b82f6',
+                    pointBorderWidth: 2,
+                    pointRadius: 4,
+                    pointHoverRadius: 6,
+                    fill: true,
+                    backgroundColor: gradient,
+                    tension: 0.3
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        padding: 12,
+                        backgroundColor: '#1e293b',
+                        titleColor: '#ffffff',
+                        bodyColor: '#ffffff',
+                        displayColors: false,
+                        callbacks: {
+                            label: function (context) {
+                                return context.parsed.y.toLocaleString() + ' đ';
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        grid: {
+                            color: '#f1f5f9'
+                        },
+                        ticks: {
+                            color: '#64748b',
+                            callback: function (value) {
+                                if (value >= 1000000) {
+                                    return (value / 1000000).toFixed(1) + 'M đ';
+                                } else if (value >= 1000) {
+                                    return (value / 1000).toFixed(0) + 'K đ';
+                                }
+                                return value + ' đ';
+                            }
+                        }
+                    },
+                    x: {
+                        grid: {
+                            display: false
+                        },
+                        ticks: {
+                            color: '#64748b'
+                        }
+                    }
+                }
+            }
+        });
+    });
+</script>

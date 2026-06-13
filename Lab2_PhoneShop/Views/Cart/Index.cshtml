@@ -55,7 +55,7 @@
                 <div class="col-xxl-12">
                     <div class="xc-breadcrumb__content p-relative z-index-1">
                         <div class="xc-breadcrumb__list">
-                            <span><a href="#">Home</a></span>
+                            <span><a href="/Home/Index">Home</a></span>
                             <span class="dvdr"><i class="icon-arrow-right"></i></span>
                             <span>Shopping Cart</span>
                         </div>
@@ -120,7 +120,7 @@
                                                 <td class="product-name">
                                                     @if (item.Product != null)
                                                     {
-                                                        <a asp-controller="Product" asp-action="Details" asp-route-slug="@item.Product.Slug">@item.Product.Name</a>
+                                                        <a asp-controller="Cart" asp-action="UpdateQuantity" asp-route-slug="@item.Product.Slug">@item.Product.Name</a>
                                                     }
                                                 </td>
                                                 <td class="product-price"><span class="amount">@item.Product?.Price?.ToString("N0") VNĐ</span></td>
@@ -137,7 +137,7 @@
                                                         </a>
                                                     </div>
                                                 </td>
-                                                <td class="product-subtotal"><span class="amount">@((item.Quantity * (item.Product?.Price ?? 0)).ToString("N0")) VNĐ</span></td>
+                                                        <td class="product-subtotal"><span class="amount">@((item.Quantity * (item.Product?.Price ?? 0)).ToString("N0")) VNĐ</span></td>
                                                 <td class="product-remove">
                                                     @if (item.Product != null)
                                                     {
@@ -200,7 +200,7 @@
                                                  <h4>@total.ToString("N0") VNĐ</h4>
                                              </div>
                                             <p>Wetters, as opposed to using Content here, content here, making it look like readable English. Many desktop </p>
-                                            <a class="cart-checkout-btn" href="checkout.html">Checkout</a>
+                                            <a asp-controller="Cart" asp-action="Checkout" class="cart-checkout-btn">Checkout</a>
                                         </div>
                                     </div>
                                 </div>

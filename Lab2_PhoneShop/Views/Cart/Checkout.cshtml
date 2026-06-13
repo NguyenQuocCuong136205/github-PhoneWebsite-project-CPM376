@@ -1,4 +1,28 @@
-﻿<!DOCTYPE html>
+@model IEnumerable<Lab2_PhoneShop.DTOs.PaymentInformation>
+
+@using Lab2_PhoneShop.DTOs
+@using Microsoft.AspNetCore.Http
+@using Newtonsoft.Json
+@inject IHttpContextAccessor HttpContextAccessor
+
+@{
+    ViewData["Title"] = "Checkout";
+
+    var session = HttpContextAccessor.HttpContext!.Session;
+    string? jsoncart = session.GetString(Lab2_PhoneShop.Controllers.ProductController.CARTKEY);
+    List<CartDTO>? cart = null;
+    if (jsoncart != null)
+    {
+        cart = JsonConvert.DeserializeObject<List<CartDTO>>(jsoncart);
+    }
+    decimal total = 0;
+    if (cart != null)
+    {
+        total = cart.Sum(item => (item.Product?.Price ?? 0) * item.Quantity);
+    }
+}
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -63,7 +87,7 @@
     <!-- checkout-area start -->
     <section class="checkout-area pt-80 pb-85">
         <div class="container">
-            <form action="#">
+            <form action="/Cart/ProcessCheckout" method="post">
                 <div class="row">
                     <div class="col-lg-8">
                         <div class="checkbox-form">
@@ -71,61 +95,17 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="checkout-form-list">
-                                        <input type="text" placeholder="First Name">
+                                        <input type="text" placeholder="First Name" name="name" required>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="checkout-form-list">
-
-                                        <input type="text" placeholder="Last Name">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="checkout-form-list">
-
-                                        <input type="text" placeholder="Example LTD.">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="checkout-form-list">
-
-                                        <input type="text" placeholder="Street address">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="checkout-form-list">
-
-                                        <input type="text" placeholder="Town / City">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="checkout-form-list">
-                                        <input type="email" placeholder="Town / City">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="checkout-form-list">
-                                        <input type="text" placeholder="State / County">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="checkout-form-list">
-                                        <input type="text" placeholder="Postcode / Zip">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="checkout-form-list">
-                                        <input type="email" placeholder="Your Email">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="checkout-form-list">
-                                        <input type="text" placeholder="Phone number">
+                                        <input type="text" placeholder="Phone number" name="phone" required>
                                     </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="checkout-form-list">
-                                        <textarea placeholder="Message"></textarea>
+                                        <textarea placeholder="Address" name="address" required></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -144,55 +124,42 @@
                                         <div class="accordion-body">
                                             <div class="cart-coupon-code">
                                                 <input type="text" placeholder="Coupon Code">
-                                                <button>Apply</button>
+                                                <button type="button">Apply</button>
                                             </div>
                                             <div class="cart-subtitle">
                                                 <h4>Subtotal</h4>
-                                                <h4>$4589</h4>
+                                                <h4>@total.ToString("N0") VNĐ</h4>
                                             </div>
                                             <div class="cart-checkout">
                                                 <h4>Shipping</h4>
                                                 <div class="shop__widget-list">
-                                                    <div class="shop__widget-list-item-2">
-                                                        <input type="radio" name="pay" id="c-rate">
-                                                        <label for="c-rate">Flat rate</label>
-                                                    </div>
                                                     <div class="shop__widget-list-item-2 has-orange">
-                                                        <input type="radio" name="pay" id="c-Free">
+                                                        <input type="radio" name="pay" id="c-Free" checked>
                                                         <label for="c-Free">Free shipping</label>
-                                                    </div>
-                                                    <div class="shop__widget-list-item-2 has-green">
-                                                        <input type="radio" name="pay" id="c-pickup">
-                                                        <label for="c-pickup">Local pickup</label>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="cart-checkout">
                                                 <h4>Payment Method</h4>
                                                 <div class="shop__widget-list">
-                                                    <div class="shop__widget-list-item-2">
-                                                        <input type="radio" name="opt" id="p-rate">
-                                                        <label for="p-rate">Direct bank transfer</label>
-                                                    </div>
-                                                    <div class="shop__widget-list-item-2 has-orange">
-                                                        <input type="radio" name="opt" id="c-shipping">
-                                                        <label for="c-shipping">Cash on delivery</label>
+                                                    <div class="shop__widget-list-item-2 has-orange" style="margin-bottom: 10px;">
+                                                        <input type="radio" name="opt" id="c-shipping" value="COD" checked>
+                                                        <label for="c-shipping">Cash on delivery (COD)</label>
                                                     </div>
                                                     <div class="shop__widget-list-item-2 has-green">
-                                                        <input type="radio" name="opt" id="p-pickup">
+                                                        <input type="radio" name="opt" id="p-pickup" value="PayPal">
                                                         <label for="p-pickup">PayPal</label>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="cart-totails">
                                                 <h4>total</h4>
-                                                <h4>$4589</h4>
+                                                <h4>@total.ToString("N0") VNĐ</h4>
                                             </div>
                                             <p>
-                                                Wetters, as opposed to using Content here, content here, making it look like
-                                                readable English. Many desktop
+                                                Vui lòng kiểm tra lại thông tin đơn hàng trước khi tiến hành đặt hàng.
                                             </p>
-                                            <a class="cart-checkout-btn" href="#">Place Order</a>
+                                            <button type="submit" class="cart-checkout-btn border-0 w-100 text-center" style="display: block;">Place Order</button>
                                         </div>
                                     </div>
                                 </div>
